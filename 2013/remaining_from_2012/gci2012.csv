@@ -1,0 +1,116 @@
+Title,Description,Time to complete,Mentors,Type,Tags
+Create POSIX Timing Test  psxtmthread05 (#9),"<p>This task consists of creating the timing test testsuites/psxtmtests/ preempt for the POSIX API method when used in a particular manner. The test case is: pthread_setschedparam - lower own priority.</p>
+<p>If there is no dash in the description then this is the only case of interest for that method. If there are multiple methods then test both methods. The test should be created using the test instantiation helper and templates in rtems-testing/rtems-test-templates. This test will be using the template: psxtmtest_single.</p>
+<p>See <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test"" title=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test</a> for more details</p>",72,joel_sherrill,Quality Assurance,testing
+Adapt Linux Trace Toolkit (LTT) Visualization Tool,"<p> </p>
+<p style=""margin: 0.4em 0px 0.5em; line-height: 19.200000762939453px; font-family: sans-serif; font-size: 13px;"">Investigate the use of the LTT Visualization Tool and its input file format(s). The goal is to use it to display traces from the RTEMS Capture Engine. Your goal is to get it to display an arbitrary timeline.</p>
+<p style=""margin: 0.4em 0px 0.5em; line-height: 19.200000762939453px; font-family: sans-serif; font-size: 13px;"">This will provide us with the definition of the input files so the RTEMS Capture Engine's output can be visualized using the LTT Visualization Tool.</p>
+<p> </p>
+<p style=""margin: 0.4em 0px 0.5em; line-height: 19.200000762939453px; font-family: sans-serif; font-size: 13px;"">This Wiki entry will contain any additional details:</p>
+<p style=""margin: 0.4em 0px 0.5em; line-height: 19.200000762939453px; font-family: sans-serif; font-size: 13px;""><a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Adapt_Linux_Trace_Toolkit_.28LTT.29_Visualization_Took"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Adapt_Linux_Trace_Toolkit_.28LTT.29_Visualization_Took</a></p>",72,joel_sherrill,User Interface,"timeline, gui, visualization"
+Test Coverage Report Improvements #1,"<p>This task consists of modifying the existing Bourne shell script that generates the primary table of results per target. An example of this can be found in the erc32 coverage results at <a href=""http://www.rtems.org/ftp/pub/rtems/people/joel/coverage/erc32.html#OsPD"" title=""http://www.rtems.org/ftp/pub/rtems/people/joel/coverage/erc32.html#OsPD"">http://www.rtems.org/ftp/pub/rtems/people/joel/coverage/erc32.html#OsPD</a>.</p>
+<p>This is a task which is a step in a multiple step project. </p>
+<p>Break out the current one page per target with a section per test configuration with a table into separate pages. The top level table will consist only of links to a set of pages per test configuration. The new pages will consist of the table. The plotted data of multiple test configurations should be removed. Instead each ""per test configuration"" page should include a plot of the data ONLY for that configuration.</p>
+<p>The scripts are in the rtems-testing git module. You will need to be familiar with git and Bourne Shell programming. Ask for sample data to use when working on this task. You will not need to run our test suite -- just generate reports based on their output.</p>
+<p>For more details, see <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Test_Coverage_Report_Improvements"" title=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Test_Coverage_Report_Improvements"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Test_Coverage_Report_Improvements</a></p>",72,joel_sherrill,User Interface,"Bourne, shell, reports, html"
+Create POSIX Timing Test psxtmbarrier04 (#11),"<p>This task consists of creating the timing test testsuites/psxtmtests/ preempt for the POSIX API method when used in a particular manner. The test case is: pthread_barrier_wait - releasing.</p>
+<p>If there is no dash in the description then this is the only case of interest for that method. If there is no dash in the description then this is the only case of interest for that method. If there are multiple methods then test both methods. The test should be created using the test instantiation helper and templates in rtems-testing/rtems-test-templates. This test will be using the template: psxtmtest_unblocking_preempt.</p>
+<p>See <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test"" title=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test</a> for more details</p>",72,joel_sherrill,Quality Assurance,testing
+Create POSIX Timing Test  psxtmthread06 (#10),"<p>This task consists of creating the timing test testsuites/psxtmtests/ preempt for the POSIX API method when used in a particular manner. The test case is: pthread_setschedparam - raise other priority.</p>
+<p>If there is no dash in the description then this is the only case of interest for that method. If there are multiple methods then test both methods. The test should be created using the test instantiation helper and templates in rtems-testing/rtems-test-templates. This test will be using the template: psxtmtest_single.</p>
+<p>See <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test%20"" title=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test "">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test</a> for more details</p>",72,joel_sherrill,Quality Assurance,testing
+Create a POSIX API group and add all POSIX support groups as childs,"<p>Add all POSIX support groups to a new ""POSIX API"" top-level group.  This is similar to the ""RTEMS Classic API"" and ""SuperCore"" group.</p>",72,joel_sherrill,Documentation/Training,"C, Doxygen"
+cpukit/score Doxygen Clean Up Task #13,"This task consists of editing the files listed in <a href=""http://rtems.org/ftp/pub/rtems/people/joel/Doxygen_Tasks/Cleanup/score_Cleanup_Doxygen_Headers_Task_12.txt"">http://rtems.org/ftp/pub/rtems/people/joel/Doxygen_Tasks/Cleanup/score_Cleanup_Doxygen_Headers_Task_12.txt&gt;</a> per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Hierarchy_formatting_and_correctness"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Hierarchy_formatting_and_correctness</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.",72,joel_sherrill,Code,"C, Doxygen"
+Identify new microprocessor architectures appropriate for RTEMS #1,"<p>Although most computer users are only familiar with the x86, PowerPC (Mac), and ARM (phones, etc.), there are at least a dozen other microprocessor architectures used in embedded systems. Identify one which RTEMS is not available for and determine if it is feasible to port RTEMS to it. If it is not feasible, identify why. If it is feasible, look at the features of the architecture that would be important to the person porting RTEMS to this architecture.</p>
+<p>To get started, some ideas for architectures can be found at:http://gcc.gnu.org/viewcvs/trunk/libgcc/config/</p>
+<p>Additional architectures can be found at: http://sourceware.org/cgi-bin/cvsweb.cgi/src/opcodes/?cvsroot=src and http://opencores.org/projects</p>
+<p>If you know of an architecture that isn't on either list, please propose it anyway!</p>
+<p>The expected result is a 1 paragraph to 1 page paper.</p>",72,joel_sherrill,Outreach/Research,microprocessor architecture
+Generating .scn (Screen Shots) #1,"<p>Completing this task will give you experience cross-compiling and debugging. We want to improve the documentation of our tests, to do this, we need screen shots.  If you select this task, please generate .scns for five (5) of the following tests.</p>
+<p>fserror<br/>fslink<br/>fspatheval<br/>fspermission<br/>fsrdwr<br/>fssymlink<br/>fstime</p>
+<p>Directions on how to complete the task can be found at:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects</p>
+<p>Ctrl+f Generating .scn (Screen Shots)</p>
+<p>Please submit the .diff</p>",72,joel_sherrill,"Documentation/Training, Quality Assurance","cross-compiling, cross-debugging, patching"
+Finish a POSIX API Chapter: Memory Management Manager 12.1-12.3 ,"<div class=""block-task-description"">
+<p>RTEMS has permission to use information from the <a href=""http://www.opengroup.org"" class=""external text"" rel=""nofollow"">Open Group's</a> <a href=""http://pubs.opengroup.org/onlinepubs/9699919799/"" class=""external text"" rel=""nofollow"">Single UNIX Specification</a> in our <a href=""http://www.rtems.org/onlinedocs/doc-current/share/rtems/html/posix_users/posix_users.html"" class=""external text"" rel=""nofollow"">RTEMS POSIX API User's Guide</a>. Each of the chapters in this manual is incomplete to a greater or lesser extent. The document is written in texinfo. This task consists of completing a chapter.</p>
+<p>Please refer to:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Finish_a_POSIX_API_Chapter</p>
+<p>for additional instructions</p>
+<h3><span id=""Deliverables"" class=""mw-headline""> Deliverables </span></h3>
+<p>The .diff for the .t</p>
+</div>",72,joel_sherrill,"Code, Documentation/Training","texi, patch"
+Finish a POSIX API Chapter: Clock Manager 14.1-14.3,"<p>RTEMS has permission to use information from the <a href=""http://www.opengroup.org"" class=""external text"" rel=""nofollow"">Open Group's</a> <a href=""http://pubs.opengroup.org/onlinepubs/9699919799/"" class=""external text"" rel=""nofollow"">Single UNIX Specification</a> in our <a href=""http://www.rtems.org/onlinedocs/doc-current/share/rtems/html/posix_users/posix_users.html"" class=""external text"" rel=""nofollow"">RTEMS POSIX API User's Guide</a>. Each of the chapters in this manual is incomplete to a greater or lesser extent. The document is written in texinfo. This task consists of completing a chapter.</p>
+<p>Please refer to:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Finish_a_POSIX_API_Chapter</p>
+<p>for additional instructions</p>
+<h3><span id=""Deliverables"" class=""mw-headline""> Deliverables </span></h3>
+<p>The .diff for the .t</p>",72,joel_sherrill,"Code, Documentation/Training","texi, patch"
+Adapt an Eclipse Plug-In Module For Use In RTEMS Development,"<p>RTEMS is not a GUI application. Most RTEMS users only see a GUI when they are doing development. The most frequently used GUI development environment used by RTEMS developers is Eclipse. Take one of the Eclipse plugin modules identified as a research focused project and adapt it for use by the RTEMS community.</p>
+<p>For more information:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Adapt_an_Eclipse_Plug-In_Module_For_Use_In_RTEMS_Development</p>
+<p>** OR **</p>
+<p>Another option would be to improve (add a feature), port (move to a new operating system) or update (make work with a recent version of RTEMS) an existing Eclipse Plug-in</p>
+<p><a href=""http://www.rtems.com/ftp/pub/rtems/eclipse/updates/"" class=""external free"" rel=""nofollow"">http://www.rtems.com/ftp/pub/rtems/eclipse/updates/</a></p>
+<p>http://wiki.rtems.org/wiki/index.php/RTEMS_Eclipse_Plug-in</p>",72,joel_sherrill,"Code, User Interface","Eclipse, GUI, Java"
+Finish a POSIX API Chapter: Thread Cancellation Manager 19.1-19.3,"<p>RTEMS has permission to use information from the <a href=""http://www.opengroup.org"" class=""external text"" rel=""nofollow"">Open Group's</a> <a href=""http://pubs.opengroup.org/onlinepubs/9699919799/"" class=""external text"" rel=""nofollow"">Single UNIX Specification</a> in our <a href=""http://www.rtems.org/onlinedocs/doc-current/share/rtems/html/posix_users/posix_users.html"" class=""external text"" rel=""nofollow"">RTEMS POSIX API User's Guide</a>. Each of the chapters in this manual is incomplete to a greater or lesser extent. The document is written in texinfo. This task consists of completing a chapter.</p>
+<p>Please refer to:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Finish_a_POSIX_API_Chapter</p>
+<p>for additional instructions</p>
+<h3><span id=""Deliverables"" class=""mw-headline""> Deliverables </span></h3>
+<p>The .diff for the .t</p>",72,joel_sherrill,"Code, Documentation/Training","texi, patch"
+Finish a POSIX API Chapter:Timer Manager 15.1 - 15.3,"<div class=""block-task-description"">
+<p>RTEMS has permission to use information from the <a href=""http://www.opengroup.org"" class=""external text"" rel=""nofollow"">Open Group's</a> <a href=""http://pubs.opengroup.org/onlinepubs/9699919799/"" class=""external text"" rel=""nofollow"">Single UNIX Specification</a> in our <a href=""http://www.rtems.org/onlinedocs/doc-current/share/rtems/html/posix_users/posix_users.html"" class=""external text"" rel=""nofollow"">RTEMS POSIX API User's Guide</a>. Each of the chapters in this manual is incomplete to a greater or lesser extent. The document is written in texinfo. This task consists of completing a chapter.</p>
+<p>Please refer to:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Finish_a_POSIX_API_Chapter</p>
+<p>for additional instructions</p>
+<h3><span id=""Deliverables"" class=""mw-headline""> Deliverables </span></h3>
+<p>The .diff for the .t</p>
+</div>",72,joel_sherrill,"Code, Documentation/Training","texi, patch"
+Research New Software #1,"<p>RTEMS Toolkits - We are defining collections of libraries and support programs which make it easier to get started for certain types of applications. We haven't identified all potential toolkits or components. Please see above for toolkit areas identified so far.</p>
+<p>This task consist of identifying an additional toolkit that would be beneficial for embedded systems development. To see what some other embedded systems developers are doing see: <a href=""http://git.buildroot.net/buildroot/tree/package"" class=""external text"" rel=""nofollow"">Buildroot Packages</a>. To see how other major *nix-like distributors gather software, see: <a href=""http://www.freebsd.org/ports/categories-grouped.html"" class=""external text"" rel=""nofollow"">FreeBSD ports</a>, Fedora packages, and <a href=""http://packages.debian.org/unstable/"" class=""external text"" rel=""nofollow"">Debian packages</a>.</p>
+<p>The deliverable is a .txt with a one paragraph explanation of the problem the kit addresses, and example software that would illustrate what type of software goes in the package (licensing would not be an issue at this stage of the proposal).</p>",72,joel_sherrill,Outreach/Research,Research
+Finish a POSIX API Chapter: Key Manager 18.1 - 18.3,"<div class=""block-task-description"">
+<p>RTEMS has permission to use information from the <a href=""http://www.opengroup.org"" class=""external text"" rel=""nofollow"">Open Group's</a> <a href=""http://pubs.opengroup.org/onlinepubs/9699919799/"" class=""external text"" rel=""nofollow"">Single UNIX Specification</a> in our <a href=""http://www.rtems.org/onlinedocs/doc-current/share/rtems/html/posix_users/posix_users.html"" class=""external text"" rel=""nofollow"">RTEMS POSIX API User's Guide</a>. Each of the chapters in this manual is incomplete to a greater or lesser extent. The document is written in texinfo. This task consists of completing a chapter.</p>
+<p>Please refer to:</p>
+<p>http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Finish_a_POSIX_API_Chapter</p>
+<p>for additional instructions</p>
+<h3><span id=""Deliverables"" class=""mw-headline""> Deliverables </span></h3>
+<p>The .diff for the .t</p>
+</div>",72,joel_sherrill,"Code, Documentation/Training","texi, patch"
+cpukit/libfs Doxygen Enhancement Task #10,"<div class=""block-task-description"">
+<p>This task consists of editing the files</p>
+<p>cpukit/libmisc/shell/shell.h<br/>cpukit/libmisc/stackchk/stackchk.h<br/>cpukit/libnetworking/rtems/ftpfs.h<br/>cpukit/score/include/rtems/score/threadq.h<br/>cpukit/rtems/include/rtems/rtems/event.h<br/>cpukit/rtems/include/rtems/rtems/ratemon.h</p>
+<p>per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.</p>
+</div>",72,joel_sherrill,"Code, Documentation/Training","C, Doxygen"
+cpukit/libfs Doxygen Enhancement Task #9,"<div class=""block-task-description"">
+<p>This task consists of editing the files</p>
+<p>cpukit/libfs/src/rfs/rtems-rfs-inode.h<br/>cpukit/libfs/src/rfs/rtems-rfs-link.h<br/>cpukit/libfs/src/rfs/rtems-rfs-rtems.h<br/>cpukit/score/inline/rtems/score/object.inl</p>
+<p>per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.</p>
+</div>",72,joel_sherrill,"Code, Documentation/Training","C, Doxygen"
+cpukit/score cpukit/rtems Doxygen Enhancement Task #1,"<div class=""block-task-description"">
+<p>This task consists of editing the files</p>
+<p>cpukit/rtems/include/rtems/rtems/region.h<br/>cpukit/score/cpu/bfin/rtems/score/cpu.h<br/>cpukit/score/cpu/lm32/rtems/score/cpu.h</p>
+<p>per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.</p>
+</div>",72,joel_sherrill,"Code, Documentation/Training","C, Doxygen"
+cpukit/libblock Doxygen Enhancement Task #1,"<p>This task consists of editing the files</p>
+<p>cpukit/libblock/include/rtems/blkdev.h<br/>cpukit/libblock/include/rtems/sparse-disk.h<br/>cpukit/libblock/src/flashdisk.c<br/>cpukit/libblock/src/nvdisk.c<br/>cpukit/libfs/src/devfs/devfs.h<br/>cpukit/libfs/src/nfsclient/src/librtemsNfs.h</p>
+<p>per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.</p>",72,joel_sherrill,"Code, Documentation/Training","C, Doxygen"
+Header File Doxygen Enhancement Task #12,"<div class=""block-task-description"">
+<div class=""block-task-description"">
+<p>This task consists of editing the files</p>
+<p>cpukit/score/cpu/m32c/rtems/score/cpu.h<br/>cpukit/score/cpu/m32r/rtems/score/cpu.h</p>
+<p>per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.</p>
+</div>
+</div>",72,joel_sherrill,"Code, Documentation/Training","C, Doxygen"
+Header File Doxygen Enhancement Task #14,"<div class=""block-task-description"">
+<div class=""block-task-description"">
+<p>This task consists of editing the files</p>
+<p>cpukit/score/cpu/mips/rtems/score/cpu.h<br/>cpukit/score/cpu/no_cpu/rtems/score/cpu.h<br/>cpukit/score/cpu/v850/rtems/score/cpu.h</p>
+<p>per the instructions at <a href=""http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"">http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers</a>. A patch generated using git diff will need to be submitted to fulfill this task. This patch will be reviewed by the mentors and suggestions are likely to be made.</p>
+</div>
+</div>",72,joel_sherrill,"Code, Documentation/Training","C, Doxygen"
+Write a Fault Test Document,"<p>During the Google Code In we discovered there were problems with some of the tests, and we want to make a list of tests that are having issues.</p>
+<p>To complete this task, write a document that captures information needed to reproduce the fault, and put it on ski-dive for other people working on the screen-shot tasks to fill in if they find faults in the tests.</p>
+<p>The deliverable is a link to the document.</p>
+<p> </p>",72,joel_sherrill,Quality Assurance,Fault Testing
