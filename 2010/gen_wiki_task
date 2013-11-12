@@ -1,0 +1,38 @@
+rm -f WIKI_TASKS*
+cp /dev/null WIKI_TASKS
+
+while read line
+do
+  name=`echo $line | cut -d'|' -f1`
+  wiki=`echo $line | cut -d'|' -f2`
+  if [ "X${name}" = "X" ] ; then
+    name=$wiki
+  fi
+  echo ${name}/${wiki}
+
+  sed -e "s/@BSPNAME@/${name}/g" \
+      -e "s/@WIKINAME@/${wiki}/g" \
+   <WikiTaskTemplate >>WIKI_TASKS
+  
+done <<EOF
+Cogent CSB637 Kit|kit637_v6
+Stellaris Microcontroller LM3S6965|lm3s6965
+genmcf548x|COBRA5475 (add page and link on genmcf548x page)
+genmcf548x|m5484FireEngine (add page and link on genmcf548x page)
+nios2_iss|nios2_iss (Altera Instruction Set Simulator)
+Motorola MBX821_001|mbx821_001 (add page and link on Mbx8xx page)
+Motorola MBX821_002b|mbx821_002b (add page and link on Mbx8xx page)
+Motorola MBX821_002|mbx821_002 (add page and link on Mbx8xx page)
+Motorola MBX860_001b|mbx860_001b (add page and link on Mbx8xx page)
+Motorola MBX860_002|mbx860_002 (add page and link on Mbx8xx page)
+Motorola MBX860_005b|mbx860_005b (add page and link on Mbx8xx page)
+Motorola MBX860_1b|mbx860_1b (add page and link on Mbx8xx page)
+Freescale mpc55xxevb|mpc5566evb (add page and link on mpc55xxevb)
+Freescale mpc55xxevb|mpc5674fevb (add page and link on mpc55xxevb)
+Freescale mpc55xxevb|phycore_mpc5554 (add page and link on mpc55xxevb)
+Motorola mvme3100|mvme3100
+qemuppc|qemuppc (BSP for Qemu simulator)
+qemuprep-altivec|qemuprep-altivec (add section to Qemuprep page)
+Freescale qoriq|qoriq (add page with information and variant holes for qoriq_core_0, qoriq_core_1, qoriq_p1020rdb)
+EOF
+exit 0

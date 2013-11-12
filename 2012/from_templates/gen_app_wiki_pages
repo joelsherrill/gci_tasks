@@ -1,0 +1,46 @@
+#! /bin/sh
+#
+#  Generate CSV set of Application Flyers for GCI 2011
+#
+input=Template_ApplicationWikiPage.csv
+output=Tasks_ApplicationWikiPage.csv
+cp /dev/null ${output}
+
+task=0
+
+echo "title, description, time_to_complete, mentors, types, tags" >>${output}
+while read line
+do
+  project=$line
+
+  # hack to get a good mentor - normally get_mentor rotates 
+  # mentor="joel_sherrill"
+  mentor=`../get_mentor ${task}`
+
+  echo "${mentor} - ${project}"
+
+  sed -e "s,@PROJECT@,${project},g" \
+      -e "s,@MENTOR@,${mentor},g" \
+   <${input} >>${output}
+
+  task=`expr ${task} + 1`
+
+done <<EOF
+ESA Proba-V Mission
+EOF
+exit 0
+# Next round
+# Generated
+
+# We are not sure we know where to look for this
+FIELDS Instrument suite on NASA MMS
+
+# These appear to have decent pages but need flyers from the wiki page
+EMFISIS Instrument suite on RBSP
+
+# These have already been published
+Mitre Centaur Robot
+NASA Express Logistics Carrier (ELC)
+ESA Proba-2 Mission
+ESA GAIA Mission
+ESA Exomars Mission

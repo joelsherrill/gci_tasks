@@ -1,0 +1,19 @@
+arm/csb337 - kit637_v6
+arm/lm3s69xx - lm3s6965
+m68k/genmcf548x - COBRA5475
+m68k/genmcf548x - m5484FireEngine
+nios2/nios2_iss - nios2_iss
+powerpc/mbx8xx - mbx821_001
+powerpc/mbx8xx - mbx821_002b
+powerpc/mbx8xx - mbx821_002
+powerpc/mbx8xx - mbx860_001b
+powerpc/mbx8xx - mbx860_002
+powerpc/mbx8xx - mbx860_005b
+powerpc/mbx8xx - mbx860_1b
+powerpc/mpc55xxevb - mpc5566evb
+powerpc/mpc55xxevb - mpc5674fevb
+powerpc/mpc55xxevb - phycore_mpc5554
+powerpc/mvme3100 - mvme3100
+powerpc/qemuppc - qemuppc
+powerpc/motorola_powerpc - qemuprep-altivec (add to Qemuprep)
+powerpc/qoriq - qoriq (add variant holes for qoriq_core_0, qoriq_core_1, qoriq_p1020rdb)

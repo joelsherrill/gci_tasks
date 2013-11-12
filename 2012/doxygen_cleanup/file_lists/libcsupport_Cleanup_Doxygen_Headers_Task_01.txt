@@ -1,0 +1,13 @@
+cpukit/libcsupport/include/rtems/watchdogdrv.h
+cpukit/libcsupport/include/rtems/malloc.h
+cpukit/libcsupport/include/rtems/gxx_wrappers.h
+cpukit/libcsupport/include/rtems/framebuffer.h
+cpukit/libcsupport/include/rtems/error.h
+cpukit/libcsupport/include/rtems/libio.h
+cpukit/libcsupport/include/rtems/assoc.h
+cpukit/libcsupport/include/rtems/termiostypes.h
+cpukit/libcsupport/include/iosupp.h
+cpukit/libcsupport/include/spurious.h
+cpukit/libcsupport/include/motorola/mc68681.h
+cpukit/libcsupport/include/motorola/mc68230.h
+cpukit/libcsupport/src/malloc_p.h

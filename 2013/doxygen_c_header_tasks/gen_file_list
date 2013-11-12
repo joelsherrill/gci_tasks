@@ -1,0 +1,218 @@
+#! /bin/sh
+
+basename=Add_Doxygen_Headers_Task_
+files_per_task=20
+
+base=`pwd`
+outdir=${base}/txt_files
+rm -rf ${outdir}
+mkdir ${outdir}
+
+if [ X${r} = "X" ] ; then
+  echo "Top of RTEMS tree not set in variable r"
+  exit 1
+fi
+
+b=${r}/c/src/lib/libbsp
+
+do_directory()
+{
+  area=$1
+
+  area_b=`echo ${area} | sed -e 's/\/src//' -e 's/\//_/g'`
+
+  cd $b/
+  find ${area} -name "*.[ch]" | while read f
+  do
+    grep "@brief" $f >/dev/null
+    if [ $? -ne 0 ] ; then
+      echo $f
+    fi
+  done >${base}/files_${area_b}
+  cd - >/dev/null 2>&1
+}
+
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"
+
+generate_tasks()
+{
+  area=${1}
+  area_b=`echo ${area} | sed -e 's/\/src//'`
+  url="http://rtems.org/ftp/pub/rtems/people/joel/gci2013/Doxygen_Tasks_1"
+
+  #echo "${area} ${area_b}"
+  # row headings do not have to be printed
+  #echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=1
+  for f1 in ${outdir}/${1}_${basename}*
+  do
+    f=`basename $f1`
+    title="${area} Doxygen Enhancement Task #${num}"
+    desc=""
+    desc="${desc} This task consists of editing the files listed in"
+    desc="${desc} <a href=${url}/${f}>${url}/${f}></a> per the"
+    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} A patch generated using git diff will need"
+    desc="${desc} to be submitted to fulfill this task. This patch"
+    desc="${desc} will be reviewed by the mentors and suggestions"
+    desc="${desc} are likely to be made."
+    time_to_complete="72"
+    mentors=`../get_mentor ${num}`
+    type="Code"
+    tags="C, Doxygen"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+    num=`expr ${num} + 1`
+  done
+}
+
+#for infile in $*
+#do
+#  if [ ! -r $infile ] ; then
+#    echo $infile is not readable
+#    exit 1
+#  fi
+#done
+
+dirs="shared"
+dirs="${dirs} arm/shared"
+dirs="${dirs} bfin/shared"
+dirs="${dirs} i386/shared"
+dirs="${dirs} lm32/shared"
+dirs="${dirs} m68k/shared"
+dirs="${dirs} mips/shared"
+dirs="${dirs} powerpc/shared"
+dirs="${dirs} sh/shared"
+dirs="${dirs} sparc64/shared"
+dirs="${dirs} sparc/shared"
+dirs="${dirs} v850/shared"
+
+# BSPs
+dirs="${dirs} arm/csb336"
+dirs="${dirs} arm/csb337"
+dirs="${dirs} arm/edb7312"
+dirs="${dirs} arm/gba"
+dirs="${dirs} arm/gdbarmsim"
+dirs="${dirs} arm/gp32"
+dirs="${dirs} arm/gumstix"
+dirs="${dirs} arm/lm3s69xx"
+dirs="${dirs} arm/lpc24xx"
+dirs="${dirs} arm/lpc32xx"
+dirs="${dirs} arm/nds"
+dirs="${dirs} arm/raspberrypi"
+dirs="${dirs} arm/realview-pbx-a9"
+dirs="${dirs} arm/rtl22xx"
+dirs="${dirs} arm/smdk2410"
+dirs="${dirs} arm/stm32f4"
+dirs="${dirs} arm/xilinx-zynq"
+dirs="${dirs} bfin/eZKit533"
+dirs="${dirs} bfin/TLL6527M"
+dirs="${dirs} h8300/h8sim"
+dirs="${dirs} i386/pc386"
+dirs="${dirs} lm32/lm32_evr"
+dirs="${dirs} lm32/milkymist"
+dirs="${dirs} m32c/m32cbsp"
+dirs="${dirs} m32r/m32rsim"
+dirs="${dirs} m68k/av5282"
+dirs="${dirs} m68k/csb360"
+dirs="${dirs} m68k/gen68302"
+dirs="${dirs} m68k/gen68340"
+dirs="${dirs} m68k/gen68360"
+dirs="${dirs} m68k/genmcf548x"
+dirs="${dirs} m68k/idp"
+dirs="${dirs} m68k/mcf5206elite"
+dirs="${dirs} m68k/mcf52235"
+dirs="${dirs} m68k/mcf5225x"
+dirs="${dirs} m68k/mcf5235"
+dirs="${dirs} m68k/mcf5329"
+dirs="${dirs} m68k/mrm332"
+dirs="${dirs} m68k/mvme136"
+dirs="${dirs} m68k/mvme147"
+dirs="${dirs} m68k/mvme147s"
+dirs="${dirs} m68k/mvme162"
+dirs="${dirs} m68k/mvme167"
+dirs="${dirs} m68k/ods68302"
+dirs="${dirs} m68k/shared"
+dirs="${dirs} m68k/sim68000"
+dirs="${dirs} m68k/uC5282"
+dirs="${dirs} mips/csb350"
+dirs="${dirs} mips/genmongoosev"
+dirs="${dirs} mips/hurricane"
+dirs="${dirs} mips/jmr3904"
+dirs="${dirs} mips/malta"
+dirs="${dirs} mips/rbtx4925"
+dirs="${dirs} mips/rbtx4938"
+dirs="${dirs} powerpc/beatnik"
+dirs="${dirs} powerpc/ep1a"
+dirs="${dirs} powerpc/gen5200"
+dirs="${dirs} powerpc/gen83xx"
+dirs="${dirs} powerpc/haleakala"
+dirs="${dirs} powerpc/mbx8xx"
+dirs="${dirs} powerpc/motorola_powerpc"
+dirs="${dirs} powerpc/mpc55xxevb"
+dirs="${dirs} powerpc/mpc8260ads"
+dirs="${dirs} powerpc/mvme3100"
+dirs="${dirs} powerpc/mvme5500"
+dirs="${dirs} powerpc/psim"
+dirs="${dirs} powerpc/qemuppc"
+dirs="${dirs} powerpc/qoriq"
+dirs="${dirs} powerpc/score603e"
+dirs="${dirs} powerpc/ss555"
+dirs="${dirs} powerpc/t32mppc"
+dirs="${dirs} powerpc/tqm8xx"
+dirs="${dirs} powerpc/virtex"
+dirs="${dirs} powerpc/virtex4"
+dirs="${dirs} powerpc/virtex5"
+dirs="${dirs} sh/gensh1"
+dirs="${dirs} sh/gensh2"
+dirs="${dirs} sh/gensh4"
+dirs="${dirs} sh/shsim"
+dirs="${dirs} sparc/erc32"
+dirs="${dirs} sparc/leon2"
+dirs="${dirs} sparc/leon3"
+dirs="${dirs} sparc64/niagara"
+dirs="${dirs} sparc64/usiii"
+dirs="${dirs} v850/gdbv850sim"
+
+for d in ${dirs}
+do
+  do_directory ${d}
+done
+
+for infile in files_*
+do
+  # echo $infile
+
+  # now split
+  area=`echo ${infile} | sed -e 's/files_//'`
+  lines=`cat ${infile} | wc -l`
+  if [ ${lines} -eq 0 ] ; then
+    echo "${infile} is empty - Skipping"
+    continue
+  else
+    echo "${infile} has ${lines} files"
+  fi
+
+  split -l ${files_per_task} -d ${infile} ${outdir}/${area}_${basename}
+  for f in ${outdir}/${area}_${basename}*
+  do
+    mv ${f} ${f}.txt
+  done
+
+  # now generate tasks
+  #outfile=`echo $infile | sed -e s/.txt/.csv/`
+  #area=`echo ${d} | sed -e 's/\/src//' -e 's/\//_/g'`
+  area=`echo ${infile} | sed -e 's/files_//'`
+  outfile=tasks_for_${area}.csv
+  generate_tasks ${area} >$outfile
+done
+
+wc -l *.csv
+exit 0

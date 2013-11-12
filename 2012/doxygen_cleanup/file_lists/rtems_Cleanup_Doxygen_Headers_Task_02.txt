@@ -1,0 +1,14 @@
+cpukit/rtems/inline/rtems/rtems/tasks.inl
+cpukit/rtems/inline/rtems/rtems/message.inl
+cpukit/rtems/inline/rtems/rtems/part.inl
+cpukit/rtems/inline/rtems/rtems/options.inl
+cpukit/rtems/inline/rtems/rtems/status.inl
+cpukit/rtems/inline/rtems/rtems/event.inl
+cpukit/rtems/inline/rtems/rtems/eventset.inl
+cpukit/rtems/inline/rtems/rtems/sem.inl
+cpukit/rtems/inline/rtems/rtems/dpmem.inl
+cpukit/rtems/inline/rtems/rtems/modes.inl
+cpukit/rtems/inline/rtems/rtems/support.inl
+cpukit/rtems/inline/rtems/rtems/ratemon.inl
+cpukit/rtems/inline/rtems/rtems/attr.inl
+cpukit/rtems/mainpage.h

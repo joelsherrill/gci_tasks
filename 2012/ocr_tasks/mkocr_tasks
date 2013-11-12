@@ -1,0 +1,71 @@
+#! /bin/bash
+#
+# Create GCI 2012 OCR tasks
+
+# The CSV column names should be
+#   title, description, time_to_complete, mentors, types, tags
+
+if [ $# -lt 1 ] ; then
+  echo "usage: $0 FILES_WITH_TASK_DETAILS"
+  exit 1
+fi
+
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Convert_PDF_to_Text_for_Original_Requirements_Documents"
+
+generate_tasks()
+{
+  read std
+  read url
+
+  # echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=1
+  while read f1
+  do
+    read f2
+    title="${std} PDF to Text Conversion Task #${num}"
+    desc=""
+    desc="This task consists of uploading the files ${f1} and ${f2} to Google"
+    desc="${desc} Drive. Use Google Drive to perform OCR (PDF->text)."
+    desc="${desc} proofread the result. Then submit the resulting"
+    desc="${desc} Google Doc."
+    desc="${desc} Some formatting should be done but only enough to restore"
+    desc="${desc} the original look of the document including page breaks."
+    desc="${desc} The page numbers are from the PDF document and will NOT"
+    desc="${desc} match any page numbers from the original document.  Please"
+    desc="${desc} do not include header and footer text in your version."
+    desc="${desc} The PDF files maybe downloaded from ${url}. "
+    desc="${desc} For more details please see ${wiki_url}."
+    #desc="${desc} "
+    time_to_complete="48"
+    mentors=`../get_mentor ${num}`
+    type="Documentation/Training"
+    tags="PDF, scan, OCR, Google Drive, Project Gutenberg"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+    echo "\"${title}\", \"${desc}\", ${time_to_complete}, ${mentors}, ${type}, \"${tags}\""
+    num=`expr ${num} + 1`
+  done
+}
+
+for infile in $*
+do
+  if [ ! -r $infile ] ; then
+    echo $infile is not readable
+    exit 1
+  fi
+done
+
+
+for infile in $*
+do
+  outfile=`echo $infile | sed -e s/.txt/.csv/`
+  generate_tasks <$infile >$outfile
+done
+
+wc -l *.csv
+exit 0

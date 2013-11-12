@@ -1,0 +1,10 @@
+RTEMS Debug Extension 2.0
+http://rtems.org/ftp/pub/rtems/people/joel/RTEID-ORKID/RTEID-DebugExtension-2.0/split/
+RTEID-DebugExtension-p1-p5.pdf
+RTEID-DebugExtension-p6-p10.pdf
+RTEID-DebugExtension-p11-p15.pdf
+RTEID-DebugExtension-p16-p20.pdf
+RTEID-DebugExtension-p21-p25.pdf
+RTEID-DebugExtension-p26-p30.pdf
+RTEID-DebugExtension-p31-p35.pdf
+RTEID-DebugExtension-p36-p36.pdf

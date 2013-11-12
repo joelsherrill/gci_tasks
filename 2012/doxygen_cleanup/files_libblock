@@ -1,0 +1,11 @@
+cpukit/libblock/include/rtems/bdbuf.h
+cpukit/libblock/include/rtems/ide_part_table.h
+cpukit/libblock/include/rtems/ramdisk.h
+cpukit/libblock/include/rtems/bdpart.h
+cpukit/libblock/include/rtems/flashdisk.h
+cpukit/libblock/include/rtems/blkdev.h
+cpukit/libblock/include/rtems/diskdevs.h
+cpukit/libblock/include/rtems/media.h
+cpukit/libblock/include/rtems/sparse-disk.h
+cpukit/libblock/include/rtems/nvdisk.h
+cpukit/libblock/include/rtems/nvdisk-sram.h

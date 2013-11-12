@@ -1,0 +1,8 @@
+cpukit/libfs/src/devfs/devfs_mknod.c
+cpukit/libfs/src/devfs/devfs_init.c
+cpukit/libfs/src/devfs/devfs_eval.c
+cpukit/libfs/src/devfs/devread.c
+cpukit/libfs/src/devfs/devioctl.c
+cpukit/libfs/src/devfs/devwrite.c
+cpukit/libfs/src/devfs/devfs_node_type.c
+cpukit/libfs/src/devfs/devopen.c
