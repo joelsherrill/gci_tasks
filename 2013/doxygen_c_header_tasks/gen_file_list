@@ -22,7 +22,7 @@ do_directory()
   area_b=`echo ${area} | sed -e 's/\/src//' -e 's/\//_/g'`
 
   cd $b/
-  find ${area} -name "*.c" | while read f
+  find ${area} -name "*.[ch]" | while read f
   do
     grep "@brief" $f >/dev/null
     if [ $? -ne 0 ] ; then
