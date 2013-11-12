@@ -40,7 +40,7 @@ def generate_tasks(year, pages):
     tags = "wiki"
 
     print(title + ", " + description + ", " + time_to_complete + ", " + 
-        mentors + ", " + type + ", \"" + tags + "\"\n")
+        mentors + ", " + type + ", \"" + tags + "\"")
 
 def main():
   # default args
