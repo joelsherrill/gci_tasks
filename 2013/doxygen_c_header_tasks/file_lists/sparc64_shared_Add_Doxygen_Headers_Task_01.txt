@@ -1,0 +1,16 @@
+sparc64/shared/helenos/boot/include/align.h
+sparc64/shared/helenos/boot/include/main.h
+sparc64/shared/helenos/boot/include/ofw_tree.h
+sparc64/shared/helenos/boot/include/gentypes.h
+sparc64/shared/helenos/boot/include/ofw.h
+sparc64/shared/helenos/boot/include/register.h
+sparc64/shared/helenos/boot/include/ofwarch.h
+sparc64/shared/helenos/boot/include/types.h
+sparc64/shared/helenos/boot/include/balloc.h
+sparc64/shared/helenos/boot/sparc64/loader/main.c
+sparc64/shared/helenos/boot/genarch/balloc.c
+sparc64/shared/helenos/boot/genarch/ofw.c
+sparc64/shared/helenos/boot/genarch/ofw_tree.c
+sparc64/shared/startup/bspstart.c
+sparc64/shared/startup/setvec.c
+sparc64/shared/startup/bsppredriverhook.c

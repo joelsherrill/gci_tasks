@@ -1,0 +1,9 @@
+m68k/mcf5329/include/tm27.h
+m68k/mcf5329/include/bsp.h
+m68k/mcf5329/clock/clock.c
+m68k/mcf5329/console/console.c
+m68k/mcf5329/timer/timer.c
+m68k/mcf5329/startup/bspstart.c
+m68k/mcf5329/startup/cfinit.c
+m68k/mcf5329/startup/init5329.c
+m68k/mcf5329/network/network.c

@@ -1,0 +1,5 @@
+powerpc/mpc55xxevb/i2c/i2c_init.c
+powerpc/mpc55xxevb/console/console-config.c
+powerpc/mpc55xxevb/startup/bspworkareainit.c
+powerpc/mpc55xxevb/startup/restart.c
+powerpc/mpc55xxevb/network/if_smc.c

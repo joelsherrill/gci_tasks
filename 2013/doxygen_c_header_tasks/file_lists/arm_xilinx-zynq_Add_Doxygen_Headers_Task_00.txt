@@ -1,0 +1,11 @@
+arm/xilinx-zynq/include/tm27.h
+arm/xilinx-zynq/include/irq.h
+arm/xilinx-zynq/include/bsp.h
+arm/xilinx-zynq/include/zynq-uart.h
+arm/xilinx-zynq/include/cache_.h
+arm/xilinx-zynq/include/zynq-uart-regs.h
+arm/xilinx-zynq/console/console-config.c
+arm/xilinx-zynq/console/zynq-uart.c
+arm/xilinx-zynq/startup/bspstart.c
+arm/xilinx-zynq/startup/bspstarthooks.c
+arm/xilinx-zynq/startup/bspreset.c

@@ -1,0 +1,7 @@
+powerpc/virtex4/include/irq.h
+powerpc/virtex4/include/bsp.h
+powerpc/virtex4/include/coverhd.h
+powerpc/virtex4/irq/irq_init.c
+powerpc/virtex4/startup/bspstart.c
+powerpc/virtex4/startup/bspclean.c
+powerpc/virtex4/startup/dummy_console.c

@@ -1,0 +1,9 @@
+m68k/mcf52235/include/tm27.h
+m68k/mcf52235/include/bsp.h
+m68k/mcf52235/clock/clock.c
+m68k/mcf52235/console/debugio.c
+m68k/mcf52235/console/console.c
+m68k/mcf52235/timer/timer.c
+m68k/mcf52235/startup/init52235.c
+m68k/mcf52235/startup/bspgetcpuclockspeed.c
+m68k/mcf52235/startup/cfinit.c

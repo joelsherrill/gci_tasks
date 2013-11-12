@@ -1,0 +1,8 @@
+mips/rbtx4938/include/bsp.h
+mips/rbtx4938/irq/vectorisrs.c
+mips/rbtx4938/clock/clockdrv.c
+mips/rbtx4938/clock/yamon_api.h
+mips/rbtx4938/console/yamon_api.h
+mips/rbtx4938/console/console-io.c
+mips/rbtx4938/startup/bspstart.c
+mips/rbtx4938/startup/inittlb.c

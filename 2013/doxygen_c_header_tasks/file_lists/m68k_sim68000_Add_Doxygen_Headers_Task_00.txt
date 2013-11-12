@@ -1,0 +1,6 @@
+m68k/sim68000/include/bsp.h
+m68k/sim68000/clock/clockdrv.c
+m68k/sim68000/console/debugio.c
+m68k/sim68000/console/conscfg.c
+m68k/sim68000/startup/spurious_assistant.c
+m68k/sim68000/startup/bsppredriverhook.c

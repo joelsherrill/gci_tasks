@@ -1,0 +1,8 @@
+m68k/mvme147s/include/tm27.h
+m68k/mvme147s/include/bsp.h
+m68k/mvme147s/include/coverhd.h
+m68k/mvme147s/shmsupp/getcfg.c
+m68k/mvme147s/shmsupp/addrconv.c
+m68k/mvme147s/shmsupp/mpisr.c
+m68k/mvme147s/shmsupp/lock.c
+m68k/mvme147s/startup/bspstart.c

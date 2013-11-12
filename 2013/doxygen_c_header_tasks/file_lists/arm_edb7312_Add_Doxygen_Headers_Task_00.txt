@@ -1,0 +1,10 @@
+arm/edb7312/include/bsp.h
+arm/edb7312/include/ep7312.h
+arm/edb7312/irq/irq.h
+arm/edb7312/irq/irq.c
+arm/edb7312/clock/clockdrv.c
+arm/edb7312/console/uart.c
+arm/edb7312/timer/timer.c
+arm/edb7312/startup/bspstart.c
+arm/edb7312/startup/bspreset.c
+arm/edb7312/network/network.c

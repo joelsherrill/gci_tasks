@@ -1,0 +1,5 @@
+bfin/eZKit533/include/tm27.h
+bfin/eZKit533/include/cplb.h
+bfin/eZKit533/include/bsp.h
+bfin/eZKit533/console/console-io.c
+bfin/eZKit533/startup/bspstart.c

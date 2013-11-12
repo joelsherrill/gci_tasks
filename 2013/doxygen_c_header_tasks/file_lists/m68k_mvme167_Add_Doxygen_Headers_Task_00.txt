@@ -1,0 +1,12 @@
+m68k/mvme167/include/tm27.h
+m68k/mvme167/include/bsp.h
+m68k/mvme167/include/coverhd.h
+m68k/mvme167/include/page_table.h
+m68k/mvme167/clock/ckinit.c
+m68k/mvme167/console/console-recording.h
+m68k/mvme167/console/console.c
+m68k/mvme167/timer/timer.c
+m68k/mvme167/startup/page_table.c
+m68k/mvme167/startup/bspstart.c
+m68k/mvme167/network/uti596.h
+m68k/mvme167/network/network.c

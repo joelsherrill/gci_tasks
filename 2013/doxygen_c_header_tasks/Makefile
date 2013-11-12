@@ -3,5 +3,5 @@ all:
 	./gen_file_list
 
 clean:
-	rm -rf  txt_files/ csv files* *.csv
+	rm -rf  file_lists/* csv files* *.csv
 

@@ -1,0 +1,2 @@
+sparc64/usiii/include/tm27.h
+sparc64/usiii/include/bsp.h

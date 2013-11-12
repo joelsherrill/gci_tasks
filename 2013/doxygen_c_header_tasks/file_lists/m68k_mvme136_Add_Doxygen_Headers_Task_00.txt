@@ -1,0 +1,12 @@
+m68k/mvme136/include/tm27.h
+m68k/mvme136/include/bsp.h
+m68k/mvme136/include/coverhd.h
+m68k/mvme136/shmsupp/getcfg.c
+m68k/mvme136/shmsupp/addrconv.c
+m68k/mvme136/shmsupp/mpisr.c
+m68k/mvme136/shmsupp/lock.c
+m68k/mvme136/clock/ckinit.c
+m68k/mvme136/console/console.c
+m68k/mvme136/timer/timer.c
+m68k/mvme136/startup/bspstart.c
+m68k/mvme136/startup/bspclean.c

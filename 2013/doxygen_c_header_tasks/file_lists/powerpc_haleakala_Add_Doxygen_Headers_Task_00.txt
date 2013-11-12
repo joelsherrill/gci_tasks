@@ -1,0 +1,6 @@
+powerpc/haleakala/include/bsp.h
+powerpc/haleakala/include/coverhd.h
+powerpc/haleakala/irq/irq.h
+powerpc/haleakala/irq/irq.c
+powerpc/haleakala/irq/irq_init.c
+powerpc/haleakala/startup/bspstart.c

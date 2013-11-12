@@ -1,0 +1,15 @@
+powerpc/mbx8xx/include/8xx_immap.h
+powerpc/mbx8xx/include/bsp.h
+powerpc/mbx8xx/include/commproc.h
+powerpc/mbx8xx/include/coverhd.h
+powerpc/mbx8xx/include/mbx.h
+powerpc/mbx8xx/irq/irq.h
+powerpc/mbx8xx/irq/irq.c
+powerpc/mbx8xx/clock/p_clock.c
+powerpc/mbx8xx/ide/idecfg.c
+powerpc/mbx8xx/ide/pcmcia_ide.c
+powerpc/mbx8xx/console/console.c
+powerpc/mbx8xx/startup/bspstart.c
+powerpc/mbx8xx/startup/mmutlbtab.c
+powerpc/mbx8xx/startup/imbx8xx.c
+powerpc/mbx8xx/network/network.c

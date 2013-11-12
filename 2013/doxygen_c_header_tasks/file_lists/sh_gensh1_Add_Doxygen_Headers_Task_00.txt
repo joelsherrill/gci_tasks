@@ -1,0 +1,2 @@
+sh/gensh1/include/bsp.h
+sh/gensh1/include/coverhd.h

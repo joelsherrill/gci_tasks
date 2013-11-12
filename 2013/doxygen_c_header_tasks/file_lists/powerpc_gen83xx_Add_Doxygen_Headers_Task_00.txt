@@ -1,0 +1,13 @@
+powerpc/gen83xx/include/irq.h
+powerpc/gen83xx/include/tsec-config.h
+powerpc/gen83xx/include/hwreg_vals.h
+powerpc/gen83xx/include/bsp.h
+powerpc/gen83xx/include/u-boot-config.h
+powerpc/gen83xx/irq/irq.c
+powerpc/gen83xx/i2c/i2c_init.c
+powerpc/gen83xx/startup/uboot_support.c
+powerpc/gen83xx/startup/cpuinit.c
+powerpc/gen83xx/startup/bsprestart.c
+powerpc/gen83xx/startup/bspreset.c
+powerpc/gen83xx/network/network.c
+powerpc/gen83xx/spi/spi_init.c

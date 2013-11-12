@@ -1,0 +1,12 @@
+m68k/mvme162/include/tm27.h
+m68k/mvme162/include/bsp.h
+m68k/mvme162/include/coverhd.h
+m68k/mvme162/include/page_table.h
+m68k/mvme162/tod/tod.c
+m68k/mvme162/clock/ckinit.c
+m68k/mvme162/console/console.c
+m68k/mvme162/timer/timer.c
+m68k/mvme162/startup/page_table.c
+m68k/mvme162/startup/bspstart.c
+m68k/mvme162/startup/bspclean.c
+m68k/mvme162/tools/sload.c

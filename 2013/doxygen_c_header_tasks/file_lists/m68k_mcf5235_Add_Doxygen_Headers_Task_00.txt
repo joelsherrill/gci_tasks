@@ -1,0 +1,9 @@
+m68k/mcf5235/include/tm27.h
+m68k/mcf5235/include/bsp.h
+m68k/mcf5235/clock/clock.c
+m68k/mcf5235/console/console.c
+m68k/mcf5235/timer/timer.c
+m68k/mcf5235/startup/bspstart.c
+m68k/mcf5235/startup/init5235.c
+m68k/mcf5235/startup/bspgetcpuclockspeed.c
+m68k/mcf5235/network/network.c

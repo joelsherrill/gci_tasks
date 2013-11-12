@@ -1,0 +1,14 @@
+powerpc/mvme3100/include/bsp.h
+powerpc/mvme3100/tod/todcfg.c
+powerpc/mvme3100/irq/irq.h
+powerpc/mvme3100/irq/irq_init.c
+powerpc/mvme3100/vme/VMEConfig.h
+powerpc/mvme3100/pci/detect_host_bridge.c
+powerpc/mvme3100/i2c/mpc8540_i2c.c
+powerpc/mvme3100/i2c/mpc8540_i2c_busdrv.h
+powerpc/mvme3100/i2c/i2c_init.c
+powerpc/mvme3100/flash/flashcfg.c
+powerpc/mvme3100/startup/misc.c
+powerpc/mvme3100/startup/bspstart.c
+powerpc/mvme3100/network/tsec.c
+powerpc/mvme3100/network/if_tsec_pub.h

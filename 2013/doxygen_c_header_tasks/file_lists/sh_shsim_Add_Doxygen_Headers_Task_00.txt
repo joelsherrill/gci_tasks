@@ -1,0 +1,3 @@
+sh/shsim/include/bsp.h
+sh/shsim/include/syscall.h
+sh/shsim/trap34/console-io.c

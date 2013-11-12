@@ -1,0 +1,2 @@
+sparc/leon2/cchip/cchip.c
+sparc/leon2/leon_open_eth/leon_open_eth.c

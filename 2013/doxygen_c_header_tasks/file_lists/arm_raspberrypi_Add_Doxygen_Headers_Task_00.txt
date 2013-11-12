@@ -1,0 +1,5 @@
+arm/raspberrypi/include/usart.h
+arm/raspberrypi/clock/clockdrv.c
+arm/raspberrypi/console/usart.c
+arm/raspberrypi/console/console-config.c
+arm/raspberrypi/startup/mm_config_table.c

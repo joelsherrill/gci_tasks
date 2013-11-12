@@ -1,0 +1,6 @@
+mips/rbtx4925/include/bsp.h
+mips/rbtx4925/irq/vectorisrs.c
+mips/rbtx4925/clock/clockdrv.c
+mips/rbtx4925/console/console-io.c
+mips/rbtx4925/startup/bspstart.c
+mips/rbtx4925/startup/inittlb.c

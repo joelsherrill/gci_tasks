@@ -1,0 +1,6 @@
+powerpc/t32mppc/include/irq.h
+powerpc/t32mppc/include/bsp.h
+powerpc/t32mppc/irq/irq.c
+powerpc/t32mppc/console/console-config.c
+powerpc/t32mppc/startup/bspstart.c
+powerpc/t32mppc/startup/bspreset.c

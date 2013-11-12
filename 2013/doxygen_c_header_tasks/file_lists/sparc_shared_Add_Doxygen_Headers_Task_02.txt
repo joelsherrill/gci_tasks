@@ -1,0 +1,10 @@
+sparc/shared/amba/ambapp_alloc.c
+sparc/shared/amba/ambapp_names.c
+sparc/shared/amba/ambapp_depth.c
+sparc/shared/amba/ambapp_freq.c
+sparc/shared/amba/ambapp_show.c
+sparc/shared/amba/ambapp.c
+sparc/shared/amba/ambapp_parent.c
+sparc/shared/amba/ambapp_count.c
+sparc/shared/startup/bspfatalextension.c
+sparc/shared/startup/early_malloc.c

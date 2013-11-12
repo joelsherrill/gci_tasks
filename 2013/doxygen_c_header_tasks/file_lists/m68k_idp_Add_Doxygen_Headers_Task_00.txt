@@ -1,0 +1,9 @@
+m68k/idp/include/bsp.h
+m68k/idp/include/leds.h
+m68k/idp/clock/ckinit.c
+m68k/idp/console/leds.c
+m68k/idp/console/mc68ec.c
+m68k/idp/console/duart.c
+m68k/idp/console/console.c
+m68k/idp/timer/timer.c
+m68k/idp/startup/bspstart.c

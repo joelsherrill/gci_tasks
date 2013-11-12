@@ -1,0 +1,11 @@
+powerpc/virtex/include/bsp.h
+powerpc/virtex/include/coverhd.h
+powerpc/virtex/include/opbintctrl.h
+powerpc/virtex/include/xparameters_dflt.h
+powerpc/virtex/irq/irq.h
+powerpc/virtex/irq/irq_init.c
+powerpc/virtex/console/consolelite.c
+powerpc/virtex/timer/timer-config.c
+powerpc/virtex/startup/bspstart.c
+powerpc/virtex/network/xiltemac.c
+powerpc/virtex/network/xiltemac.h

@@ -1,0 +1,7 @@
+powerpc/qemuppc/include/bsp.h
+powerpc/qemuppc/irq/irq.h
+powerpc/qemuppc/irq/irq_init.c
+powerpc/qemuppc/console/console-io.c
+powerpc/qemuppc/startup/cmain.c
+powerpc/qemuppc/startup/bspstart.c
+powerpc/qemuppc/startup/bsppanic.c

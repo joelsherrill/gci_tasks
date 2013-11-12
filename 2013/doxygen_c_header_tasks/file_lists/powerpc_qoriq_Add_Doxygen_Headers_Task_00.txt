@@ -1,0 +1,4 @@
+powerpc/qoriq/include/hwreg_vals.h
+powerpc/qoriq/include/u-boot-config.h
+powerpc/qoriq/startup/smp.c
+powerpc/qoriq/network/if_intercom.c

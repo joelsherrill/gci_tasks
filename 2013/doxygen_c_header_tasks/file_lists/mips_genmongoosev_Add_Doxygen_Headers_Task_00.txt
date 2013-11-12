@@ -1,0 +1,13 @@
+mips/genmongoosev/include/tm27.h
+mips/genmongoosev/include/lr33000.h
+mips/genmongoosev/include/bsp.h
+mips/genmongoosev/include/lr333x0.h
+mips/genmongoosev/include/r3000.h
+mips/genmongoosev/irq/vectorisrs.c
+mips/genmongoosev/clock/clockdrv.c
+mips/genmongoosev/console/conscfg.c
+mips/genmongoosev/start/mg5.h
+mips/genmongoosev/start/regs.h
+mips/genmongoosev/timer/timer.c
+mips/genmongoosev/startup/gdb-support.c
+mips/genmongoosev/startup/bspstart.c

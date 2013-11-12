@@ -2,9 +2,12 @@
 
 basename=Add_Doxygen_Headers_Task_
 files_per_task=20
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"
+url="https://github.com/joelsherrill/gci_tasks/tree/master/2013/doxygen_c_header_tasks/file_lists"
+
 
 base=`pwd`
-outdir=${base}/txt_files
+outdir=${base}/file_lists
 rm -rf ${outdir}
 mkdir ${outdir}
 
@@ -32,13 +35,10 @@ do_directory()
   cd - >/dev/null 2>&1
 }
 
-wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"
-
 generate_tasks()
 {
   area=${1}
   area_b=`echo ${area} | sed -e 's/\/src//'`
-  url="http://rtems.org/ftp/pub/rtems/people/joel/gci2013/Doxygen_Tasks_1"
 
   #echo "${area} ${area_b}"
   # row headings do not have to be printed

@@ -1,0 +1,11 @@
+arm/shared/arm-cp15-set-exception-handler.c
+arm/shared/mminit.c
+arm/shared/comm/uart.h
+arm/shared/comm/uart.c
+arm/shared/arm-pl011.c
+arm/shared/arm-a9mpcore-clock-config.c
+arm/shared/armv7m/include/armv7m-irq.h
+arm/shared/armv7m/irq/armv7m-irq.c
+arm/shared/armv7m/irq/armv7m-irq-dispatch.c
+arm/shared/armv7m/clock/armv7m-clock-config.c
+arm/shared/arm-pl050.c

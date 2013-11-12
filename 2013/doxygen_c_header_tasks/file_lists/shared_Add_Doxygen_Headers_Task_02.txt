@@ -1,0 +1,12 @@
+shared/src/irq-default-handler.c
+shared/bspreset.c
+shared/bspclean.c
+shared/clockdrv_shell.h
+shared/bsplibc.c
+shared/setvec.c
+shared/smp/getcpuid.c
+shared/smp/smp_stub.c
+shared/console_select_simple.c
+shared/tod.c
+shared/bsppredriverhook.c
+shared/gnatinstallhandler.c

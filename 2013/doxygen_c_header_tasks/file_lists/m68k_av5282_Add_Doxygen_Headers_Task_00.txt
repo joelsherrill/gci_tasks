@@ -1,0 +1,8 @@
+m68k/av5282/include/tm27.h
+m68k/av5282/include/bsp.h
+m68k/av5282/clock/clock.c
+m68k/av5282/console/console.c
+m68k/av5282/timer/timer.c
+m68k/av5282/startup/init5282.c
+m68k/av5282/startup/bspstart.c
+m68k/av5282/network/network.c

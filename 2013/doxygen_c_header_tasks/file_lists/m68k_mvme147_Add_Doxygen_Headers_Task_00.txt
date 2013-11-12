@@ -1,0 +1,8 @@
+m68k/mvme147/include/tm27.h
+m68k/mvme147/include/bsp.h
+m68k/mvme147/include/coverhd.h
+m68k/mvme147/clock/ckinit.c
+m68k/mvme147/console/console.c
+m68k/mvme147/timer/timer.c
+m68k/mvme147/startup/bspstart.c
+m68k/mvme147/startup/bspclean.c

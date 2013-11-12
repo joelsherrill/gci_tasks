@@ -1,0 +1,4 @@
+powerpc/score603e/startup/Hwr_init.c
+powerpc/score603e/startup/vmeintr.c
+powerpc/score603e/startup/genpvec.c
+powerpc/score603e/startup/bspstart.c

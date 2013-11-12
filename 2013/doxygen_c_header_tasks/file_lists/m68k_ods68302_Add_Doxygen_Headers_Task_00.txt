@@ -1,0 +1,17 @@
+m68k/ods68302/include/m68302scc.h
+m68k/ods68302/include/crc.h
+m68k/ods68302/include/bsp.h
+m68k/ods68302/include/bare.h
+m68k/ods68302/include/coverhd.h
+m68k/ods68302/include/debugport.h
+m68k/ods68302/clock/ckinit.c
+m68k/ods68302/console/console.c
+m68k/ods68302/timer/timer.c
+m68k/ods68302/startup/debugport.c
+m68k/ods68302/startup/gdb-hooks.c
+m68k/ods68302/startup/m68302scc.c
+m68k/ods68302/startup/trace.c
+m68k/ods68302/startup/cpuboot.c
+m68k/ods68302/startup/m68k-stub.c
+m68k/ods68302/startup/memcheck.c
+m68k/ods68302/startup/crc.c

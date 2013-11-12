@@ -1,0 +1,8 @@
+m68k/genmcf548x/include/tm27.h
+m68k/genmcf548x/include/bsp.h
+m68k/genmcf548x/clock/clock.c
+m68k/genmcf548x/console/console.c
+m68k/genmcf548x/timer/timer.c
+m68k/genmcf548x/startup/init548x.c
+m68k/genmcf548x/startup/bspstart.c
+m68k/genmcf548x/network/network.c

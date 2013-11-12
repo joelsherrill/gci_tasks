@@ -1,0 +1,8 @@
+arm/realview-pbx-a9/include/tm27.h
+arm/realview-pbx-a9/include/irq.h
+arm/realview-pbx-a9/include/bsp.h
+arm/realview-pbx-a9/console/console-config.c
+arm/realview-pbx-a9/startup/bspstart.c
+arm/realview-pbx-a9/startup/bspstarthooks.c
+arm/realview-pbx-a9/startup/bspreset.c
+arm/realview-pbx-a9/startup/fb-config.c

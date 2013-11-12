@@ -1,0 +1,3 @@
+powerpc/shared/motorola/motorola.c
+powerpc/shared/motorola/vpd.c
+powerpc/shared/motorola/motorola.h

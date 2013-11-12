@@ -1,0 +1,10 @@
+powerpc/gen5200/i2c/i2c.c
+powerpc/gen5200/console/console.c
+powerpc/gen5200/startup/uboot_support.c
+powerpc/gen5200/startup/cpuinit.c
+powerpc/gen5200/startup/bspstart.c
+powerpc/gen5200/startup/bestcomm.c
+powerpc/gen5200/startup/bspreset.c
+powerpc/gen5200/nvram/nvram.c
+powerpc/gen5200/nvram/m93cxx.h
+powerpc/gen5200/nvram/nvram.h
