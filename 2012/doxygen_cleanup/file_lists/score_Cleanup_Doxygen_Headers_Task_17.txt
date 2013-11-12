@@ -1,0 +1,12 @@
+cpukit/score/inline/rtems/score/prioritybitmap.inl
+cpukit/score/inline/rtems/score/rbtree.inl
+cpukit/score/inline/rtems/score/threadmp.inl
+cpukit/score/inline/rtems/score/schedulerpriority.inl
+cpukit/score/inline/rtems/score/schedulersimple.inl
+cpukit/score/inline/rtems/score/watchdog.inl
+cpukit/score/inline/rtems/score/coremutex.inl
+cpukit/score/inline/rtems/score/priority.inl
+cpukit/score/inline/rtems/score/address.inl
+cpukit/score/inline/rtems/score/heap.inl
+cpukit/score/inline/rtems/score/wkspace.inl
+cpukit/score/inline/rtems/score/threadq.inl

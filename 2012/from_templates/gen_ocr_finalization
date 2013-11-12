@@ -1,0 +1,38 @@
+#! /bin/sh
+#
+#  Generate CSV set of OCR Finalization Tasks
+#
+input=Template_OCR_Finalization.csv
+output=Tasks_OCR_Finalization.csv
+cp /dev/null ${output}
+
+task=0
+
+# FIX ME
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#XXX"
+
+echo "title, description, time_to_complete, mentors, types, tags" >>${output}
+while read standard
+do
+  read pieces_url
+
+  # hack to get a good mentor - normally get_mentor rotates 
+  # mentor="joel_sherrill"
+  mentor=`../get_mentor ${task}`
+
+  echo "${mentor} - ${project}"
+
+  sed -e "s,@PROJECT@,${project},g" \
+      -e "s,@MENTOR@,${mentor},g" \
+      -e "s,@PIECES_URL@,${pieces_url},g" \
+      -e "s,@WIKI_URL@,${wiki_url},g" \
+   <${input} >>${output}
+
+  task=`expr ${task} + 1`
+
+done <<EOF
+RTEID 2.1
+URL for pieces
+FIXME
+EOF
+exit 0

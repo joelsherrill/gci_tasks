@@ -1,0 +1,14 @@
+cpukit/libmisc/bspcmdline/bspcmdline.h
+cpukit/libmisc/cpuuse/cpuuse.h
+cpukit/libmisc/devnull/devnull.h
+cpukit/libmisc/devnull/devzero.h
+cpukit/libmisc/dumpbuf/dumpbuf.h
+cpukit/libmisc/fb/mw_uid.h
+cpukit/libmisc/fb/fb.h
+cpukit/libmisc/fsmount/fsmount.h
+cpukit/libmisc/mouse/serial_mouse.h
+cpukit/libmisc/mouse/mouse_parser.h
+cpukit/libmisc/stackchk/stackchk.h
+cpukit/libmisc/stackchk/internal.h
+cpukit/libmisc/stringto/stringto.h
+cpukit/libmisc/untar/untar.h

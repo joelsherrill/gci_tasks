@@ -1,0 +1,8 @@
+cpukit/libmisc/stringto/stringtounsignedint.c
+cpukit/libmisc/stringto/stringtolonglong.c
+cpukit/libmisc/stringto/stringtounsignedlong.c
+cpukit/libmisc/stringto/stringtodouble.c
+cpukit/libmisc/stringto/stringtopointer.c
+cpukit/libmisc/stringto/stringtolong.c
+cpukit/libmisc/stringto/stringtoint.c
+cpukit/libmisc/untar/untar.c

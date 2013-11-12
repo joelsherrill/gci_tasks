@@ -1,0 +1,11 @@
+cpukit/libfs/src/rfs/rtems-rfs-group.h
+cpukit/libfs/src/nfsclient/proto/mount_prot.h
+cpukit/libfs/src/nfsclient/proto/nfs_prot.h
+cpukit/libfs/src/nfsclient/src/librtemsNfs.h
+cpukit/libfs/src/nfsclient/src/rpcio.h
+cpukit/libfs/src/dosfs/fat_file.h
+cpukit/libfs/src/dosfs/fat_fat_operations.h
+cpukit/libfs/src/dosfs/msdos.h
+cpukit/libfs/src/dosfs/fat.h
+cpukit/libfs/src/dosfs/dosfs.h
+cpukit/libfs/src/devfs/devfs.h

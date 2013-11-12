@@ -1,0 +1,34 @@
+#! /bin/sh
+#
+#  Generate CSV set of Application Flyers for GCI 2011
+#
+input=Template_ApplicationFlyer.csv
+output=Tasks_ApplicationFlyers.csv
+cp /dev/null ${output}
+
+task=0
+
+while read line
+do
+  project=$line
+
+  case `expr ${task} % 2` in
+    0) mentor=juli1 ;;
+    1) mentor=jenniferaverettoarcorp ;;
+    *) echo "Not a mentor number" ; exit 1 ;;
+  esac
+
+  echo "${mentor} - ${project}"
+
+  sed -e "s,@PROJECT@,${project},g" \
+      -e "s,@MENTOR@,${mentor},g" \
+   <${input} >>${output}
+
+  task=`expr ${task} + 1`
+
+done <<EOF
+ESA Proba2 Mission
+EMFISIS Instrument suite on RBSP
+ESA ProbaV Mission
+FIELDS Instrument suite on MMS.
+EOF

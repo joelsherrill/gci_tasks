@@ -1,0 +1,56 @@
+#! /bin/sh
+#
+#  Generate CSV set of BSP List Items for GCI 2011
+#
+input=Template_BSPList.csv
+output=Tasks_BSPList.csv
+cp /dev/null ${output}
+
+task=0
+
+while read line
+do
+  start=`echo $line | cut -d' ' -f1`
+  end=`echo $line | cut -d' ' -f2`
+  difficulty=`echo $line | cut -d' ' -f3`
+  if [ "X${start}" = "X" ] ; then
+    echo ERROR no start
+    exit 1
+  fi
+
+  case `expr ${task} % 6` in
+    0) mentor="jenniferaverettoarcorp," ;;
+    1) mentor="joel_sherrill" ;;
+    2) mentor="eugenl," ;;
+    3) mentor="aanjhan," ;;
+    4) mentor="amartakhar," ;;
+    5) mentor="hiddenpearls," ;;
+    *) echo "Not a mentor number" ; exit 1 ;;
+  esac
+
+  echo "${mentor} - ${start} to ${end} (${difficulty})"
+
+  sed -e "s/@MENTOR@/${mentor}joel_sherrill/g" \
+      -e "s/@START@/${start}/g" \
+      -e "s/@END@/${end}/g" \
+      -e "s/@DIFFICULTY@/${difficulty}/g" \
+   <${input} >>${output}
+  
+  task=`expr ${task} + 1`
+
+done <<EOF
+2 12 Medium
+13 22 Medium
+23 32 Medium
+33 42 Medium
+43 52 Medium
+53 62 Medium
+63 72 Medium
+73 82 Medium
+83 92 Medium
+93 102 Medium
+103 112 Medium
+113 122 Medium
+123 132 Medium
+133 138 Easy
+EOF

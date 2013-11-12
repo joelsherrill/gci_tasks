@@ -1,0 +1,13 @@
+cpukit/libcsupport/src/printk.c
+cpukit/libcsupport/src/issetugid.c
+cpukit/libcsupport/src/fsync.c
+cpukit/libcsupport/src/rmdir.c
+cpukit/libcsupport/src/privateenv.c
+cpukit/libcsupport/src/lstat.c
+cpukit/libcsupport/src/seteuid.c
+cpukit/libcsupport/src/rtems_memalign.c
+cpukit/libcsupport/src/fpathconf.c
+cpukit/libcsupport/src/gxx_wrappers.c
+cpukit/libcsupport/src/mount.c
+cpukit/libcsupport/src/clonenode.c
+cpukit/libcsupport/src/pathconf.c

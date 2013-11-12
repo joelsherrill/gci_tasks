@@ -1,0 +1,56 @@
+#! /bin/sh
+#
+#  Generate CSV set of Moodle Tasks for GCI 2011
+#
+input=Template_MoodleQuestions.csv
+output=Tasks_MoodleQuestions.csv
+cp /dev/null ${output}
+
+task=0
+
+while read line
+do
+  chapter=$line
+
+  case `expr ${task} % 2` in
+    0) mentor=jenniferaverettoarcorp ;;
+    1) mentor=joel_sherrill ;;
+    *) echo "Not a mentor number" ; exit 1 ;;
+  esac
+
+  echo "${mentor} - ${chapter}"
+
+  sed -e "s,@CHAPTER@,${chapter},g" \
+      -e "s,@MENTOR@,${mentor},g" \
+   <${input} >>${output}
+  
+  task=`expr ${task} + 1`
+
+done <<EOF
+Key Concepts
+RTEMS Data Types
+Initialization Manager
+Interrupt Manager
+Clock Manager
+Timer Manager
+Semaphore Manager
+Message Manager
+Event Manager
+Signal Manager
+Partition Manager
+Region Manager
+Dual-Ported Memory Manager
+I/O Manager
+Fatal Error Manager
+Scheduling Concepts
+Rate Monotonic Manager
+Barrier Manager
+Board Support Packages
+User Extensions Manager
+Configuring a System
+Multiprocessing Manager
+Stack Bounds Checker
+CPU Usage Statistics
+Object Services
+Chains
+EOF

@@ -1,0 +1,8 @@
+
+
+The RTEMS Project is proud to be included in the Google Summer of Code 2010. We have been busy in the off-season getting ready for potential students. We have updated the Open Projects and RTEMS Summer of Code pages in the Wiki and begun to promote GSOC. An RTEMS Project GSOC flyer is available as part of the standard GSOC downloads.
+
+We now have a Fedora 12 RTEMS Development environment virtual image (torrent). This was created and tested using VirtualBox. The virtual image includes SPARC and i386 target support as well as Eclipse with the RTEMS plugin. Simulators are included for the SPARC/sis BSP and i386/pc386. A version of Qemu with coverage support is installed and configured to support testing networked applications with the pc386 BSP. Students without a dedicated Linux computer are encouraged to use this. See this page for more details.
+
+We have a Google Docs Proposal Template we encourage you to follow. You should also be aware that we do NOT want you to fail so we require all students to do a simple hello world project to prove they can do something basic with RTEMS. Don't worry! We are friendly and will help as much as we can. Visit us at #rtems at freenode.net or join the mailing list.
+

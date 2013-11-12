@@ -1,0 +1,9 @@
+rtems/monitor.h
+rtems/shell.h
+rtems/fs.h
+rtems/devzero.h
+rtems.h
+semaphore.h
+sys/utsname.h
+sys/statvfs.h
+sys/termios.h

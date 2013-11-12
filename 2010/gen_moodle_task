@@ -1,0 +1,47 @@
+lines=0
+file=1
+rm -f TASKS.*
+cp /dev/null TASKS.${file}
+
+while read line
+do
+  chapter=$line
+
+  sed -e "s,@CHAPTER@,${chapter},g" \
+   <MoodleTaskTemplate.csv \
+   >>TASKS.${file}
+  lines=`expr ${lines} + 1`
+  if [ ${lines} -eq 6 ] ; then
+    file=`expr ${file} + 1`
+    cp /dev/null TASKS.${file}
+    lines=0
+  fi
+  
+done <<EOF
+Key Concepts
+RTEMS Data Types
+Initialization Manager
+Interrupt Manager
+Clock Manager
+Timer Manager
+Semaphore Manager
+Message Manager
+Event Manager
+Signal Manager
+Partition Manager
+Region Manager
+Dual-Ported Memory Manager
+I/O Manager
+Fatal Error Manager
+Scheduling Concepts
+Rate Monotonic Manager
+Barrier Manager
+Board Support Packages
+User Extensions Manager
+Configuring a System
+Multiprocessing Manager
+Stack Bounds Checker
+CPU Usage Statistics
+Object Services
+Chains
+EOF

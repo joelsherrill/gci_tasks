@@ -1,0 +1,15 @@
+cpukit/posix/include/rtems/posix/posixapi.h
+cpukit/posix/include/rtems/posix/mutex.h
+cpukit/posix/include/rtems/posix/semaphore.h
+cpukit/posix/include/semaphore.h
+cpukit/posix/inline/rtems/posix/barrier.inl
+cpukit/posix/inline/rtems/posix/timer.inl
+cpukit/posix/inline/rtems/posix/mutex.inl
+cpukit/posix/inline/rtems/posix/cond.inl
+cpukit/posix/inline/rtems/posix/pthread.inl
+cpukit/posix/inline/rtems/posix/semaphore.inl
+cpukit/posix/inline/rtems/posix/mqueue.inl
+cpukit/posix/inline/rtems/posix/key.inl
+cpukit/posix/inline/rtems/posix/priority.inl
+cpukit/posix/inline/rtems/posix/spinlock.inl
+cpukit/posix/inline/rtems/posix/rwlock.inl

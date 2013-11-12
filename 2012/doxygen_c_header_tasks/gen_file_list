@@ -1,0 +1,124 @@
+#! /bin/sh
+
+basename=Add_Doxygen_Headers_Task_
+
+base=`pwd`
+outdir=${base}/txt_files
+rm -rf ${outdir}
+mkdir ${outdir}
+
+do_directory()
+{
+  area=$1
+
+  area_b=`echo ${area} | sed -e 's/\/src//' -e 's/\//_/g'`
+
+  cd $r/
+  find cpukit/${area} -name "*.c" | while read f
+  do
+    grep "@brief" $f >/dev/null
+    if [ $? -ne 0 ] ; then
+      echo $f
+    fi
+  done >${base}/files_${area_b}
+
+}
+
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_Doxygen_File_Headers"
+
+generate_tasks()
+{
+  area=cpukit/${1}
+  area_b=`echo ${area} | sed -e 's/\/src//'`
+  url="http://rtems.org/ftp/pub/rtems/people/joel/Doxygen_Tasks"
+
+  # row headings do not have to be printed
+  #echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=1
+  for f1 in ${outdir}/${1}_${basename}*
+  do
+    f=`basename $f1`
+    title="${area} Doxygen Enhancement Task #${num}"
+    desc=""
+    desc="${desc} This task consists of editing the files listed in"
+    desc="${desc} <a href=${url}/${f}>${url}/${f}></a> per the"
+    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} A patch generated using git diff will need"
+    desc="${desc} to be submitted to fulfill this task. This patch"
+    desc="${desc} will be reviewed by the mentors and suggestions"
+    desc="${desc} are likely to be made."
+    time_to_complete="72"
+    mentors=`../get_mentor ${num}`
+    type="Code"
+    tags="C, Doxygen"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+    num=`expr ${num} + 1`
+  done
+}
+
+#for infile in $*
+#do
+#  if [ ! -r $infile ] ; then
+#    echo $infile is not readable
+#    exit 1
+#  fi
+#done
+
+#dirs="score sapi rtems libcsupport"
+dirs="posix libblock libfs"
+dirs="${dirs} libmisc/bspcmdline"
+dirs="${dirs} libmisc/cpuuse"
+dirs="${dirs} libmisc/devnull"
+dirs="${dirs} libmisc/dumpbuf"
+dirs="${dirs} libmisc/fb"
+dirs="${dirs} libmisc/fsmount"
+dirs="${dirs} libmisc/mouse"
+dirs="${dirs} libmisc/stackchk"
+dirs="${dirs} libmisc/stringto"
+dirs="${dirs} libmisc/untar"
+
+for d in ${dirs}
+do
+  do_directory ${d}
+done
+
+# Merge libmisc subdirectories
+cd ${base}
+count=`ls -1 files_libmisc* 2>/dev/null | wc -l`
+if [ ${count} -ne 0 ] ; then
+  echo "Merging libmisc subdirectory file lists"
+  cat files_libmisc_* >files_libmisc
+  rm -f files_libmisc_*
+fi
+
+for infile in files_*
+do
+  echo $infile
+
+  # now split
+  area=`echo ${infile} | sed -e 's/files_//'`
+  split -l 20 -d ${infile} ${outdir}/${area}_${basename}
+
+  for f in ${outdir}/${area}_${basename}*
+  do
+    mv ${f} ${f}.txt
+  done
+
+  # now generate tasks
+  #outfile=`echo $infile | sed -e s/.txt/.csv/`
+  #area=`echo ${d} | sed -e 's/\/src//' -e 's/\//_/g'`
+  area=`echo ${infile} | sed -e 's/files_//'`
+  outfile=tasks_for_${area}.csv
+  generate_tasks ${area} >$outfile
+done
+
+wc -l *.csv
+exit 0

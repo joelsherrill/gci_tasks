@@ -1,0 +1,8 @@
+cpukit/score/cpu/nios2/nios2-initialize-vectors.c
+cpukit/score/cpu/nios2/nios2-mpu-add-region.c
+cpukit/score/cpu/nios2/nios2-fatal-halt.c
+cpukit/score/cpu/nios2/nios2-context-initialize.c
+cpukit/score/cpu/nios2/nios2-mpu-reset.c
+cpukit/score/cpu/nios2/nios2-isr-is-in-progress.c
+cpukit/score/cpu/nios2/nios2-mpu-configuration.c
+cpukit/score/cpu/nios2/nios2-isr-get-level.c

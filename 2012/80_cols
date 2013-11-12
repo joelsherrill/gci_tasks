@@ -1,0 +1,3 @@
+Another idea would be to break up lines > 80 characters
+$> grep '.\{80,\}' -nR *
+prints them out. this takes some thought at least.

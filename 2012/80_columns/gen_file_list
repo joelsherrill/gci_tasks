@@ -1,0 +1,102 @@
+#! /bin/sh
+
+basename=Fix_Lines_Greater_Than_80_Columns_
+
+if [ "X${r}" = "X" ] ; then
+  echo "RTEMS directory not set -- set environment variable r"
+  exit 1
+fi
+
+if [ ! -r ${r}/LICENSE.NET ]; then
+  echo "Environment variable r does not appear to be an RTEMS directory"
+  exit 1
+fi
+
+base=`pwd`
+outdir=${base}/txt_files
+rm -rf ${outdir}
+mkdir ${outdir}
+
+# XXX FIXME
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Fix_80_Columns"
+
+generate_tasks()
+{
+  url="http://rtems.org/ftp/pub/rtems/people/joel/Doxygen_Tasks"
+
+  # row headings do not have to be printed
+  #echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=1
+  for f1 in ${outdir}/${1}_${basename}*
+  do
+    f=`basename $f1`
+    title="Fix Files With Lines Greater Than 80 Columns Task #${num}"
+    desc=""
+    desc="${desc} This task consists of editing the files listed in"
+    desc="${desc} <a href=${url}/${f}>${url}/${f}</a> per the"
+    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} A patch generated using git diff will need"
+    desc="${desc} to be submitted to fulfill this task. This patch"
+    desc="${desc} will be reviewed by the mentors and suggestions"
+    desc="${desc} are likely to be made."
+    time_to_complete="72"
+    mentors=`../get_mentor ${num}`
+    type="Code"
+    tags="C"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+    num=`expr ${num} + 1`
+  done
+}
+
+# Find files with lines greater than 80 columns
+cd $r
+find cpukit/ -name "*.[ch]" -o -name "*.inl" | \
+  xargs -e grep -ln '.\{79,\}' | \
+  sed -e '/cpukit\/mghttpd/d' \
+      -e '/cpukit\/score\/cpu\/avr/d' \
+      -e '/cpukit\/libnetworking/d' \
+      -e '/cpukit\/pppd/d' \
+      -e '/cpukit\/librpc/d' \
+| while read f 
+do
+  grep "The Regents of the University of California." $f >/dev/null
+  test $? -ne 0 && echo $f
+done \
+>${base}/files_cpukit
+
+files=`cat ${base}/files_cpukit | wc -l`
+cat ${base}/files_cpukit | xargs -e grep -n '.\{79,\}' \
+    >${base}/greater_than_80.txt
+count=`cat ${base}/greater_than_80.txt | wc -l`
+
+echo ${count} lines exceed 80 columns in ${files} files
+
+# Now split
+cd ${base}
+for infile in files_*
+do
+  echo $infile
+
+  # now split
+  area=`echo ${infile} | sed -e 's/files_//'`
+  split -l 20 -d ${infile} ${outdir}/${area}_${basename}
+
+  for f in ${outdir}/${area}_${basename}*
+  do
+    mv ${f} ${f}.txt
+  done
+
+  outfile=tasks_for_${area}.csv
+  generate_tasks ${area} >$outfile
+done
+
+wc -l *.csv
+exit 0
