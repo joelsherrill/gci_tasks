@@ -40,7 +40,7 @@ generate_tasks()
   area_b=`echo ${area} | sed -e 's/\/src//'`
   url="http://rtems.org/ftp/pub/rtems/people/joel/gci2013/Doxygen_Tasks_1"
 
-echo "${area} ${area_b}"
+  #echo "${area} ${area_b}"
   # row headings do not have to be printed
   #echo "title, description, time_to_complete, mentors, types, tags"
 
