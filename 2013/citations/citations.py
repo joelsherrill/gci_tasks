@@ -25,15 +25,21 @@ def get_mentor(n):
 
 def generate_tasks(year, pages):
   for p in xrange(pages):
-    title = "Update Citations " + str(year) + "-" + str(p)
-    description = "This task consists of updating the RTEMS Wiki page located\
- at http://wiki.rtems.org/wiki/index.php/RTEMSReferences according to the\
- instructions given at\
- http://wiki.rtems.org/wiki/index.php/GoogleCodeInProjects#Update_List_of_Citations\
- for the year " + str(year) + " and page " + str(p) + ". You will need to\
+    title = "Update Citations " + str(year) + "-" + str(p+1)
+    description = "This task consists of updating the\
+ <a href=\"http://wiki.rtems.org/wiki/index.php/RTEMSReferences\">RTEMS\
+ References Wiki page</a> according to the instructions given in the\
+ <a href=\"http://wiki.rtems.org/wiki/index.php/GoogleCodeInProjects#Update_List_of_Citations\">\
+ RTEMS GoogleCodeInProjects Wiki page</a> for the year " + str(year) +\
+ " and page " + str(p+1) + ". You will need to\
  request a user account on the wiki and be careful to avoid making updates\
  that conflict or delete other relevant citations. You will upload a text\
- file containing the entries that you added to the wiki page."
+ file containing the entries that you added to the wiki page.\
+ We have constructed the\
+ <a href=\"http://scholar.google.com/scholar?start=" + str(p*10) +\
+ "q=RTEMS&hl=en&lr=lang_en&as_sdt=1,47&as_vis=1&as_ylo=" + str(year) +\
+ "&as_yhi=" + str(year) +\
+ "\">Google Scholar search for this task</a> for your convenience."
     time_to_complete = "72"
     mentors = get_mentor(year+p)
     type = "Outreach/Research"
