@@ -33,8 +33,7 @@ case ${remainder} in
 #  5) mentor=sebhub ;;
 #  6) mentor=amartakhar ;;
 #  7) mentor=cdcs ;;
-#  8) mentor=gedare ;;
-#  9) mentor=oarmark ;;
+#  8) mentor=oarmark ;;
   *) echo "What?" ; exit 1 ;;
 esac
 echo -n ${mentor}
