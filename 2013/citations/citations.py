@@ -4,8 +4,9 @@
 ##
 
 import getopt
-import os
 import sys
+import os
+import subprocess
 
 def usage():
   print "\
@@ -16,12 +17,10 @@ Usage: citations.py -[hy:p:]\n\
 "
 
 def get_mentor(n):
-  mentors = []
-  mentors.append("joel_sherrill")
-  mentors.append("jenniferaverettoarcorp")
-  mentors.append("chrisjohns")
-  mentors.append("gedare")
-  return mentors[n % len(mentors)]
+  cmd = os.path.join("..","get_mentor") + " " + str(n)
+  proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+  (m, e) = proc.communicate()
+  return m
 
 def generate_tasks(year, pages):
   for p in xrange(pages):
@@ -41,7 +40,7 @@ def generate_tasks(year, pages):
  "&as_yhi=" + str(year) +\
  ">Google Scholar search for this task</a> for your convenience."
     time_to_complete = "72"
-    mentors = get_mentor(year+p)
+    mentors = str(get_mentor(year+p))
     type = "Outreach/Research"
     tags = "wiki"
 
