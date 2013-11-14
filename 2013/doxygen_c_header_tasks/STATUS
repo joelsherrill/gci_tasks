@@ -21,10 +21,10 @@ tasks_for_bfin_eZKit533.csv
 tasks_for_bfin_TLL6527M.csv
 tasks_for_h8300_h8sim.csv
 tasks_for_i386_pc386.csv
-tasks_for_i386_shared.csv
+ADDED - tasks_for_i386_shared.csv
 tasks_for_lm32_lm32_evr.csv
 tasks_for_lm32_milkymist.csv
-tasks_for_lm32_shared.csv
+ADDED - tasks_for_lm32_shared.csv
 tasks_for_m32c_m32cbsp.csv
 tasks_for_m32r_m32rsim.csv
 tasks_for_m68k_av5282.csv
@@ -46,7 +46,7 @@ tasks_for_m68k_mvme147s.csv
 tasks_for_m68k_mvme162.csv
 tasks_for_m68k_mvme167.csv
 tasks_for_m68k_ods68302.csv
-tasks_for_m68k_shared.csv
+ADDED - tasks_for_m68k_shared.csv
 tasks_for_m68k_sim68000.csv
 tasks_for_m68k_uC5282.csv
 tasks_for_mips_csb350.csv
@@ -56,7 +56,7 @@ tasks_for_mips_jmr3904.csv
 tasks_for_mips_malta.csv
 tasks_for_mips_rbtx4925.csv
 tasks_for_mips_rbtx4938.csv
-tasks_for_mips_shared.csv
+ADDED - tasks_for_mips_shared.csv
 tasks_for_powerpc_beatnik.csv
 tasks_for_powerpc_ep1a.csv
 tasks_for_powerpc_gen5200.csv
@@ -72,25 +72,25 @@ tasks_for_powerpc_psim.csv
 tasks_for_powerpc_qemuppc.csv
 tasks_for_powerpc_qoriq.csv
 tasks_for_powerpc_score603e.csv
-tasks_for_powerpc_shared.csv
+ADDED - tasks_for_powerpc_shared.csv
 tasks_for_powerpc_ss555.csv
 tasks_for_powerpc_t32mppc.csv
 tasks_for_powerpc_tqm8xx.csv
 tasks_for_powerpc_virtex4.csv
 tasks_for_powerpc_virtex5.csv
 tasks_for_powerpc_virtex.csv
-tasks_for_shared.csv
+ADDED - tasks_for_shared.csv
 tasks_for_sh_gensh1.csv
 tasks_for_sh_gensh2.csv
 tasks_for_sh_gensh4.csv
-tasks_for_sh_shared.csv
+ADDED - tasks_for_sh_shared.csv
 tasks_for_sh_shsim.csv
 tasks_for_sparc64_niagara.csv
-tasks_for_sparc64_shared.csv
+ADDED - tasks_for_sparc64_shared.csv
 tasks_for_sparc64_usiii.csv
 tasks_for_sparc_erc32.csv
 tasks_for_sparc_leon2.csv
 tasks_for_sparc_leon3.csv
-tasks_for_sparc_shared.csv
+ADDED - tasks_for_sparc_shared.csv
 tasks_for_v850_gdbv850sim.csv
-tasks_for_v850_shared.csv
+ADDED - tasks_for_v850_shared.csv
