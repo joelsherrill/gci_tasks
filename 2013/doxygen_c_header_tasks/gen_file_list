@@ -25,7 +25,9 @@ do_directory()
   area_b=`echo ${area} | sed -e 's/\/src//' -e 's/\//_/g'`
 
   cd $b/
-  find ${area} -name "*.[ch]" | while read f
+  find ${area} -name "*.[ch]" | \
+    grep -v /nds/ | \
+    while read f
   do
     grep "@brief" $f >/dev/null
     if [ $? -ne 0 ] ; then
@@ -48,7 +50,7 @@ generate_tasks()
   for f1 in ${outdir}/${1}_${basename}*
   do
     f=`basename $f1`
-    title="${area} Doxygen Enhancement Task #${num}"
+    title="libbsp/.../${area} Doxygen Enhancement Task #${num}"
     desc=""
     desc="${desc} This task consists of editing the files listed in"
     desc="${desc} <a href=${url}/${f}>${url}/${f}></a> per the"
