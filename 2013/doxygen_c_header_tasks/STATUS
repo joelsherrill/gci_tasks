@@ -1,96 +1,96 @@
 ADDED = Imported into Melange
 DONE = All tasks are closed and merged
 
-tasks_for_arm_csb336.csv
-tasks_for_arm_csb337.csv
-tasks_for_arm_edb7312.csv
-tasks_for_arm_gba.csv
-tasks_for_arm_gdbarmsim.csv
-tasks_for_arm_gp32.csv
-tasks_for_arm_gumstix.csv
-tasks_for_arm_lm3s69xx.csv
-tasks_for_arm_lpc32xx.csv
-tasks_for_arm_raspberrypi.csv
-tasks_for_arm_realview-pbx-a9.csv
-tasks_for_arm_rtl22xx.csv
+ADDED - tasks_for_arm_csb336.csv
+ADDED - tasks_for_arm_csb337.csv
+ADDED - tasks_for_arm_edb7312.csv
+ADDED - tasks_for_arm_gba.csv
+ADDED - tasks_for_arm_gdbarmsim.csv
+ADDED - tasks_for_arm_gp32.csv
+ADDED - tasks_for_arm_gumstix.csv
+ADDED - tasks_for_arm_lm3s69xx.csv
+ADDED - tasks_for_arm_lpc32xx.csv
+ADDED - tasks_for_arm_raspberrypi.csv
+ADDED - tasks_for_arm_realview-pbx-a9.csv
+ADDED - tasks_for_arm_rtl22xx.csv
 ADDED - tasks_for_arm_shared.csv
-tasks_for_arm_smdk2410.csv
-tasks_for_arm_stm32f4.csv
-tasks_for_arm_xilinx-zynq.csv
-tasks_for_bfin_eZKit533.csv
-tasks_for_bfin_TLL6527M.csv
-tasks_for_h8300_h8sim.csv
-tasks_for_i386_pc386.csv
+ADDED - tasks_for_arm_smdk2410.csv
+ADDED - tasks_for_arm_stm32f4.csv
+ADDED - tasks_for_arm_xilinx-zynq.csv
+ADDED - tasks_for_bfin_eZKit533.csv
+ADDED - tasks_for_bfin_TLL6527M.csv
+ADDED - tasks_for_h8300_h8sim.csv
+ADDED - tasks_for_i386_pc386.csv
 ADDED - tasks_for_i386_shared.csv
-tasks_for_lm32_lm32_evr.csv
-tasks_for_lm32_milkymist.csv
+ADDED - tasks_for_lm32_lm32_evr.csv
+ADDED - tasks_for_lm32_milkymist.csv
 ADDED - tasks_for_lm32_shared.csv
-tasks_for_m32c_m32cbsp.csv
-tasks_for_m32r_m32rsim.csv
-tasks_for_m68k_av5282.csv
-tasks_for_m68k_csb360.csv
-tasks_for_m68k_gen68302.csv
-tasks_for_m68k_gen68340.csv
-tasks_for_m68k_gen68360.csv
-tasks_for_m68k_genmcf548x.csv
-tasks_for_m68k_idp.csv
-tasks_for_m68k_mcf5206elite.csv
-tasks_for_m68k_mcf52235.csv
-tasks_for_m68k_mcf5225x.csv
-tasks_for_m68k_mcf5235.csv
-tasks_for_m68k_mcf5329.csv
-tasks_for_m68k_mrm332.csv
-tasks_for_m68k_mvme136.csv
-tasks_for_m68k_mvme147.csv
-tasks_for_m68k_mvme147s.csv
-tasks_for_m68k_mvme162.csv
-tasks_for_m68k_mvme167.csv
-tasks_for_m68k_ods68302.csv
+ADDED - tasks_for_m32c_m32cbsp.csv
+ADDED - tasks_for_m32r_m32rsim.csv
+ADDED - tasks_for_m68k_av5282.csv
+ADDED - tasks_for_m68k_csb360.csv
+ADDED - tasks_for_m68k_gen68302.csv
+ADDED - tasks_for_m68k_gen68340.csv
+ADDED - tasks_for_m68k_gen68360.csv
+ADDED - tasks_for_m68k_genmcf548x.csv
+ADDED - tasks_for_m68k_idp.csv
+ADDED - tasks_for_m68k_mcf5206elite.csv
+ADDED - tasks_for_m68k_mcf52235.csv
+ADDED - tasks_for_m68k_mcf5225x.csv
+ADDED - tasks_for_m68k_mcf5235.csv
+ADDED - tasks_for_m68k_mcf5329.csv
+ADDED - tasks_for_m68k_mrm332.csv
+ADDED - tasks_for_m68k_mvme136.csv
+ADDED - tasks_for_m68k_mvme147.csv
+ADDED - tasks_for_m68k_mvme147s.csv
+ADDED - tasks_for_m68k_mvme162.csv
+ADDED - tasks_for_m68k_mvme167.csv
+ADDED - tasks_for_m68k_ods68302.csv
 ADDED - tasks_for_m68k_shared.csv
-tasks_for_m68k_sim68000.csv
-tasks_for_m68k_uC5282.csv
-tasks_for_mips_csb350.csv
-tasks_for_mips_genmongoosev.csv
-tasks_for_mips_hurricane.csv
-tasks_for_mips_jmr3904.csv
-tasks_for_mips_malta.csv
-tasks_for_mips_rbtx4925.csv
-tasks_for_mips_rbtx4938.csv
+ADDED - tasks_for_m68k_sim68000.csv
+ADDED - tasks_for_m68k_uC5282.csv
+ADDED - tasks_for_mips_csb350.csv
+ADDED - tasks_for_mips_genmongoosev.csv
+ADDED - tasks_for_mips_hurricane.csv
+ADDED - tasks_for_mips_jmr3904.csv
+ADDED - tasks_for_mips_malta.csv
+ADDED - tasks_for_mips_rbtx4925.csv
+ADDED - tasks_for_mips_rbtx4938.csv
 ADDED - tasks_for_mips_shared.csv
-tasks_for_powerpc_beatnik.csv
-tasks_for_powerpc_ep1a.csv
-tasks_for_powerpc_gen5200.csv
-tasks_for_powerpc_gen83xx.csv
-tasks_for_powerpc_haleakala.csv
-tasks_for_powerpc_mbx8xx.csv
-tasks_for_powerpc_motorola_powerpc.csv
-tasks_for_powerpc_mpc55xxevb.csv
-tasks_for_powerpc_mpc8260ads.csv
-tasks_for_powerpc_mvme3100.csv
-tasks_for_powerpc_mvme5500.csv
-tasks_for_powerpc_psim.csv
-tasks_for_powerpc_qemuppc.csv
-tasks_for_powerpc_qoriq.csv
-tasks_for_powerpc_score603e.csv
+ADDED - tasks_for_powerpc_beatnik.csv
+ADDED - tasks_for_powerpc_ep1a.csv
+ADDED - tasks_for_powerpc_gen5200.csv
+ADDED - tasks_for_powerpc_gen83xx.csv
+ADDED - tasks_for_powerpc_haleakala.csv
+ADDED - tasks_for_powerpc_mbx8xx.csv
+ADDED - tasks_for_powerpc_motorola_powerpc.csv
+ADDED - tasks_for_powerpc_mpc55xxevb.csv
+ADDED - tasks_for_powerpc_mpc8260ads.csv
+ADDED - tasks_for_powerpc_mvme3100.csv
+ADDED - tasks_for_powerpc_mvme5500.csv
+ADDED - tasks_for_powerpc_psim.csv
+ADDED - tasks_for_powerpc_qemuppc.csv
+ADDED - tasks_for_powerpc_qoriq.csv
+ADDED - tasks_for_powerpc_score603e.csv
 ADDED - tasks_for_powerpc_shared.csv
-tasks_for_powerpc_ss555.csv
-tasks_for_powerpc_t32mppc.csv
-tasks_for_powerpc_tqm8xx.csv
-tasks_for_powerpc_virtex4.csv
-tasks_for_powerpc_virtex5.csv
-tasks_for_powerpc_virtex.csv
+ADDED - tasks_for_powerpc_ss555.csv
+ADDED - tasks_for_powerpc_t32mppc.csv
+ADDED - tasks_for_powerpc_tqm8xx.csv
+ADDED - tasks_for_powerpc_virtex4.csv
+ADDED - tasks_for_powerpc_virtex5.csv
+ADDED - tasks_for_powerpc_virtex.csv
 ADDED - tasks_for_shared.csv
-tasks_for_sh_gensh1.csv
-tasks_for_sh_gensh2.csv
-tasks_for_sh_gensh4.csv
+ADDED - tasks_for_sh_gensh1.csv
+ADDED - tasks_for_sh_gensh2.csv
+ADDED - tasks_for_sh_gensh4.csv
 ADDED - tasks_for_sh_shared.csv
-tasks_for_sh_shsim.csv
-tasks_for_sparc64_niagara.csv
+ADDED - tasks_for_sh_shsim.csv
+ADDED - tasks_for_sparc64_niagara.csv
 ADDED - tasks_for_sparc64_shared.csv
-tasks_for_sparc64_usiii.csv
-tasks_for_sparc_erc32.csv
-tasks_for_sparc_leon2.csv
-tasks_for_sparc_leon3.csv
+ADDED - tasks_for_sparc64_usiii.csv
+ADDED - tasks_for_sparc_erc32.csv
+ADDED - tasks_for_sparc_leon2.csv
+ADDED - tasks_for_sparc_leon3.csv
 ADDED - tasks_for_sparc_shared.csv
-tasks_for_v850_gdbv850sim.csv
+ADDED - tasks_for_v850_gdbv850sim.csv
 ADDED - tasks_for_v850_shared.csv
