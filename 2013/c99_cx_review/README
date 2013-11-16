@@ -1,0 +1,13 @@
+CX is POSIX 2013 notation for extensions to the C Programming
+Language Standard. Sometimes it is for functionality and other
+times it is to add a method.
+
+This task consists of identifying the .h files which have
+CX methods and any rules defined for adding them. This
+will usually be something like "added in POSIX 2003" or
+a more complex list of standards. This information will
+be used in a subsequent tasks to verify the proper CPP
+macro guards.
+
+Header files are either in RTEMS, Newlib, or not supported.
+The script will ignore the not supported ones.

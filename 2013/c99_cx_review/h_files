@@ -1,0 +1,82 @@
+aio.h, rtems
+arpa/inet.h, rtems
+assert.h, newlib
+complex.h, newlib
+cpio.h, not supported
+ctype.h, newlib
+dirent.h, newlib
+dlfcn.h, not supported
+errno.h, newlib
+fcntl.h, newlib
+fenv.h, not supported
+float.h, not supported
+fmtmsg.h, not supported
+fnmatch.h, newlib
+ftw.h, not supported
+glob.h, newlib
+grp.h, newlib
+iconv.h, newlib
+inttypes.h, newlib
+iso646.h, not supported
+langinfo.h, newlib
+libgen.h, newlib
+limits.h, newlib
+locale.h, newlib
+math.h, newlib
+monetary.h, not supported
+mqueue.h, rtems
+ndbm.h, not supported
+net/if.h, rtems
+netdb.h, rtems
+netinet/in.h, rtems
+netinet/tcp.h, rtems
+nl_types.h, not supported
+poll.h, rtems
+pthread.h, newlib
+pwd.h, newlib
+regex.h, newlib
+sched.h, newlib
+search.h, newlib
+semaphore.h, rtems
+setjmp.h, newlib
+signal.h, newlib
+spawn.h, not supported
+stdarg.h, GCC
+stdbool.h, GCC
+stddef.h, GCC
+stdint.h, newlib
+stdio.h, newlib
+stdlib.h, newlib
+string.h, newlib
+strings.h, newlib
+stropts.h, not supported
+sys/ipc.h, not supported
+sys/mman.h, not supported
+sys/msg.h, not supported
+sys/resource.h, newlib
+sys/select.h, rtems
+sys/sem.h, not supported
+sys/shm.h, not supported
+sys/socket.h, rtems
+sys/stat.h, newlib
+sys/statvfs.h, rtems
+sys/time.h, newlib
+sys/times.h, newlib
+sys/types.h, newlib
+sys/uio.h, rtems
+sys/un.h, rtems
+sys/utsname.h, rtems
+sys/wait.h, newlib
+syslog.h, rtems
+tar.h, newlib
+termios.h, newlib
+tgmath.h, newlib
+time.h, newlib
+trace.h, rtems
+ulimit.h, not supported
+unistd.h, newlib
+utime.h, newlib
+utmpx.h, not supported
+wchar.h, newlib
+wctype.h, newlib
+wordexp.h, newlib
