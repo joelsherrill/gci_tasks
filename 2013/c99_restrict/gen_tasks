@@ -1,0 +1,53 @@
+#! /bin/sh
+
+basename=Add_C99_restrict_
+files_per_task=1
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Missing_Restrict_Keyword"
+outfile=tasks_c99_restrict.csv
+
+base=`pwd`
+
+if [ X${r} = "X" ] ; then
+  echo "Top of RTEMS tree not set in variable r"
+  exit 1
+fi
+
+generate_tasks()
+{
+  # row headings do not have to be printed
+  #echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=1
+  while read f
+  do
+    title="Add C99 Restrict to ${f} #${num}"
+    desc=""
+    desc="${desc} This task consists of editing the header file ${f}"
+    desc="${desc} per the"
+    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} A patch generated using cvs diff will need"
+    desc="${desc} to be submitted to fulfill this task. This patch"
+    desc="${desc} will be reviewed by the mentors and suggestions"
+    desc="${desc} are likely to be made."
+    time_to_complete="72"
+    mentors=`../get_mentor ${num}`
+    type="Code"
+    tags="C, POSIX, C99, libc, newlib"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+    num=`expr ${num} + 1`
+  done
+}
+
+generate_tasks \
+  <h_files_missing_restrict \
+  >$outfile
+
+wc -l *.csv
+exit 0

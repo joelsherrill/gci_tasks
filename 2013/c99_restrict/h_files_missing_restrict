@@ -1,0 +1,15 @@
+dirent.h
+glob.h
+iconv.h
+netdb.h
+regex.h
+search.h
+signal.h
+sys/select
+sys/stat.h
+sys/statvfs.h
+sys/time.h
+time.h
+unistd.h
+wchar.h
+wordexp.h
