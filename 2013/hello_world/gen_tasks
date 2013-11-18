@@ -1,0 +1,50 @@
+#! /bin/sh
+
+basename=Hello_World_
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Run_and_Modify_GSOC_Hello_World_Procedure"
+outfile=tasks_hello_world.csv
+start_number=1
+finish_number=5
+
+base=`pwd`
+
+generate_tasks()
+{
+  # row headings do not have to be printed
+  #echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=${start_number}
+  while :
+  do
+    title="Getting Started/Hello World  #${num}"
+    desc=""
+    desc="${desc} This task consists of performing the hello world"
+    desc="${desc} task that Google Summer of Code students do. It is"
+    desc="${desc} a necessary step to be able to build RTEMS itself"
+    desc="${desc} and perform some of the other GCI tasks."
+    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} This task can only be performed once per GCI student."
+    time_to_complete="72"
+    mentors=`../get_mentor ${num}`
+    type="Code"
+    tags="C, POSIX, C99, libc, newlib"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+    num=`expr ${num} + 1`
+    if [ ${num} -gt ${finish_number} ] ; then
+      break
+    fi
+  done
+}
+
+generate_tasks \
+  >$outfile
+
+wc -l *.csv
+exit 0
