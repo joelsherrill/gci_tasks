@@ -3,8 +3,8 @@
 basename=Hello_World_
 wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Run_and_Modify_GSOC_Hello_World_Procedure"
 outfile=tasks_hello_world.csv
-start_number=1
-finish_number=5
+start_number=6
+finish_number=10
 
 base=`pwd`
 
