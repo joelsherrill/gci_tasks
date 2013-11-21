@@ -17,12 +17,20 @@ fi
 start_number=$1 # Pass the starting no of task in the array
 total=$2 # Pass the no of tasks to be generated starting from the index given in the previous parameter.
 
+bsp[0]=""
+bsp[1]="arm/gumstix"
+bsp[2]="powerpc/beatnik"
+bsp[3]="powerpc/mpc55xxevb"
+bsp[4]="powerpc/mpc55xxevb"
+bsp[5]="powerpc/mpc55xxevb"
+
 task[0]=""
 task[1]="arm/gumstix : Move bsp_reset() in startup/bspstart.c to startup/bspreset.c"
 task[2]="powerpc/beatnik : Move bsp_reset() in startup/reboot.c to startup/bspreset.c"
 task[3]="powerpc/mpc55xxevb : Move bsp_reset() in startup/reset.c  to startup/bspreset.c"
 task[4]="powerpc/mpc55xxevb : Move bsp_work_area_initialize() in startup/bspworkareainit.c to startup/bspgetworkarea.c"
 task[5]="powerpc/mpc55xxevb : startup/start.S should be moved to start/start.S"
+
 
 # More tasks can be added in this category by appending the entries in the task array.
 
@@ -34,13 +42,13 @@ generate_tasks()
 
   while :
   do
-    title="BSP Refactoring Task #${num}"
+    title="BSP Refactoring Task #${num}: ${bsp[${num}]}"
     desc=""
     desc="${desc} This task consists of refactoring BSP code."
     desc="${desc} The instructions to carry out this category of tasks"
     desc="${desc} can be found at <a href=${wiki_url}>${wiki_url}</a>."
     desc="${desc} Before attempting this task it is strongly suggested that the student first completes"
-    desc="${desc} one of the Hello World tasks given in the list."
+    desc="${desc} one of the Getting Started/Hello World tasks given in the list."
     desc="${desc} The problem statement for this particular task is :"
     
     text=${task[$num]}
