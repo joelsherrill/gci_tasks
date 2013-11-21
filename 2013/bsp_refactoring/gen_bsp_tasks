@@ -14,8 +14,8 @@ if [[ -z $2 ]]; then
 fi
 
 
-start_number=$1
-total=$2
+start_number=$1 # Pass the starting no of task in the array
+total=$2 # Pass the no of tasks to be generated starting from the index given in the previous parameter.
 
 task[0]=""
 task[1]="arm/gumstix : Move bsp_reset() in startup/bspstart.c to startup/bspreset.c"
@@ -23,6 +23,8 @@ task[2]="powerpc/beatnik : Move bsp_reset() in startup/reboot.c to startup/bspre
 task[3]="powerpc/mpc55xxevb : Move bsp_reset() in startup/reset.c  to startup/bspreset.c"
 task[4]="powerpc/mpc55xxevb : Move bsp_work_area_initialize() in startup/bspworkareainit.c to startup/bspgetworkarea.c"
 task[5]="powerpc/mpc55xxevb : startup/start.S should be moved to start/start.S"
+
+# More tasks can be added in this category by appending the entries in the task array.
 
 generate_tasks()
 {
@@ -43,6 +45,7 @@ generate_tasks()
     desc="${desc} ${text}"
 
     time_to_complete="72"
+    # The mentors are selected from the get_mentor list on a cyclic basis.
     mentor_no=$(( $num-1 % 10 ))
     mentors=`../get_mentor ${mentor_no}`
     type="Code"
