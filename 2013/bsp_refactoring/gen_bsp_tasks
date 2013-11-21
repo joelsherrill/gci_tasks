@@ -39,6 +39,10 @@ generate_tasks()
     desc="${desc} This task consists of refactoring BSP code."
     desc="${desc} The instructions to carry out this category of tasks"
     desc="${desc} can be found at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} Before attempting this task, it is strongly suggested that the student first completes"
+    desc="${desc} on of the Hello World tasks given in the list. One of the Hello World tasks can be found"
+    desc="${desc} at <a href=http://www.google-melange.com/gci/task/view/google/gci2013/5906609481973760>"
+    desc="${desc} http://www.google-melange.com/gci/task/view/google/gci2013/5906609481973760</a>"
     desc="${desc} The problem statement for this particular task is :"
     
     text=${task[$num]}
