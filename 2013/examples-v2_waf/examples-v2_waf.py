@@ -78,12 +78,12 @@ This task assists the effort of converting the build system\
  submit your work as a pull request on GitHub.\
 "
     time_to_complete = "72"
-    mentors = "\"gedare, chrisjohns, " + str(get_mentor(d)) + "\""
+    mentors = "\"gedare,chrisjohns, " + str(get_mentor(d)) + "\""
     type = "Code"
-    tags = "\"python, waf, make, git\""
+    tags = "\"python,waf,make,git\""
 
-    print(title + ", " + description + ", " + time_to_complete +
-        ", " + mentors + ", " + type + ", " + tags)
+    print(title + "," + description + "," + time_to_complete +
+        "," + mentors + "," + type + "," + tags)
 
 def main():
   # default args
