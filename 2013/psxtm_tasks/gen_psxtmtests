@@ -7,7 +7,7 @@ output=Tasks_psxtmtests.csv
 TESTS=psxtmtests.csv
 cp /dev/null ${output}
 
-task=0
+task=1
 
 while read line
 do
