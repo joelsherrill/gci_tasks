@@ -23,6 +23,17 @@ bsp[2]="powerpc/beatnik"
 bsp[3]="powerpc/mpc55xxevb"
 bsp[4]="powerpc/mpc55xxevb"
 bsp[5]="powerpc/mpc55xxevb"
+bsp[6]="powerpc"
+bsp[7]="sh"
+bsp[8]="sparc"
+bsp[9]="m68k"
+bsp[10]="sparc"
+bsp[11]="powerpc/mbx8xx"
+bsp[12]="powerpc/ss555"
+bsp[13]="powerpc/tqm8xx"
+bsp[14]="powerpc/virtex"
+bsp[15]="powerpc/virtex5"
+
 
 task[0]=""
 task[1]="arm/gumstix : Move bsp_reset() in startup/bspstart.c to startup/bspreset.c"
@@ -30,6 +41,16 @@ task[2]="powerpc/beatnik : Move bsp_reset() in startup/reboot.c to startup/bspre
 task[3]="powerpc/mpc55xxevb : Move bsp_reset() in startup/reset.c  to startup/bspreset.c"
 task[4]="powerpc/mpc55xxevb : Move bsp_work_area_initialize() in startup/bspworkareainit.c to startup/bspgetworkarea.c"
 task[5]="powerpc/mpc55xxevb : startup/start.S should be moved to start/start.S"
+task[6]="powerpc : shared/bspreset.c should be moved to shared/startup/bspreset.c . Modify path of bspreset.c in motorola_powerpc/Makefile.am so as to point to the correct location."
+task[7]="sh : shared/bspstart.c should be moved to shared/startup/bspstart.c . Modify path of bspstart.c in gensh1/Makefile.am, gensh2/Makefile.am, gensh4/Makefile.am and shsim/Makefile.am so as to point to the correct location."
+task[8]="sparc : shared/bspgetworkarea.c should be moved to shared/startup/bspgetworkarea.c . Modify path of bspgetworkarea.c in erc32/Makefile.am, leon2/Makefile.am and leon3/Makefile.am so as to point to the correct location."
+task[9]="m68k : shared/start.S should be moved to shared/start/start.S . Modify path of start.S in idp/Makefile.am, mvme136/Makefile.am, mvme147/Makefile.am, mvme147s/Makefile.am, mvme162/Makefile.am and mvme167/Makefile.am so as to point to the correct location."
+task[10]="sparc : shared/start.S should be moved to shared/start/start.S . Modify path of start.S in erc32/Makefile.am, leon2/Makefile.am and leon3/Makefile.am so as to point to the correct location."
+task[11]="powerpc/mbx8xx : startup/start.S should be moved to start/start.S"
+task[12]="powerpc/ss555 : startup/start.S should be moved to start/start.S"
+task[13]="powerpc/tqm8xx : startup/start.S should be moved to start/start.S"
+task[14]="powerpc/virtex : startup/start.S should be moved to start/start.S"
+task[15]="powerpc/virtex5 : startup/start.S should be moved to start/start.S"
 
 
 # More tasks can be added in this category by appending the entries in the task array.
@@ -63,7 +84,8 @@ generate_tasks()
 
     echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
     num=`expr ${num} + 1`
-    if [ ${num} -gt ${total} ] ; then
+    end=`expr ${start_number} + ${total} - 1`
+    if [ ${num} -gt ${end} ] ; then
       break
     fi
   done
