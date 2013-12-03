@@ -1,11 +1,8 @@
-arm/gba/include/conio.h
+arm/gba/irq/irq.h
 arm/gba/include/gba.h
-arm/gba/include/arm_mode_bits.h
-arm/gba/include/gba_registers.h
 arm/gba/include/bsp.h
 arm/gba/include/asm_macros.h
-arm/gba/irq/irq.h
-arm/gba/irq/irq.c
+arm/gba/include/conio.h
+arm/gba/include/arm_mode_bits.h
+arm/gba/include/gba_registers.h
 arm/gba/console/defaultfont.h
-arm/gba/startup/bspgetworkarea.c
-arm/gba/startup/bspreset.c

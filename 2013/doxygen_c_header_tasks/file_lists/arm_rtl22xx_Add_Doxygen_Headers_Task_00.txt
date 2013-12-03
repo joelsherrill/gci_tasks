@@ -1,6 +1,2 @@
 arm/rtl22xx/include/bsp.h
 arm/rtl22xx/console/lpc22xx_uart.h
-arm/rtl22xx/console/uart.c
-arm/rtl22xx/startup/bspstart.c
-arm/rtl22xx/startup/bspreset.c
-arm/rtl22xx/network/network.c

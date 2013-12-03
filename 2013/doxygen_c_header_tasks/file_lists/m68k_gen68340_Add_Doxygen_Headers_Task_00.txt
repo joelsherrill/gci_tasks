@@ -1,11 +1,5 @@
-m68k/gen68340/include/bsp.h
 m68k/gen68340/include/m68340.h
-m68k/gen68340/include/m340timer.h
+m68k/gen68340/include/bsp.h
 m68k/gen68340/include/coverhd.h
+m68k/gen68340/include/m340timer.h
 m68k/gen68340/include/m340uart.h
-m68k/gen68340/clock/ckinit.c
-m68k/gen68340/console/m340uart.c
-m68k/gen68340/console/console.c
-m68k/gen68340/timer/timer.c
-m68k/gen68340/startup/init68340.c
-m68k/gen68340/startup/dumpanic.c

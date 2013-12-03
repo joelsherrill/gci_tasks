@@ -1,4 +1,1 @@
 m32c/m32cbsp/include/bsp.h
-m32c/m32cbsp/console/console-io.c
-m32c/m32cbsp/timer/timer.c
-m32c/m32cbsp/startup/bspstart.c

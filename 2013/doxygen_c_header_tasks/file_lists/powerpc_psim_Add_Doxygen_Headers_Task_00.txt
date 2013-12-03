@@ -1,13 +1,5 @@
-powerpc/psim/include/tm27.h
-powerpc/psim/include/bsp.h
-powerpc/psim/include/psim.h
-powerpc/psim/include/coverhd.h
-powerpc/psim/shmsupp/getcfg.c
-powerpc/psim/shmsupp/addrconv.c
-powerpc/psim/shmsupp/mpisr.c
-powerpc/psim/shmsupp/lock.c
 powerpc/psim/irq/irq.h
-powerpc/psim/irq/irq_init.c
-powerpc/psim/console/console-io.c
-powerpc/psim/startup/bspstart.c
-powerpc/psim/network/if_sim.c
+powerpc/psim/include/bsp.h
+powerpc/psim/include/tm27.h
+powerpc/psim/include/coverhd.h
+powerpc/psim/include/psim.h

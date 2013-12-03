@@ -1,6 +1,3 @@
-m68k/csb360/include/tm27.h
 m68k/csb360/include/bsp.h
+m68k/csb360/include/tm27.h
 m68k/csb360/include/coverhd.h
-m68k/csb360/console/console-io.c
-m68k/csb360/startup/init5272.c
-m68k/csb360/network/network.c

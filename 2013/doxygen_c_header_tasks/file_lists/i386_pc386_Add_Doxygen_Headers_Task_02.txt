@@ -1,2 +1,0 @@
-i386/pc386/startup/bspreset.c
-i386/pc386/tools/bin2boot.c

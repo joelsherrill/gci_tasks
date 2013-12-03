@@ -1,9 +1,0 @@
-lm32/shared/milkymist_tmu/tmu.c
-lm32/shared/milkymist_tmu/milkymist_tmu.h
-lm32/shared/tsmac/tsmac.h
-lm32/shared/tsmac/tsmac.c
-lm32/shared/tsmac/dp83848phy.h
-lm32/shared/milkymist_clock/ckinit.c
-lm32/shared/milkymist_clock/clock.h
-lm32/shared/milkymist_pfpu/milkymist_pfpu.h
-lm32/shared/milkymist_pfpu/pfpu.c

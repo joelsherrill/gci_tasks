@@ -1,8 +1,3 @@
-powerpc/ss555/include/tm27.h
-powerpc/ss555/include/bsp.h
 powerpc/ss555/irq/irq.h
-powerpc/ss555/clock/p_clock.c
-powerpc/ss555/console/console.c
-powerpc/ss555/startup/tm27supp.c
-powerpc/ss555/startup/bspstart.c
-powerpc/ss555/startup/iss555.c
+powerpc/ss555/include/bsp.h
+powerpc/ss555/include/tm27.h

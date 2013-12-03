@@ -1,15 +1,4 @@
+sparc/erc32/include/erc32.h
+sparc/erc32/include/bsp.h
 sparc/erc32/include/tm27.h
 sparc/erc32/include/bsp/irq.h
-sparc/erc32/include/bsp.h
-sparc/erc32/include/erc32.h
-sparc/erc32/clock/ckinit.c
-sparc/erc32/console/debugputs.c
-sparc/erc32/timer/timer.c
-sparc/erc32/startup/erc32mec.c
-sparc/erc32/startup/bspdelay.c
-sparc/erc32/startup/spurious.c
-sparc/erc32/startup/bsppredriver.c
-sparc/erc32/startup/bspidle.c
-sparc/erc32/startup/setvec.c
-sparc/erc32/gnatsupp/gnatsupp.c
-sparc/erc32/erc32sonic/erc32sonic.c

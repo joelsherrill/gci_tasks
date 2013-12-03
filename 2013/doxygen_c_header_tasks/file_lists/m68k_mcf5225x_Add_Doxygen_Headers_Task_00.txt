@@ -1,9 +1,2 @@
-m68k/mcf5225x/include/tm27.h
 m68k/mcf5225x/include/bsp.h
-m68k/mcf5225x/clock/clock.c
-m68k/mcf5225x/console/debugio.c
-m68k/mcf5225x/console/console.c
-m68k/mcf5225x/timer/timer.c
-m68k/mcf5225x/startup/bspstart.c
-m68k/mcf5225x/startup/bspclean.c
-m68k/mcf5225x/startup/init5225x.c
+m68k/mcf5225x/include/tm27.h

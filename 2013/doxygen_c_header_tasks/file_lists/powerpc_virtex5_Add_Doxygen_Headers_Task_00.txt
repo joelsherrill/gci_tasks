@@ -1,7 +1,3 @@
-powerpc/virtex5/include/irq.h
 powerpc/virtex5/include/bsp.h
 powerpc/virtex5/include/coverhd.h
-powerpc/virtex5/irq/irq_init.c
-powerpc/virtex5/startup/bspstart.c
-powerpc/virtex5/startup/bspclean.c
-powerpc/virtex5/startup/dummy_console.c
+powerpc/virtex5/include/irq.h

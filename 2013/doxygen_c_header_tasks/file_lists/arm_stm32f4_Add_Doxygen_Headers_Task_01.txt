@@ -1,3 +1,0 @@
-arm/stm32f4/startup/start-config-io.c
-arm/stm32f4/startup/bspstarthook.c
-arm/stm32f4/startup/bspreset.c

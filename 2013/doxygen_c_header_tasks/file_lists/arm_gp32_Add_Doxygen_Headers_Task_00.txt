@@ -1,8 +1,2 @@
 arm/gp32/include/bsp.h
-arm/gp32/console/uart.c
-arm/gp32/startup/bspstart.c
-arm/gp32/startup/bspidle.c
-arm/gp32/startup/bspreset.c
-arm/gp32/startup/memmap.c
 arm/gp32/smc/smc.h
-arm/gp32/smc/smc.c

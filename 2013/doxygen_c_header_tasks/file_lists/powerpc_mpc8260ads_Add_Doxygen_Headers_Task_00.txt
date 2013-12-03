@@ -1,11 +1,4 @@
-powerpc/mpc8260ads/include/tm27.h
-powerpc/mpc8260ads/include/bsp.h
 powerpc/mpc8260ads/irq/irq.h
-powerpc/mpc8260ads/irq/irq.c
-powerpc/mpc8260ads/clock/p_clock.c
-powerpc/mpc8260ads/console/console.c
-powerpc/mpc8260ads/startup/cpuinit.c
-powerpc/mpc8260ads/startup/bspstart.c
-powerpc/mpc8260ads/network/if_hdlcsubr.c
-powerpc/mpc8260ads/network/network.c
 powerpc/mpc8260ads/network/if_hdlcsubr.h
+powerpc/mpc8260ads/include/bsp.h
+powerpc/mpc8260ads/include/tm27.h

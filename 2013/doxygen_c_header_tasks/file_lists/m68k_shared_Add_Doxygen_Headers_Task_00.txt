@@ -1,5 +1,2 @@
-m68k/shared/gdbstub/gdb_if.h
-m68k/shared/gdbstub/m68k-stub.c
-m68k/shared/m68000spurious.c
-m68k/shared/bspspuriousinit.c
 m68k/shared/mvme/mvme16x_hw.h
+m68k/shared/gdbstub/gdb_if.h

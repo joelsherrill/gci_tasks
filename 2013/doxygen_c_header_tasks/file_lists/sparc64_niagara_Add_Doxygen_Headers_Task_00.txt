@@ -1,2 +1,2 @@
-sparc64/niagara/include/tm27.h
 sparc64/niagara/include/bsp.h
+sparc64/niagara/include/tm27.h

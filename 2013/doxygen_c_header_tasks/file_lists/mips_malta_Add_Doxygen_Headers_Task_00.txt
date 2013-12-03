@@ -1,14 +1,2 @@
 mips/malta/include/bsp.h
 mips/malta/include/pci.h
-mips/malta/irq/vectorisrs.c
-mips/malta/irq/maxvectors.c
-mips/malta/irq/interruptmask.c
-mips/malta/pci/pcifinddevice.c
-mips/malta/pci/pcilistdevices.c
-mips/malta/pci/pci.c
-mips/malta/console/printk_support.c
-mips/malta/console/conscfg.c
-mips/malta/startup/bspstart.c
-mips/malta/startup/bspreset.c
-mips/malta/startup/inittlb.c
-mips/malta/startup/simple_access.c
