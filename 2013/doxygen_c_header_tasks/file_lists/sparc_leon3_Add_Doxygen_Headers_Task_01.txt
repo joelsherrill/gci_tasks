@@ -1,6 +1,0 @@
-sparc/leon3/startup/bsppredriver.c
-sparc/leon3/startup/setvec.c
-sparc/leon3/gnatsupp/gnatsupp.c
-sparc/leon3/smp/getcpuid.c
-sparc/leon3/smp/smp_leon3.c
-sparc/leon3/leon_open_eth/leon_open_eth.c

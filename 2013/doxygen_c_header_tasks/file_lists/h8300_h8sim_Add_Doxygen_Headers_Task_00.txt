@@ -1,4 +1,1 @@
 h8300/h8sim/include/bsp.h
-h8300/h8sim/console/console-io.c
-h8300/h8sim/startup/__main.c
-h8300/h8sim/startup/h8bdinstallirq.c

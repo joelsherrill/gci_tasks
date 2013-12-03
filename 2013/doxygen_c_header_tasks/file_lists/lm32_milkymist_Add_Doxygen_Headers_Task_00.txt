@@ -1,3 +1,2 @@
-lm32/milkymist/include/system_conf.h
 lm32/milkymist/include/bsp.h
-lm32/milkymist/startup/bspclean.c
+lm32/milkymist/include/system_conf.h

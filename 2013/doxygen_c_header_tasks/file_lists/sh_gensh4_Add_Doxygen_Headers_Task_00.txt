@@ -1,5 +1,3 @@
-sh/gensh4/include/tm27.h
 sh/gensh4/include/bsp.h
+sh/gensh4/include/tm27.h
 sh/gensh4/include/sdram.h
-sh/gensh4/hw_init/hw_init.c
-sh/gensh4/console/console.c

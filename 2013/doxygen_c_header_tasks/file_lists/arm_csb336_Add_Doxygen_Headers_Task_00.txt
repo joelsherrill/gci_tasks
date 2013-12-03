@@ -1,7 +1,2 @@
-arm/csb336/include/bsp.h
-arm/csb336/console/uart.c
-arm/csb336/startup/bspstart.c
-arm/csb336/startup/memmap.c
 arm/csb336/network/lan91c11x.h
-arm/csb336/network/network.c
-arm/csb336/network/lan91c11x.c
+arm/csb336/include/bsp.h

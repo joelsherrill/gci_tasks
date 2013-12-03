@@ -1,4 +1,2 @@
 sh/gensh2/include/bsp.h
 sh/gensh2/include/coverhd.h
-sh/gensh2/console/config.c
-sh/gensh2/startup/hw_init.c

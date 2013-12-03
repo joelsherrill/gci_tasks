@@ -1,12 +1,5 @@
-mips/shared/gdbstub/mips-stub.c
-mips/shared/gdbstub/gdb_if.h
-mips/shared/gdbstub/memlimits.h
-mips/shared/gdbstub/mips_opcode.h
-mips/shared/irq/i8259.c
 mips/shared/irq/i8259.h
-mips/shared/irq/interruptmask_TX49.c
-mips/shared/irq/maxvectors.c
-mips/shared/irq/vectorexceptions.c
-mips/shared/irq/interruptmask.c
-mips/shared/clock/clockdrv.c
+mips/shared/gdbstub/gdb_if.h
+mips/shared/gdbstub/mips_opcode.h
+mips/shared/gdbstub/memlimits.h
 mips/shared/liblnk/regs.h

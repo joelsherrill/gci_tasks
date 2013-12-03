@@ -1,4 +1,2 @@
-m32r/m32rsim/include/tm27.h
 m32r/m32rsim/include/bsp.h
-m32r/m32rsim/console/console-io.c
-m32r/m32rsim/startup/bspreset.c
+m32r/m32rsim/include/tm27.h

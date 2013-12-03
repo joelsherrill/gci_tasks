@@ -1,4 +1,0 @@
-sh/shared/bsphwinit.c
-sh/shared/bspstart.c
-sh/shared/console.c
-sh/shared/setvec.c

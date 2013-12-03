@@ -1,4 +1,4 @@
-lm32/lm32_evr/include/tm27.h
-lm32/lm32_evr/include/system_conf.h
 lm32/lm32_evr/include/bsp.h
+lm32/lm32_evr/include/tm27.h
 lm32/lm32_evr/include/coverhd.h
+lm32/lm32_evr/include/system_conf.h

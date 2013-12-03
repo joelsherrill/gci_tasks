@@ -25,7 +25,7 @@ do_directory()
   area_b=`echo ${area} | sed -e 's/\/src//' -e 's/\//_/g'`
 
   cd $b/
-  find ${area} -name "*.[ch]" | \
+  find ${area} -name "*.[h]" | \
     grep -v /nds/ | \
     while read f
   do

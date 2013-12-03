@@ -1,6 +1,2 @@
-arm/gdbarmsim/include/swi.h
 arm/gdbarmsim/include/bsp.h
-arm/gdbarmsim/console/console-io.c
-arm/gdbarmsim/startup/syscalls.c
-arm/gdbarmsim/startup/bspstart.c
-arm/gdbarmsim/startup/bspreset.c
+arm/gdbarmsim/include/swi.h

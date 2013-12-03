@@ -1,7 +1,2 @@
-mips/jmr3904/include/tm27.h
 mips/jmr3904/include/bsp.h
-mips/jmr3904/irq/vectorisrs.c
-mips/jmr3904/clock/clockdrv.c
-mips/jmr3904/console/console-io.c
-mips/jmr3904/timer/timer.c
-mips/jmr3904/startup/bspstart.c
+mips/jmr3904/include/tm27.h

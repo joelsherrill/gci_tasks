@@ -1,7 +1,3 @@
 m68k/gen68302/include/bsp.h
 m68k/gen68302/include/coverhd.h
 m68k/gen68302/include/m302_int.h
-m68k/gen68302/clock/ckinit.c
-m68k/gen68302/console/console.c
-m68k/gen68302/timer/timer.c
-m68k/gen68302/network/network.c

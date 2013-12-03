@@ -1,8 +1,3 @@
-arm/gumstix/include/tm27.h
 arm/gumstix/include/bsp.h
-arm/gumstix/console/uarts.c
-arm/gumstix/rtl8019/rtl8019.c
+arm/gumstix/include/tm27.h
 arm/gumstix/rtl8019/wd80x3.h
-arm/gumstix/startup/bspstart.c
-arm/gumstix/startup/memmap.c
-arm/gumstix/fb/fb.c

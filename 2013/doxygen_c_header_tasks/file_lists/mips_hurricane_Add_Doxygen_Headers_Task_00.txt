@@ -1,9 +1,4 @@
 mips/hurricane/include/usc.h
 mips/hurricane/include/bsp.h
 mips/hurricane/include/coverhd.h
-mips/hurricane/irq/vectorisrs.c
-mips/hurricane/clock/ckinit.c
 mips/hurricane/clock/clock.h
-mips/hurricane/console/console.c
-mips/hurricane/startup/bspstart.c
-mips/hurricane/startup/inittlb.c

@@ -1,2 +1,2 @@
-powerpc/motorola_powerpc/include/tm27.h
 powerpc/motorola_powerpc/include/bsp.h
+powerpc/motorola_powerpc/include/tm27.h
