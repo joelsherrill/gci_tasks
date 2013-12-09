@@ -1,0 +1,19 @@
+screen 14, sptimer_err01, for non-server cases
+screen 14, sptimer_err02, for server cases
+screen 13, spclock_err02, all cases
+screen 13, spio_err01, all cases
+screen 12, spregion_err01, all cases
+screen 11, sppartition_err01, all cases
+screen 10, spratemon_err01, all cases
+screen 9, spport_err01, all cases
+screen 9, spsignal_err01, all cases
+screen 9, spintr_err01, all cases
+screen 8, spmsgq_err02, all cases
+screen 7, spmsgq_err01, all cases
+screen 6, spsem_err02, all cases
+screen 5, spsem_err01, all cases
+screen 4, spevent_err03, all cases but check what clock set test case is
+screen 3, sptask_err03, all cases
+screen 2, sptask_err02, task wake when cases
+screen 2, spclock_err01, clock cases
+screen 1, sptask_err01, all cases

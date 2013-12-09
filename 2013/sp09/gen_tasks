@@ -1,0 +1,62 @@
+#! /bin/sh
+#
+#  Generate CSV set of SP09 tasks for GCI2013
+#
+
+files_per_task=1
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test"
+outfile=tasks_sp09.csv
+
+base=`pwd`
+
+if [ X${r} = "X" ] ; then
+  echo "Top of RTEMS tree not set in variable r"
+  exit 1
+fi
+
+generate_tasks()
+{
+  # row headings do not have to be printed
+  #echo "title, description, time_to_complete, mentors, types, tags"
+
+  num=1
+  while read l
+  do
+    scn=`echo ${f} | cut -d',' -f1`
+    tname=`echo ${f} | cut -d',' -f2`
+    tcase=`echo ${f} | cut -d',' -f3`
+    title="Refactor sp09 - ${tcase} #${num}"
+    desc=""
+    desc="${desc} This task consists of modifying testsuites/sptests/sp09"
+    desc="${desc} per the"
+    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} You will need to create a new test (${tname}) based"
+    desc="${desc} on ${tcase} from ${scn}."
+    desc="${desc} "
+    desc="${desc}<br>"
+    desc="${desc} A patch generated using git diff will need"
+    desc="${desc} to be submitted to fulfill this task. This patch"
+    desc="${desc} will be reviewed by the mentors and suggestions"
+    desc="${desc} are likely to be made."
+    time_to_complete="96"
+    mentors=`../get_mentor ${num}`
+    type="Code"
+    tags="C, Classic API, Testing, refactoring"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+    num=`expr ${num} + 1`
+  done
+}
+
+generate_tasks \
+  <sp09_list.txt \
+  >$outfile
+
+wc -l *.csv
+exit 0
