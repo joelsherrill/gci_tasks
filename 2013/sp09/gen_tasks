@@ -3,8 +3,7 @@
 #  Generate CSV set of SP09 tasks for GCI2013
 #
 
-files_per_task=1
-wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#Add_a_POSIX_Timing_Test"
+wiki_url="http://www.rtems.org/wiki/index.php/GoogleCodeInProjects#sp09_Refactoring"
 outfile=tasks_sp09.csv
 
 base=`pwd`
@@ -22,10 +21,10 @@ generate_tasks()
   num=1
   while read l
   do
-    scn=`echo ${f} | cut -d',' -f1`
-    tname=`echo ${f} | cut -d',' -f2`
-    tcase=`echo ${f} | cut -d',' -f3`
-    title="Refactor sp09 - ${tcase} #${num}"
+    scn=`echo ${l} | cut -d',' -f1 | sed -e 's/^ *//'`
+    tname=`echo ${l} | cut -d',' -f2 | sed -e 's/^ *//'`
+    tcase=`echo ${l} | cut -d',' -f3 | sed -e 's/^ *//'`
+    title="Refactor sp09 #${num} - ${tname}"
     desc=""
     desc="${desc} This task consists of modifying testsuites/sptests/sp09"
     desc="${desc} per the"

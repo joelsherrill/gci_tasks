@@ -1,0 +1,17 @@
+sp09 split up. It is too long, too big, and uses a mix of every
+manager. The test is set up in screens which really correspond to a
+screen of output on a VT-100.  That's how we checked the tests in the
+original lab.  A "range" of the test is for a single manager. The tasks
+would likely have to start at the end.
+
+
+    + screen 14 -> sptimer_err01 and sptimer_err02
+    + screen 13 -> spclock_err01 and spio_err01
+    + screen 12 -> spregion_err01
+    + screen 11 -> sppartition_err01
+    + screen 10 -> spratemon_err01
+    + screen 9  -> spport_err01, spsignal_err01, and spintr_err01
+       ...
+
+until test is dispersed. I would expect that the configuration of the
+test shrinks along the way until sp09 is gone.
