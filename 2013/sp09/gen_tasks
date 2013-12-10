@@ -26,6 +26,7 @@ generate_tasks()
     tcase=`echo ${l} | cut -d',' -f3 | sed -e 's/^ *//'`
     title="Refactor sp09 #${num} - ${tname}"
     desc=""
+    desc="${desc} First do a Getting Started task.<p><p>"
     desc="${desc} This task consists of modifying testsuites/sptests/sp09"
     desc="${desc} per the"
     desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
