@@ -25,7 +25,7 @@ fi
 NumMentors=9
 remainder=`expr ${Number} % ${NumMentors}`
 case ${remainder} in
-  0) mentor=joel_sherrill@gmail.com ;;
+  0) mentor=joel.sherrill@gmail.com ;;
   1) mentor=gedarebloom@gmail.com ;;
   2) mentor=vattam.santosh@gmail.com ;;
   3) mentor=krzysztof.miesowicz@gmail.com ;;
