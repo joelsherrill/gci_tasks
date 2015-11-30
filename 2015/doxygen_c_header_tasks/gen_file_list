@@ -54,7 +54,7 @@ generate_tasks()
   #echo "${area} ${area_b}"
   # row headings do not have to be printed
   # OLD  echo "title, description, time_to_complete, mentors, types, tags"
-  # NEW - name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
 
 
   num=1
@@ -63,17 +63,24 @@ generate_tasks()
     f=`basename $f1`
     title="libbsp/.../${area} Doxygen Enhancement Task #${num}"
     desc=""
-    desc="${desc} This task consists of editing the files listed in"
+    desc="${desc}This task consists of editing the files listed in"
     desc="${desc} <a href=${url}/${f}>${url}/${f}></a> per the"
     desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
     desc="${desc} A patch generated using git diff will need"
     desc="${desc} to be submitted to fulfill this task. This patch"
     desc="${desc} will be reviewed by the mentors and suggestions"
     desc="${desc} are likely to be made."
-    time_to_complete="72"
+    max_instances="1"
     mentors=`../get_mentor ${num}`
-    type="Code"
     tags="C, Doxygen"
+    lines=`cat ${f1} | wc -l`
+    if [ ${lines} -eq 1 ] ; then
+      is_beginner="1"
+    else
+      is_beginner="0"
+    fi
+    categories="Code, Documentation / Training"
+    time_to_complete="3"
 
     # commas must be quoted
     # desc=`echo ${desc} | sed -e 's/,/","/g'`
@@ -81,7 +88,8 @@ generate_tasks()
 
     # print row
 
-    echo "${title}, ${desc},${time_to_complete},${mentors},${type},\"${tags}\""
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+    echo "${title}, \"${desc}\",${max_instances},\"${tags}\",${is_beginner},${categories},${time_to_complete}"
     num=`expr ${num} + 1`
   done
 }
