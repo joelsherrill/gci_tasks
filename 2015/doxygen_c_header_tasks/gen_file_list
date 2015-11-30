@@ -58,6 +58,7 @@ generate_tasks()
 
 
   num=1
+  echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
   for f1 in ${outdir}/${1}_${basename}*
   do
     echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
