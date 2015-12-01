@@ -46,17 +46,17 @@ def generate_tasks():
 Investigate the bug described in Ticket #" + bugs[b] + " on\
  <a href=https://www.rtems.org/bugzilla/show_bug.cgi?id=" + bugs[b] + ">\
  [the RTEMS Trac](https://devel.rtems.org/ticket/" + bugs[b] + ")\
- Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/QA/InvestigateTicket) on our wiki.
+ Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/QA/InvestigateTicket) on our wiki.\
 "
     max_instances = "1"	
-    mentors = "\"" + str(get_mentor(year+p)) + "\""
-    tags = "wiki"
-    is_beginner = "true"
-    categories = "\"3\""
+    mentors = "\"" + str(get_mentor(b)) + "\""
+    tags = "\"c,debugging\""
+    is_beginner = "false"
+    categories = "\"1,3,4\""
     	# 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
 	# 4: Quality Assurance. 5: User Interface.
-    time_to_complete = "4"
-    private_metadata = "citations"
+    time_to_complete = "5"
+    private_metadata = "bugfix"
 
     print(title + ", " + description + ", " + max_instances + ", " +
         mentors + ", " + tags + ", " + is_beginner + ", " + categories + ", " +
