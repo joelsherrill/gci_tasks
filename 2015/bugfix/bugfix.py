@@ -44,7 +44,6 @@ def generate_tasks():
     title = "Investigate/Fix Bug: Ticket #" + bugs[b]
     description = "First complete one of the Getting Started tasks.<p><p>\
 Investigate the bug described in Ticket #" + bugs[b] + " on\
- <a href=https://www.rtems.org/bugzilla/show_bug.cgi?id=" + bugs[b] + ">\
  [the RTEMS Trac](https://devel.rtems.org/ticket/" + bugs[b] + ")\
  Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/QA/InvestigateTicket) on our wiki.\
 "
