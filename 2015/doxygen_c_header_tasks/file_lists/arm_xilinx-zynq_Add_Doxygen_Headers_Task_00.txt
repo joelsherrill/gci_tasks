@@ -1,0 +1,3 @@
+arm/xilinx-zynq/include/cadence-i2c-regs.h
+arm/xilinx-zynq/include/i2c.h
+arm/xilinx-zynq/include/cadence-i2c.h

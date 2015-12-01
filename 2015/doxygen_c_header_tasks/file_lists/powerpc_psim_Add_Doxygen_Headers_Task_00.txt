@@ -1,0 +1,3 @@
+powerpc/psim/include/bsp.h
+powerpc/psim/include/psim.h
+powerpc/psim/irq/irq.h

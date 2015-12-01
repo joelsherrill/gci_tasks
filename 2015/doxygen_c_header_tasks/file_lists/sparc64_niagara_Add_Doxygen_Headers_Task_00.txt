@@ -1,0 +1,3 @@
+sparc64/niagara/include/bsp.h
+sparc64/niagara/startup/m5ops.h
+sparc64/niagara/startup/m5op.h

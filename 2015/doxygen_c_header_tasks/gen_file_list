@@ -60,12 +60,13 @@ generate_tasks()
   num=1
   for f1 in ${outdir}/${1}_${basename}*
   do
+    echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
     f=`basename $f1`
     title="libbsp/.../${area} Doxygen Enhancement Task #${num}"
     desc=""
     desc="${desc}This task consists of editing the files listed in"
-    desc="${desc} <a href=${url}/${f}>${url}/${f}></a> per the"
-    desc="${desc} instructions at <a href=${wiki_url}>${wiki_url}</a>."
+    desc="${desc} this [file](${url}/${f}) per these"
+    desc="${desc} [instructions](${wiki_url})."
     desc="${desc} A patch generated using git diff will need"
     desc="${desc} to be submitted to fulfill this task. This patch"
     desc="${desc} will be reviewed by the mentors and suggestions"
@@ -79,7 +80,9 @@ generate_tasks()
     else
       is_beginner="0"
     fi
-    categories="Code, Documentation / Training"
+    # 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
+    # 4: Quality Assurance. 5: User Interface.
+    categories="1, 2"
     time_to_complete="3"
 
     # commas must be quoted
@@ -89,7 +92,8 @@ generate_tasks()
     # print row
 
   # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
-    echo "${title}, \"${desc}\",${max_instances},\"${tags}\",${is_beginner},${categories},${time_to_complete}"
+  #  echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
+    echo "${title}, \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, doxygen"
     num=`expr ${num} + 1`
   done
 }
@@ -183,7 +187,7 @@ dirs="${dirs} arm/lpc24xx"
 dirs="${dirs} arm/csb336"
 dirs="${dirs} arm/altera-cyclone-v"
 dirs="${dirs} arm/tms570"
-dirs="${dirs} arm/stm32f4"
+dirs="${dirs} arm/stm32f4"           # added as a test case
 dirs="${dirs} bfin/bf537Stamp"
 dirs="${dirs} bfin/TLL6527M"
 dirs="${dirs} bfin/eZKit533"
@@ -212,15 +216,15 @@ dirs="${dirs} m68k/gen68340"
 dirs="${dirs} m68k/mcf52235"
 dirs="${dirs} m68k/genmcf548x"
 dirs="${dirs} h8300/h8sim"
-dirs="${dirs} v850/gdbv850sim"
+dirs="${dirs} v850/gdbv850sim"           # added as a test case
 dirs="${dirs} sparc64/usiii"
 dirs="${dirs} sparc64/niagara"
 dirs="${dirs} or1k/generic_or1k"
 dirs="${dirs} sh/gensh2"
 dirs="${dirs} sh/gensh1"
 dirs="${dirs} sh/shsim"
-dirs="${dirs} sh/gensh4"
-dirs="${dirs} epiphany/epiphany_sim"
+dirs="${dirs} sh/gensh4"                 # added as a test case
+dirs="${dirs} epiphany/epiphany_sim"     # added as a test case
 
 for d in ${dirs}
 do

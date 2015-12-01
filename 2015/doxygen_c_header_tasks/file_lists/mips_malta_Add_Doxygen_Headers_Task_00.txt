@@ -1,0 +1,2 @@
+mips/malta/include/pci.h
+mips/malta/include/bsp.h

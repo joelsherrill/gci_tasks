@@ -1,0 +1,2 @@
+powerpc/qemuppc/include/bsp.h
+powerpc/qemuppc/irq/irq.h

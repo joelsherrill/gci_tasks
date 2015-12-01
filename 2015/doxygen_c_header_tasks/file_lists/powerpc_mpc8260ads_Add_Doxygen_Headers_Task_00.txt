@@ -1,0 +1,3 @@
+powerpc/mpc8260ads/include/bsp.h
+powerpc/mpc8260ads/irq/irq.h
+powerpc/mpc8260ads/network/if_hdlcsubr.h

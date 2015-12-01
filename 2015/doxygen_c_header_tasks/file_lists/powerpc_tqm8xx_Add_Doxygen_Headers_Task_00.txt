@@ -1,0 +1,5 @@
+powerpc/tqm8xx/include/irq.h
+powerpc/tqm8xx/include/tqm.h
+powerpc/tqm8xx/include/bsp.h
+powerpc/tqm8xx/include/8xx_immap.h
+powerpc/tqm8xx/spi/spi.h
