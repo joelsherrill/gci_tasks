@@ -46,6 +46,7 @@ do_directory()
   cd - >/dev/null 2>&1
 }
 
+num=1
 generate_tasks()
 {
   area=${1}
@@ -57,7 +58,6 @@ generate_tasks()
   # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
 
 
-  num=1
   echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
   for f1 in ${outdir}/${1}_${basename}*
   do
