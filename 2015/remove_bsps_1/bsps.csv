@@ -10,4 +10,3 @@ id,summary,component,status,type,priority,milestone
 2453,Remove h8300/h8sim BSP,bsps,new,enhancement,normal,4.12
 2457,Remove powerpc/ep1a BSP,bsps,new,enhancement,normal,4.12
 2458,Remove powerpc/score603e BSP,bsps,new,enhancement,normal,4.12
-

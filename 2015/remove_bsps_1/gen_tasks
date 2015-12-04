@@ -18,6 +18,7 @@ if [ ! -x ../get_mentor ] ; then
   exit 1
 fi
 
+  num=1
 generate_tasks()
 {
   # row headings have to be printed
