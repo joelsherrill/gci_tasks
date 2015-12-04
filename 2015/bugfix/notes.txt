@@ -1,0 +1,26 @@
+The bugs are hard-coded into bugfix.py
+
+I generated the bug lists by using queries on Trac and manually
+copying the ticket numbers. Probably this can be automated better.
+
+So far, I have made the bugfix lists for the following:
+milestone=4.9.5, not closed
+miletone=4.11, not closed
+
+Tickets:
+'1254',
+'1405',
+'1406',
+'1709',
+'1720',
+'1778',
+'2024',
+'2346',
+'2288',
+'2300',
+'2325',
+'2352',
+'2355',
+'2377',
+'2419',
+
