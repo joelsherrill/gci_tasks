@@ -68,7 +68,7 @@ def generate_tasks():
 
   for b in xrange(len(pages)):
     title = "Resolve Wiki Page: " + pages[b]
-    description = "
+    description = "\
 Investigate the page located on\
  [the RTEMS Trac Wiki](https://devel.rtems.org/wiki/" + pages[b] + ")\
  Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/UI/WikiTBR) on our wiki.\
