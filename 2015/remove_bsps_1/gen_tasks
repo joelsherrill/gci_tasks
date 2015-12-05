@@ -40,9 +40,9 @@ generate_tasks()
   mentors=`../get_mentor ${num}`
   tags="C, BSP"
   is_beginner="0"
-  # 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
-  # 4: Quality Assurance. 5: User Interface.
-  categories="1, 4"
+  # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+  # 4: Quality Assurance. 5: Outreach & Research.
+  categories="1,4"
   time_to_complete="5"
 
 # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
