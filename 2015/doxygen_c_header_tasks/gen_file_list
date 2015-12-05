@@ -46,7 +46,6 @@ do_directory()
   cd - >/dev/null 2>&1
 }
 
-num=1
 generate_tasks()
 {
   area=${1}
@@ -63,7 +62,7 @@ generate_tasks()
   do
     #echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
     f=`basename $f1`
-    title="libbsp/.../${area} Doxygen Enhancement Task #${num}"
+    title="Doxygen Enhancement Task #${num} ${area}"
     desc=""
     desc="${desc}This task consists of editing the files listed in"
     desc="${desc} this [file](${url}/${f}) per these"
@@ -94,8 +93,7 @@ generate_tasks()
 
   # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
   #  echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
-    echo "${title}, \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, doxygen"
-    num=`expr ${num} + 1`
+    echo "\"${title}\", \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, doxygen"
   done
 }
 
@@ -232,6 +230,7 @@ do
   do_directory ${d}
 done
 
+num=1
 for infile in files_*
 do
   # echo $infile
@@ -257,7 +256,9 @@ do
   #area=`echo ${d} | sed -e 's/\/src//' -e 's/\//_/g'`
   area=`echo ${infile} | sed -e 's/files_//'`
   outfile=tasks_for_${area}.csv
-  generate_tasks ${area} >$outfile
+  generate_tasks ${area} | sed -e '/^$/d' >$outfile
+  echo ${num}: ${outfile}
+  num=`expr ${num} + 1`
   lines=`cat ${outfile} | wc -l`
   if [ ${lines} -eq 0 ] ; then
     rm ${area}.csv
