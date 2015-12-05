@@ -33,9 +33,9 @@ case ${remainder} in
   5) mentor=chriscjohns@gmail.com ;;
   6) mentor=jenniferaverett@gmail.com ;;
   7) mentor=saketsinha89@gmail.com ;;
-  8) mentor=martingalvan@tallertechnologies.com ;;
+  8) mentor=martin.galvan@tallertechnologies.com ;;
   9) mentor=nickrtemsgci@gmail.com ;;
-  10) mentor=alancudmoregmail.com ;;
+  10) mentor=alancudmore@gmail.com ;;
   *) echo "What?" ; exit 1 ;;
 esac
 echo -n ${mentor}
