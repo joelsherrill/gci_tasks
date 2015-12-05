@@ -1,0 +1,4 @@
+The wiki pages are hard-coded into TBR.py
+
+So far I have processed all of the "Delete" category.
+
