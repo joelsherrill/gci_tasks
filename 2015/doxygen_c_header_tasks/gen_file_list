@@ -80,9 +80,9 @@ generate_tasks()
     else
       is_beginner="0"
     fi
-    # 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
-    # 4: Quality Assurance. 5: User Interface.
-    categories="1, 2"
+    # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+    # 4: Quality Assurance. 5: Outreach & Research.
+    categories="1,3"
     time_to_complete="3"
 
     # commas must be quoted
