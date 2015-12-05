@@ -78,8 +78,8 @@ Investigate the page located on\
     tags = "\"wiki,research\""
     is_beginner = "false"
     categories = "\"2,3,4,5\""
-    	# 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
-	# 4: Quality Assurance. 5: User Interface.
+	# 1: Coding. 2: User Interface. 3: Documentation & Training.
+	# 4: Quality Assurance. 5: Outreach & Research.
     time_to_complete = "3"
     private_metadata = "TBR"
 

@@ -43,9 +43,9 @@ def generate_tasks(year, pages):
     mentors = "\"" + str(get_mentor(year+p)) + "\""
     tags = "wiki"
     is_beginner = "true"
-    categories = "\"3\""
-    	# 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
-	# 4: Quality Assurance. 5: User Interface.
+    categories = "\"5\""
+	# 1: Coding. 2: User Interface. 3: Documentation & Training.
+	# 4: Quality Assurance. 5: Outreach & Research.
     time_to_complete = "4"
     private_metadata = "citations"
 
