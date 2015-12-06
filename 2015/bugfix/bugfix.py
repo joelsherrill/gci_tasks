@@ -52,8 +52,8 @@ Investigate the bug described in Ticket #" + bugs[b] + " on\
     tags = "\"c,debugging\""
     is_beginner = "false"
     categories = "\"1,3,4\""
-    	# 1: Coding. 2: Documentation & Training. 3: Outreach & Research.
-	# 4: Quality Assurance. 5: User Interface.
+	# 1: Coding. 2: User Interface. 3: Documentation & Training.
+	# 4: Quality Assurance. 5: Outreach & Research.
     time_to_complete = "5"
     private_metadata = "bugfix"
 
