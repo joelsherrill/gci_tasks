@@ -26,12 +26,6 @@ if [[ -z $r || ! -d $r/cpukit ]] ; then
   exit 1
 fi
 
-if [ ! -f do_doxygen ] ; then
-  echo "Error: Unable to find ./do_doxygen script. Invalid working directory."
-  pwd
-  exit 1
-fi
-
 type mscgen >/dev/null 2>/dev/null
 if [ $? -ne 0 ] ; then
   echo "Warning! "
