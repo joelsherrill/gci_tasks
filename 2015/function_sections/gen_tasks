@@ -1,6 +1,6 @@
 #! /bin/sh
 
-wiki_url="https://devel.rtems.org/wiki/Developer/Removing_a_BSP"
+wiki_url="https://devel.rtems.org/wiki/GCI/Coding/AddPerSectionSupportToBSPs"
 
 infile=bsps_needing_sections.txt
 outfile=tasks.csv
