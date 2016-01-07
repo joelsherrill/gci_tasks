@@ -1,0 +1,40 @@
+#! /bin/sh
+
+wiki_url="https://devel.rtems.org/wiki/Developer/Removing_a_BSP"
+
+infile=bsps_needing_sections.txt
+outfile=tasks.csv
+
+generate_tasks()
+{
+  # row headings have to be printed
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+
+  bsp=$1
+
+  title="Add Per Function Sections to ${bsp} BSP"
+  desc=""
+  desc="${desc}This task consists of adding per function section support to"
+  desc="${desc} ${bsp} BSP per these [instructions](${wiki_url})."
+  max_instances="1"
+  mentors="joelsherrill@gmail.com,gedarebloom@gmail.com,vattamsantosh@gmail.com,chriscjohns@gmail.com,saketsinha89@gmail.com,martin.galvan@tallertechnologies.com,nickrtemsgci@gmail.com,alancudmore@gmail.com"
+  tags="C, BSP"
+  is_beginner="0"
+  # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+  # 4: Quality Assurance. 5: Outreach & Research.
+  categories="1,4"
+  time_to_complete="5"
+
+# NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  echo "${title}, \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"function sections BSP\""
+}
+
+echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
+cat ${infile} | while read line
+do
+  bsp=${line}
+  generate_tasks ${bsp}
+done >>${outfile}
+
+wc -l *.csv
+exit 0
