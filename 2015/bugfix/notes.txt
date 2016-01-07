@@ -6,6 +6,7 @@ copying the ticket numbers. Probably this can be automated better.
 So far, I have made the bugfix lists for the following:
 milestone=4.9.5, not closed
 miletone=4.11, not closed
+Two tickets created by Sebastian related to removing deprecated features.
 
 Tickets:
 '1254',
@@ -23,4 +24,5 @@ Tickets:
 '2355',
 '2377',
 '2419',
-
+'2493',
+'2494'

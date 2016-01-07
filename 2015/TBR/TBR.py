@@ -21,47 +21,16 @@ def get_mentor(n):
   return m
 
 pages = [
-'TBR/Delete/Arm_bare_bsp',
-'TBR/Delete/BSPQuickInfo',
-'TBR/Delete/BSP_Template',
-'TBR/Delete/Build_Results',
-'TBR/Delete/Canadian_Cross_Compiler?',
-'TBR/Delete/Documentation',
-'TBR/Delete/DownloadRTEMS',
-'TBR/Delete/DownloadingRTEMS',
-'TBR/Delete/ExecutiveVsKernelVsOperatingSystemVsRTOS',
-'TBR/Delete/Fault_injection?',
-'TBR/Delete/FreeBSD_Ports',
-'TBR/Delete/GCCAVRBugs',
-'TBR/Delete/Hierarchy',
-'TBR/Delete/HowTo:_Mongoose_Web_Server',
-'TBR/Delete/IDL_COM?',
-'TBR/Delete/Installing_MinGW_RTEMS_Tools',
-'TBR/Delete/Installing_an_Infobox',
-'TBR/Delete/Libbsd-port?',
-'TBR/Delete/MacOSHostedTools?',
-'TBR/Delete/MacOS_Tools_From_Source',
-'TBR/Delete/Makefile',
-'TBR/Delete/Makefile.am',
-'TBR/Delete/MinGW_Tools_for_Windows2',
-'TBR/Delete/MoreBSPsForSimulators?',
-'TBR/Delete/NewlibMemoryAllocation',
-'TBR/Delete/OutsideSOC_64bit_timestamps',
-'TBR/Delete/POSIXTimingTests?',
-'TBR/Delete/RTEMSLicense',
-'TBR/Delete/RTEMS_Build_Farm',
-'TBR/Delete/RTEMS_CENTRE',
-'TBR/Delete/RTEMS_CVS_Repository',
-'TBR/Delete/RTEMS_CVS_Repository_Writing',
-'TBR/Delete/RTEMS_Graphics_Toolkit',
-'TBR/Delete/RecentChanges',
-'TBR/Delete/SPARCengine_1e',
-'TBR/Delete/SandBox',
-'TBR/Delete/SpecBuilder',
-'TBR/Delete/TNC',
-'TBR/Delete/Tools_Used_by_the_RTEMS_Project',
-'TBR/Delete/UseHashOrMapInNotepadsAndKeys',
-'TBR/Delete/Virtual_Machines_for_RTEMS_Development'
+'TBR/Review/CVSPlot',
+'TBR/Review/DateTimeHardwareIssues',
+'TBR/Review/GSOC_F12_ToolChainSetup',
+'TBR/Review/HomePage',
+'TBR/Review/OASL',
+'TBR/Review/RTEMS411Ideas',
+'TBR/Review/Real-Time_Resources',
+'TBR/Review/RsgTrialsAndTribulations',
+'TBR/Review/Steering_Committee',
+'TBR/Review/ToolStatus'
 ]
 
 def generate_tasks():
@@ -74,7 +43,7 @@ Investigate the page located on\
  Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/UI/WikiTBR) on our wiki.\
 "
     max_instances = "1"	
-    mentors = "\"" + str(get_mentor(b)) + "\""
+    mentors = "\"amardtakhar@gmail.com," + str(get_mentor(b)) + "\""
     tags = "\"wiki,research\""
     is_beginner = "false"
     categories = "\"2,3,4,5\""
