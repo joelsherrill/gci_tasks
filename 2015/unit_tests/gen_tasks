@@ -1,0 +1,48 @@
+#! /bin/sh
+
+wiki_url="https://devel.rtems.org/wiki/GCI/QA/UnitNames"
+spreadsheet_url="https://docs.google.com/spreadsheets/d/1yTBlmzrhZfwm6mWpOiJFbcilMoiauwbdArQbSMPWh4I/edit#gid=0"
+
+outfile=tasks.csv
+
+generate_tasks()
+{
+  # row headings have to be printed
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+
+  start=$1
+  stop=$2
+
+  title="Define new unit test names (${start}-${stop})"
+  desc=""
+  desc="${desc}This task consists of suggesting new unit test names"
+  desc="${desc} for ten existing RTEMS tests per these"
+  desc="${desc} [instructions](${wiki_url}). The tests are defined in"
+  desc="${desc} rows ${start}-${stop} in this"
+  desc="${desc} [spreadsheet](${spreadsheet_url})."
+  max_instances="1"
+  mentors="amardtakhar@gmail.com"
+  tags="testing, unit test"
+  is_beginner="0"
+  # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+  # 4: Quality Assurance. 5: Outreach & Research.
+  categories="1,4"
+  time_to_complete="3"
+
+# NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  echo "${title}, \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"unit test names\""
+}
+
+echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
+row=1
+while test ${row} -lt 110
+do
+  start=${row}
+  stop=`expr ${row} + 9`
+  generate_tasks ${start} ${stop}
+  row=`expr ${row} + 10`
+done >>${outfile}
+
+
+wc -l *.csv
+exit 0
