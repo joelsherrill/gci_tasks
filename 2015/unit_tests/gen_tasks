@@ -34,8 +34,8 @@ generate_tasks()
 }
 
 echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
-row=1
-while test ${row} -lt 110
+row=111
+while test ${row} -lt 260
 do
   start=${row}
   stop=`expr ${row} + 9`
