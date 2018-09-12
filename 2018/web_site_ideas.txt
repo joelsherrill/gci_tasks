@@ -1,0 +1,24 @@
+
++ (7 Dec 2015, joel)
+Any issues with group mentoring? Watch for these.
+
++ (7 Dec 2015, joel)
+Workflow issue where only the assigned mentor can edit a task. 
+This doesn't work well when the mentor is randomly assigned by
+a script as part of generating multiple tasks. 
+
++ (7 Dec 2015, joel)
+Task table title column changes width depending on how
+some fields are sorted. Seen with Chrome on Windows but not by another
+user using a similar Chromium version on Linux.
+
++ (7 Dec 2015, joel)
+Filter has "Draft" which is only use of that word.
+
++ (7 Dec 2015, joel) 
+Sorting table by last modified does not sort correctly.
+
++ (7 Dec 2015, joel) 
+Ability to provide organization email list.
+
+

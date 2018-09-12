@@ -1,0 +1,2 @@
+powerpc/t32mppc/include/irq.h
+powerpc/t32mppc/include/bsp.h

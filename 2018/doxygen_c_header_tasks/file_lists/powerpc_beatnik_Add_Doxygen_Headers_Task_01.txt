@@ -1,0 +1,6 @@
+powerpc/beatnik/network/porting/pcireg.h
+powerpc/beatnik/network/porting/rtemscompat.h
+powerpc/beatnik/network/if_mve/if_mve_pub.h
+powerpc/beatnik/network/support/bsp_bsdnet_attach.h
+powerpc/beatnik/network/support/early_enet_link_status.h
+powerpc/beatnik/vme/VMEConfig.h

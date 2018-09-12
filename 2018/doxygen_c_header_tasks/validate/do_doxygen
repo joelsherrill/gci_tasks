@@ -1,0 +1,83 @@
+#!/bin/bash
+
+#
+#  Generate Doxygen for Head
+#
+
+usage()
+{
+  echo "
+Usage: ./do_doxygen path/from/rtems
+
+Where path/from/rtems is the path to a subdirectory of RTEMS to use as the
+root directory for generating the doxygen output. The environment variable
+\$r must be set to the full path to the top of the RTEMS source tree.
+"
+}
+
+if [[ -z $1 || ! -d $r/$1 ]] ; then
+  echo "Error: Invalid directory specified $1"
+  usage
+  exit 1
+fi
+
+if [[ -z $r || ! -d $r/cpukit ]] ; then
+  echo "Error: Unable to locate RTEMS sources at \$r: $r"
+  exit 1
+fi
+
+type mscgen >/dev/null 2>/dev/null
+if [ $? -ne 0 ] ; then
+  echo "Warning! "
+  echo "  Missing mscgen. If you want to generate the complete figure set,"
+  echo "  visit http://www.mcternan.me.uk/mscgen/ and look for RPMs and Yum"
+  echo "  instructions."
+  echo ""
+  echo "  This is not necessary but some figures will be missing."
+fi
+
+# Pass the subdirectory to use as the root of doxygen generation as $1
+do_doxy()
+{
+  directory=$1
+
+  # Where to put the Doxygen and Texinfo output
+  output=./out
+  test -d ${output} || mkdir ${output}
+  cd ${output}
+
+  d=doxygen
+  outdir=${d}/${directory}
+  rm -rf ${outdir}
+  test -d ${outdir} || mkdir -p ${outdir}
+
+  inputs=`find "$r/${directory}" -name "*.h"`
+  inputs=`echo $inputs`
+
+  #mv Doxyfile Doxyfile.tmp
+  sed -e "s,^PROJECT_NAME.*=.*$,PROJECT_NAME = \"RTEMS ${directory}\"," \
+      -e "s,^OUTPUT_DIRECTORY.*=.*$,OUTPUT_DIRECTORY = ${outdir}-tmp," \
+      -e "s,^STRIP_FROM_PATH.*=.*$,STRIP_FROM_PATH = $r," \
+      -e "s,^INPUT.*=.*lib.*$,INPUT = ${inputs}," \
+      -e "s,^INPUT_FILTER.*=.*$,INPUT_FILTER = ${r}/cpukit/doxy-filter," \
+      -e "s,^PROJECT_NUMBER.*=.*$,PROJECT_NUMBER = ," \
+      -e "s,^PERL_PATH.*=.*$,PERL_PATH = `which perl`," \
+      -e "s,^MSCGEN_PATH.*=.*$,MSCGEN_PATH = `which mscgen`," \
+    < $r/cpukit/Doxyfile.in > Doxyfile
+
+  doxygen >${d}/doxy.log 2>&1
+  error=$?
+
+  if [ ${error} -eq 0 ] ; then
+    rm -rf ${outdir}
+    mv ${outdir}-tmp ${outdir}
+  else
+    echo "Error: doxygen failed with code ${error}"
+    exit ${error}
+  fi
+  xdg-open ${outdir}/html/index.html
+  cd -
+}
+
+do_doxy $1
+exit 0

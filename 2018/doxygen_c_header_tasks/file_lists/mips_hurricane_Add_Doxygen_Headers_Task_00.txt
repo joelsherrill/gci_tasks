@@ -1,0 +1,3 @@
+mips/hurricane/include/bsp.h
+mips/hurricane/include/usc.h
+mips/hurricane/clock/clock.h
