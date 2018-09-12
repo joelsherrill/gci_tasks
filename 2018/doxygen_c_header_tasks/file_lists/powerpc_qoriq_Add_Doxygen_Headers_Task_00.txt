@@ -1,0 +1,1 @@
+powerpc/qoriq/include/u-boot-config.h

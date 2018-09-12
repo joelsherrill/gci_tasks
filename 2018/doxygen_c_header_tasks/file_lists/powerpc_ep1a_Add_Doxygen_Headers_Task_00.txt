@@ -1,0 +1,6 @@
+powerpc/ep1a/include/bsp.h
+powerpc/ep1a/console/m68360.h
+powerpc/ep1a/console/rsPMCQ1.h
+powerpc/ep1a/console/ns16550cfg.h
+powerpc/ep1a/console/console.h
+powerpc/ep1a/vme/VMEConfig.h

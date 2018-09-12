@@ -1,0 +1,2 @@
+sh/gensh4/include/bsp.h
+sh/gensh4/include/sdram.h

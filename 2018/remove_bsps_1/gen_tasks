@@ -1,0 +1,62 @@
+#! /bin/sh
+
+basename=Add_Doxygen_Headers_Task_
+files_per_task=20
+wiki_url="https://devel.rtems.org/wiki/Developer/Removing_a_BSP"
+ticket_url="https://devel.rtems.org/ticket/"
+
+infile=bsps.csv
+outfile=tasks.csv
+
+if [ X${r} = "X" ] ; then
+  echo "Top of RTEMS tree not set in variable r"
+  exit 1
+fi
+
+if [ ! -x ../get_mentor ] ; then
+  echo "get_mentor is not executable"
+  exit 1
+fi
+
+  num=1
+generate_tasks()
+{
+  # row headings have to be printed
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+
+  ticket=$1
+  bsp=$2
+
+  title="Remove obselete BSP ${bsp}"
+  desc=""
+  desc="${desc}This task consists of removing the obsolete BSP ${bsp}"
+  desc="${desc} per these [instructions](${wiki_url})."
+  desc="${desc} Removing ${bsp} is tracked as"
+  desc="${desc} [issue ${ticket}](${ticket_url}/${ticket}]."
+  desc="${desc} This patch will be reviewed by the mentors and suggestions"
+  desc="${desc} are likely to be made. Please file the patch as an attachment"
+  desc="${desc} to the issue ticket. This will require an account."
+  max_instances="1"
+  mentors=`../get_mentor ${num}`
+  tags="C, BSP"
+  is_beginner="0"
+  # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+  # 4: Quality Assurance. 5: Outreach & Research.
+  categories="1,4"
+  time_to_complete="5"
+
+# NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  echo "${title}, \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"obsolete BSP\""
+  num=`expr ${num} + 1`
+}
+
+echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
+cat ${infile} | while read line
+do
+  ticket=`echo ${line} | cut -d',' -f1`
+  bsp=`echo ${line} | cut -d',' -f2 | cut -d' ' -f2`
+  generate_tasks ${ticket} ${bsp}
+done >>${outfile}
+
+wc -l *.csv
+exit 0

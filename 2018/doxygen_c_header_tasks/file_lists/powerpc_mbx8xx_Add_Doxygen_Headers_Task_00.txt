@@ -1,0 +1,5 @@
+powerpc/mbx8xx/include/bsp.h
+powerpc/mbx8xx/include/mbx.h
+powerpc/mbx8xx/include/commproc.h
+powerpc/mbx8xx/include/8xx_immap.h
+powerpc/mbx8xx/irq/irq.h

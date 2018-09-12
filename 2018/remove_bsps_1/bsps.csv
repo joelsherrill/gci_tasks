@@ -1,0 +1,12 @@
+id,summary,component,status,type,priority,milestone
+2442,Remove avrtest BSP,bsps,new,enhancement,normal,4.12
+2444,Remove m68k/mvme136 BSP,bsps,new,enhancement,normal,4.12
+2445,Remove m68k/sim68000 BSP,bsps,new,enhancement,normal,4.12
+2447,Remove m32r/m32rsim,bsps,new,enhancement,normal,4.12
+2448,Remove mips/mongoose BSP,bsps,new,enhancement,normal,4.12
+2449,Remove arm/gba BSP,bsps,new,enhancement,normal,4.12
+2450,Remove arm/nds,bsps,new,enhancement,normal,4.12
+2451,Remove arm/gp32 BSP,bsps,new,enhancement,normal,4.12
+2453,Remove h8300/h8sim BSP,bsps,new,enhancement,normal,4.12
+2457,Remove powerpc/ep1a BSP,bsps,new,enhancement,normal,4.12
+2458,Remove powerpc/score603e BSP,bsps,new,enhancement,normal,4.12

@@ -1,0 +1,2 @@
+sh/shsim/include/bsp.h
+sh/shsim/include/syscall.h

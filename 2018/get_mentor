@@ -1,0 +1,42 @@
+#! /bin/sh
+
+if [ $# -ne 1 ] ; then
+  echo "usage: $0 number"
+  exit 1
+fi
+
+Number=$1
+
+isNumber()
+{
+  if [ $Number -ne 0 -o $Number -eq 0 2>/dev/null ]; then
+    return 0
+  fi
+  return 1
+}
+
+status=`isNumber ${Number}`
+if [ $? -ne 0 ] ; then
+  echo "${Number} is NOT a number"
+  exit 1
+fi
+
+## CHANGE ME WHEN LIST CHANGES
+NumMentors=11
+remainder=`expr ${Number} % ${NumMentors}`
+case ${remainder} in
+  0) mentor=joelsherrill@gmail.com ;;
+  1) mentor=gedarebloom@gmail.com ;;
+  2) mentor=vattamsantosh@gmail.com ;;
+  3) mentor=krzysztofmiesowicz@gmail.com ;;
+  4) mentor=heshamelmatary@gmail.com ;;
+  5) mentor=chriscjohns@gmail.com ;;
+  6) mentor=jenniferaverett@gmail.com ;;
+  7) mentor=saketsinha89@gmail.com ;;
+  8) mentor=martin.galvan@tallertechnologies.com ;;
+  9) mentor=nickrtemsgci@gmail.com ;;
+  10) mentor=alancudmore@gmail.com ;;
+  *) echo "What?" ; exit 1 ;;
+esac
+echo -n ${mentor}
+exit 0

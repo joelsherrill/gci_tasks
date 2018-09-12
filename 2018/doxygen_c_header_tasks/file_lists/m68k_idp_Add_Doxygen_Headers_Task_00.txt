@@ -1,0 +1,2 @@
+m68k/idp/include/motorola/mc68230.h
+m68k/idp/include/motorola/mc68681.h

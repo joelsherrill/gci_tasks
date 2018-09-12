@@ -1,0 +1,40 @@
+#! /bin/sh
+
+wiki_url="https://devel.rtems.org/wiki/References#ReferencePageInstructions"
+
+infile=years_to_sort.txt
+outfile=tasks.csv
+
+generate_tasks()
+{
+  # row headings have to be printed
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+
+  year=$1
+
+  title="Clean up references for Year ${year}"
+  desc=""
+  desc="${desc}This task consists of cleaning up the references for the"
+  desc="${desc} specified year per these [instructions](${wiki_url})."
+  max_instances="1"
+  mentors="joelsherrill@gmail.com,gedarebloom@gmail.com,vattamsantosh@gmail.com,chriscjohns@gmail.com,saketsinha89@gmail.com,martin.galvan@tallertechnologies.com,nickrtemsgci@gmail.com,alancudmore@gmail.com"
+  tags="wiki"
+  is_beginner="0"
+  # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+  # 4: Quality Assurance. 5: Outreach & Research.
+  categories="3,4"
+  time_to_complete="3"
+
+# NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  echo "${title}, \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"fix citations\""
+}
+
+echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
+cat ${infile} | while read line
+do
+  bsp=${line}
+  generate_tasks ${bsp}
+done >>${outfile}
+
+wc -l *.csv
+exit 0

@@ -1,0 +1,3 @@
+shared/include/fdt.h
+shared/include/cache_.h
+shared/include/console-polled.h

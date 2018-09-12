@@ -1,0 +1,270 @@
+#! /bin/sh
+
+basename=Add_Doxygen_Headers_Task_
+files_per_task=20
+wiki_url="https://devel.rtems.org/wiki/GCI/Documentation/Doxygen"
+url="https://github.com/joelsherrill/gci_tasks/tree/master/2015/doxygen_c_header_tasks/file_lists"
+
+
+base=`pwd`
+outdir=${base}/file_lists
+rm -rf ${outdir}
+mkdir ${outdir}
+
+if [ X${r} = "X" ] ; then
+  echo "Top of RTEMS tree not set in variable r"
+  exit 1
+fi
+
+if [ ! -x ../get_mentor ] ; then
+  echo "get_mentor is not executable"
+  exit 1
+fi
+
+b=${r}/c/src/lib/libbsp
+
+do_directory()
+{
+  area=$1
+
+  area_b=`echo ${area} | sed -e 's/\/src//' -e 's/\//_/g'`
+
+  cd $b/
+  find ${area} -name "*.[h]" | \
+    grep -v /nds/ | \
+    while read f
+  do
+    grep "@brief" $f >/dev/null
+    if [ $? -ne 0 ] ; then
+      echo $f
+    fi
+  done >${base}/files_${area_b}
+  lines=`cat ${base}/files_${area_b} | wc -l`
+  if [ ${lines} -eq 0 ] ; then
+    rm ${base}/files_${area_b}
+  fi
+  cd - >/dev/null 2>&1
+}
+
+generate_tasks()
+{
+  area=${1}
+  area_b=`echo ${area} | sed -e 's/\/src//'`
+
+  #echo "${area} ${area_b}"
+  # row headings do not have to be printed
+  # OLD  echo "title, description, time_to_complete, mentors, types, tags"
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+
+
+  echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
+  for f1 in ${outdir}/${1}_${basename}*
+  do
+    #echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
+    f=`basename $f1`
+    title="Doxygen Enhancement Task #${num} ${area}"
+    desc=""
+    desc="${desc}This task consists of editing the files listed in"
+    desc="${desc} this [file](${url}/${f}) per these"
+    desc="${desc} [instructions](${wiki_url})."
+    desc="${desc} A patch generated using git diff will need"
+    desc="${desc} to be submitted to fulfill this task. This patch"
+    desc="${desc} will be reviewed by the mentors and suggestions"
+    desc="${desc} are likely to be made."
+    max_instances="1"
+    mentors=`../get_mentor ${num}`
+    tags="C, Doxygen"
+    lines=`cat ${f1} | wc -l`
+    if [ ${lines} -eq 1 ] ; then
+      is_beginner="1"
+    else
+      is_beginner="0"
+    fi
+    # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+    # 4: Quality Assurance. 5: Outreach & Research.
+    categories="1,3"
+    time_to_complete="3"
+
+    # commas must be quoted
+    # desc=`echo ${desc} | sed -e 's/,/","/g'`
+    # tags=`echo ${tags} | sed -e 's/,/","/g'`
+
+    # print row
+
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  #  echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata"
+    echo "\"${title}\", \"${desc}\",${max_instances},\"${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, doxygen"
+  done
+}
+
+#for infile in $*
+#do
+#  if [ ! -r $infile ] ; then
+#    echo $infile is not readable
+#    exit 1
+#  fi
+#done
+
+dirs="shared"
+dirs="${dirs} arm/shared"
+dirs="${dirs} bfin/shared"
+dirs="${dirs} epiphany/shared"
+dirs="${dirs} i386/shared"
+dirs="${dirs} lm32/shared"
+dirs="${dirs} m68k/shared"
+dirs="${dirs} mips/shared"
+dirs="${dirs} or1k/shared"
+dirs="${dirs} powerpc/shared"
+dirs="${dirs} sh/shared"
+dirs="${dirs} sparc64/shared"
+dirs="${dirs} sparc/shared"
+dirs="${dirs} v850/shared"
+
+
+# BSPs
+dirs="${dirs} sparc/leon2"
+dirs="${dirs} sparc/erc32"
+dirs="${dirs} sparc/leon3"
+dirs="${dirs} mips/rbtx4925"
+dirs="${dirs} mips/jmr3904"
+dirs="${dirs} mips/jmr3904"
+dirs="${dirs} mips/rbtx4938"
+dirs="${dirs} mips/genmongoosev"
+dirs="${dirs} mips/malta"
+dirs="${dirs} mips/csb350"
+dirs="${dirs} mips/hurricane"
+dirs="${dirs} i386/pc386"
+dirs="${dirs} i386/pc386"
+dirs="${dirs} no_cpu/no_bsp"
+dirs="${dirs} powerpc/score603e"
+dirs="${dirs} powerpc/gen83xx"
+dirs="${dirs} powerpc/psim"
+dirs="${dirs} powerpc/motorola_powerpc"
+dirs="${dirs} powerpc/motorola_powerpc"
+dirs="${dirs} powerpc/motorola_powerpc"
+dirs="${dirs} powerpc/beatnik"
+dirs="${dirs} powerpc/mbx8xx"
+dirs="${dirs} powerpc/t32mppc"
+dirs="${dirs} powerpc/virtex"
+dirs="${dirs} powerpc/qoriq"
+dirs="${dirs} powerpc/mpc55xxevb"
+dirs="${dirs} powerpc/gen5200"
+dirs="${dirs} powerpc/mpc8260ads"
+dirs="${dirs} powerpc/haleakala"
+dirs="${dirs} powerpc/ss555"
+dirs="${dirs} powerpc/virtex5"
+dirs="${dirs} powerpc/mvme3100"
+dirs="${dirs} powerpc/virtex4"
+dirs="${dirs} powerpc/mvme5500"
+dirs="${dirs} powerpc/qemuppc"
+dirs="${dirs} powerpc/ep1a"
+dirs="${dirs} powerpc/tqm8xx"
+dirs="${dirs} m32c/m32cbsp"
+dirs="${dirs} nios2/nios2_iss"
+dirs="${dirs} avr/avrtest"
+dirs="${dirs} lm32/milkymist"
+dirs="${dirs} lm32/lm32_evr"
+dirs="${dirs} moxie/moxiesim"
+dirs="${dirs} arm/csb337"
+dirs="${dirs} arm/gdbarmsim"
+dirs="${dirs} arm/edb7312"
+dirs="${dirs} arm/gumstix"
+dirs="${dirs} arm/gba"
+dirs="${dirs} arm/nds"
+dirs="${dirs} arm/nds"
+dirs="${dirs} arm/xilinx-zynq"
+dirs="${dirs} arm/raspberrypi"
+dirs="${dirs} arm/lm3s69xx"
+dirs="${dirs} arm/lpc32xx"
+dirs="${dirs} arm/smdk2410"
+dirs="${dirs} arm/realview-pbx-a9"
+dirs="${dirs} arm/beagle"
+dirs="${dirs} arm/gp32"
+dirs="${dirs} arm/rtl22xx"
+dirs="${dirs} arm/lpc176x"
+dirs="${dirs} arm/lpc24xx"
+dirs="${dirs} arm/csb336"
+dirs="${dirs} arm/altera-cyclone-v"
+dirs="${dirs} arm/tms570"
+dirs="${dirs} arm/stm32f4"           # added as a test case
+dirs="${dirs} bfin/bf537Stamp"
+dirs="${dirs} bfin/TLL6527M"
+dirs="${dirs} bfin/eZKit533"
+dirs="${dirs} m32r/m32rsim"
+dirs="${dirs} m68k/mvme162"
+dirs="${dirs} m68k/mvme162"
+dirs="${dirs} m68k/mvme136"
+dirs="${dirs} m68k/mcf5235"
+dirs="${dirs} m68k/gen68302"
+dirs="${dirs} m68k/uC5282"
+dirs="${dirs} m68k/gen68360"
+dirs="${dirs} m68k/mcf5329"
+dirs="${dirs} m68k/av5282"
+dirs="${dirs} m68k/mvme147"
+dirs="${dirs} m68k/mcf5206elite"
+dirs="${dirs} m68k/mcf5206elite"
+dirs="${dirs} m68k/mvme147s"
+dirs="${dirs} m68k/mrm332"
+dirs="${dirs} m68k/idp"
+dirs="${dirs} m68k/mvme167"
+dirs="${dirs} m68k/ods68302"
+dirs="${dirs} m68k/sim68000"
+dirs="${dirs} m68k/csb360"
+dirs="${dirs} m68k/mcf5225x"
+dirs="${dirs} m68k/gen68340"
+dirs="${dirs} m68k/mcf52235"
+dirs="${dirs} m68k/genmcf548x"
+dirs="${dirs} h8300/h8sim"
+dirs="${dirs} v850/gdbv850sim"           # added as a test case
+dirs="${dirs} sparc64/usiii"
+dirs="${dirs} sparc64/niagara"
+dirs="${dirs} or1k/generic_or1k"
+dirs="${dirs} sh/gensh2"
+dirs="${dirs} sh/gensh1"
+dirs="${dirs} sh/shsim"
+dirs="${dirs} sh/gensh4"                 # added as a test case
+dirs="${dirs} epiphany/epiphany_sim"     # added as a test case
+
+for d in ${dirs}
+do
+  do_directory ${d}
+done
+
+num=1
+for infile in files_*
+do
+  # echo $infile
+
+  # now split
+  area=`echo ${infile} | sed -e 's/files_//'`
+  lines=`cat ${infile} | wc -l`
+  if [ ${lines} -eq 0 ] ; then
+    echo "${infile} is empty - Skipping"
+    continue
+  else
+    echo "${infile} has ${lines} files"
+  fi
+
+  split -l ${files_per_task} -d ${infile} ${outdir}/${area}_${basename}
+  for f in ${outdir}/${area}_${basename}*
+  do
+    mv ${f} ${f}.txt
+  done
+
+  # now generate tasks
+  #outfile=`echo $infile | sed -e s/.txt/.csv/`
+  #area=`echo ${d} | sed -e 's/\/src//' -e 's/\//_/g'`
+  area=`echo ${infile} | sed -e 's/files_//'`
+  outfile=tasks_for_${area}.csv
+  generate_tasks ${area} | sed -e '/^$/d' >$outfile
+  echo ${num}: ${outfile}
+  num=`expr ${num} + 1`
+  lines=`cat ${outfile} | wc -l`
+  if [ ${lines} -eq 0 ] ; then
+    rm ${area}.csv
+    rm ${outfile}
+  fi
+done
+
+wc -l *.csv
+exit 0
