@@ -1,0 +1,13 @@
+14 September 2018
+
+The gen_bsps_needing_sections script was updated based on current
+source organization. All BSPs identified appear to have tickets
+for this issue. Ticket 2577 is a tracking ticket for all of the
+remaining BSPs.
+
+https://devel.rtems.org/ticket/2577
+
+The tasks to import should point to the individual tickets once 
+those are confirmed.
+
+--joel
