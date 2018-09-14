@@ -1,0 +1,5 @@
+"pthread_once: first time","psxtmonce01","psxtmtest_single","No"
+"pthread_once: second time","psxtmonce02","psxtmtest_single","No"
+"mq_receive: not available: block",psxtmmqrcvblock01,"psxtmtest_blocking","No"
+"mq_timedreceive: not available: blocks",psxtmmqrcvblock02,"psxtmtest_single","No"
+
