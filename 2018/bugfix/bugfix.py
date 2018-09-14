@@ -21,8 +21,11 @@ def get_mentor(n):
   return m
 
 bugs = [
-'2493',
-'2494'
+'1405',
+'1406',
+'2024',
+'2581',
+'1778'
 ]
 
 def generate_tasks():
@@ -33,6 +36,8 @@ def generate_tasks():
 Investigate the bug described in Ticket #" + bugs[b] + " on\
  [the RTEMS Trac](https://devel.rtems.org/ticket/" + bugs[b] + ")\
  Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/QA/InvestigateTicket) on our wiki.\
+ The outcome of this task will be a comment on the ticket to suggest a path forward.\
+ If a bug fix is available, you may be expected to test the fix and possibly produce an updated patch.\
 "
     max_instances = "1"	
     mentors = "\"joelsherrill@gmail.com,gedarebloom@gmail.com," + str(get_mentor(b+2)) + "\""

@@ -26,7 +26,7 @@ def generate_tasks(year, pages):
   for p in xrange(pages):
     title = "\"Update Citations " + str(year) + "-" + str(p+1) + "\""
     description = "\"This task consists of updating the\
-[RTEMS References Wiki page](https://devel.rtems.org/wiki/TBR/Website/RTEMSReferences) according to the instructions given in the\
+[RTEMS References Wiki page](https://devel.rtems.org/wiki/References/" + str(year) + ") according to the instructions given in the\
  [RTEMS GCI Wiki page](https://devel.rtems.org/wiki/GCI/Outreach/Citations)\
  for the year " + str(year) +\
  " and page " + str(p+1) + ". You will need to\

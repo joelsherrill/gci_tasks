@@ -41,6 +41,7 @@ def generate_tasks():
 Investigate the page located on\
  [the RTEMS Trac Wiki](https://devel.rtems.org/wiki/" + pages[b] + ")\
  Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/UI/WikiTBR) on our wiki.\
+ The outcome of this task is a recommendation to relocate the page/contents or to delete it.\
 "
     max_instances = "1"	
     mentors = "\"amardtakhar@gmail.com," + str(get_mentor(b)) + "\""

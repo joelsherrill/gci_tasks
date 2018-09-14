@@ -14,8 +14,10 @@ generate_tasks()
 
   title="Add Per Function Sections to ${bsp} BSP"
   desc=""
-  desc="${desc}This task consists of adding per function section support to"
+  desc="${desc}Compiler and Linker flags can make a big difference on the size and speed of programs."
+  desc="${desc} This task consists of adding per function section support to"
   desc="${desc} ${bsp} BSP per these [instructions](${wiki_url})."
+  desc="${desc} The outcome of this task is a patch and report of the size difference achieved."
   max_instances="1"
   mentors="joelsherrill@gmail.com,gedarebloom@gmail.com,vattamsantosh@gmail.com,chriscjohns@gmail.com,saketsinha89@gmail.com,martin.galvan@tallertechnologies.com,nickrtemsgci@gmail.com,alancudmore@gmail.com"
   tags="C, BSP"

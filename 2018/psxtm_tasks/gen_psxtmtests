@@ -1,0 +1,33 @@
+#! /bin/sh
+#
+#  Generate CSV set of PSXTMTEST tasks for GCI2012
+#
+input=Template_psxtmtests.csv
+output=Tasks_psxtmtests.csv
+TESTS=psxtmtests.csv
+cp /dev/null ${output}
+
+task=1
+
+while read line
+do
+  project=`echo $line | cut -d',' -f1 | sed -e 's/"//g'`
+  name=`echo $line | cut -d',' -f2 | sed -e 's/"//g'`
+  template=`echo $line | cut -d',' -f3 | sed -e 's/"//g'`
+
+  mentor=`../get_mentor ${task}`
+
+  # echo "${mentor} - ${project}"
+
+  sed -e "s,@PROJECT@,${project},g" \
+      -e "s,@MENTOR@,${mentor},g" \
+      -e "s,@NAME@,${name},g" \
+      -e "s,@NUMBER@,${task},g" \
+      -e "s,@TEMPLATE@,${template},g" \
+   <${input} >>${output}
+
+  task=`expr ${task} + 1`
+
+done <${TESTS}
+wc -l ${output}
+exit 0
