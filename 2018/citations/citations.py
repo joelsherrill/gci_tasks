@@ -26,7 +26,7 @@ def generate_tasks(year, pages):
   for p in xrange(pages):
     title = "\"Update Citations " + str(year) + "-" + str(p+1) + "\""
     description = "\"This task consists of updating the\
-[RTEMS References Wiki page](https://devel.rtems.org/wiki/References/" + str(year) + ") according to the instructions given in the\
+ [RTEMS References Wiki page](https://devel.rtems.org/wiki/References/" + str(year) + ") according to the instructions given in the\
  [RTEMS GCI Wiki page](https://devel.rtems.org/wiki/GCI/Outreach/Citations)\
  for the year " + str(year) +\
  " and page " + str(p+1) + ". You will need to\
@@ -34,8 +34,7 @@ def generate_tasks(year, pages):
  that conflict or delete other relevant citations. You will upload a text\
  file containing the entries that you added to the wiki page.\
  We have constructed the\
- [Google Scholar Search for this task]\
- (http://scholar.google.com/scholar?start=" + str(p*10) +\
+ [Google Scholar Search for this task](http://scholar.google.com/scholar?start=" + str(p*10) +\
  "&q=RTEMS&hl=en&lr=lang_en&as_sdt=1%2C47&as_vis=1&as_ylo=" + str(year) +\
  "&as_yhi=" + str(year) +\
  ") for your convenience.\""
