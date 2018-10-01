@@ -22,20 +22,23 @@ if [ $? -ne 0 ] ; then
 fi
 
 ## CHANGE ME WHEN LIST CHANGES
-NumMentors=11
+NumMentors=12
 remainder=`expr ${Number} % ${NumMentors}`
 case ${remainder} in
-  0) mentor=joelsherrill@gmail.com ;;
+  0) mentor=joel.sherrill@gmail.com ;;
   1) mentor=gedarebloom@gmail.com ;;
-  2) mentor=vattamsantosh@gmail.com ;;
-  3) mentor=krzysztofmiesowicz@gmail.com ;;
-  4) mentor=heshamelmatary@gmail.com ;;
-  5) mentor=chriscjohns@gmail.com ;;
-  6) mentor=jenniferaverett@gmail.com ;;
-  7) mentor=saketsinha89@gmail.com ;;
-  8) mentor=martin.galvan@tallertechnologies.com ;;
-  9) mentor=nickrtemsgci@gmail.com ;;
-  10) mentor=alancudmore@gmail.com ;;
+  2) mentor=chrisj@rtems.org ;;
+  3) mentor=heshamelmatary@gmail.com ;;
+  4) mentor=amardtakhar@gmail.com ;;
+  5) mentor=aanjhan@gmail.com ;;
+  6) mentor=hiddenpearls@gmail.com ;;
+  7) mentor=lmy2010lmy@gmail.com ;;
+  8) mentor=amaan.cheval@gmail.com ;;
+  9) mentor=dev.madaari@gmail.com ;;
+  10) mentor=zaidiaunali9@gmail.com ;;
+  11) mentor=vijaykumar9597@gmail.com ;;
+  #12) mentor=scott@zemericks.com ;;
+  #13) mentor=cibrario@polito.it ;;
   *) echo "What?" ; exit 1 ;;
 esac
 echo -n ${mentor}
