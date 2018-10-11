@@ -1,0 +1,24 @@
+This task consists of redrawing the specified image file in a
+new and open source format.
+
+For each specified image file, the desired format and some notes will be
+specified. The image file name is in the rtems-docs git repository. The file can be viewed online if you start browsing the path from here:
+
+https://git.rtems.org/rtems-docs/tree/images
+
+The desired
+format will be one of the following:
+
+- SVG 
+- an ASCII drawing language like Graphviz or PlantUML
+
+If SVG, then you an use any number of tools witk Inkscape being a
+powerful free program. 
+
+Graphviz (https://www.graphviz.org/) includes dot which is a
+simple command language to draw graphics like flowcharts.
+
+PlantUML (https://www.plantuml.com) is a simple command language
+to draw UML diagrams including inheritance, sequence, and
+flowcharts. 
+

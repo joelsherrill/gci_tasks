@@ -1,0 +1,40 @@
+rtems-docs/images/c_user/rtemsarc.png
+SVG
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/c_user/rtemspie.png
+SVG
+Update to reflect current managers in Classic API. Design latitude allowed.
+
+rtems-docs/images/c_user/semaphore_attributes.png
+Dot, PlantUML maybe
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/c_user/states.png
+SVG
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/networking/PCIreg.jpg
+SVG
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/networking/networkflow.jpg
+PlantUML
+Redraw reasonably faithfully but attractively as flowchart
+
+rtems-docs/images/networking/recvbd.jpg
+SVG
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/user/hw-layers.png
+SVG
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/user/rtems-trace-buffering.png
+SVG
+Redraw reasonably faithfully but attractively
+
+rtems-docs/images/user/rtems-trace-printk.png
+SVG
+Redraw reasonably faithfully but attractively
+
