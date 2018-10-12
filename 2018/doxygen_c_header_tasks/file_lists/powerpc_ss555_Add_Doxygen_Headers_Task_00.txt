@@ -1,2 +1,2 @@
 powerpc/ss555/include/bsp.h
-powerpc/ss555/irq/irq.h
+powerpc/ss555/include/bsp/irq.h

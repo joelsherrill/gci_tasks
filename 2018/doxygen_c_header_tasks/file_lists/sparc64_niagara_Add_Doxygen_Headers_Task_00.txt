@@ -1,3 +1,4 @@
 sparc64/niagara/include/bsp.h
-sparc64/niagara/startup/m5ops.h
-sparc64/niagara/startup/m5op.h
+sparc64/niagara/include/tm27.h
+sparc64/niagara/start/m5op.h
+sparc64/niagara/start/m5ops.h

@@ -1,3 +1,8 @@
-shared/include/fdt.h
-shared/include/cache_.h
-shared/include/console-polled.h
+shared/cache/cacheimpl.h
+shared/dev/display/disp_fonts.h
+shared/dev/display/font_hcms29xx.h
+shared/dev/serial/mc68681_p.h
+shared/dev/serial/z85c30_p.h
+shared/net/i82586reg.h
+shared/net/if_fxpreg.h
+shared/net/smc91111config.h

@@ -1,1 +1,7 @@
 sh/gensh1/include/bsp.h
+sh/gensh1/include/rtems/score/iosh7032.h
+sh/gensh1/include/rtems/score/ispsh7032.h
+sh/gensh1/include/sh/sci.h
+sh/gensh1/include/sh/sh7_pfc.h
+sh/gensh1/include/sh/sh7_sci.h
+sh/gensh1/include/tm27.h

@@ -1,0 +1,9 @@
+arm/atsam/include/bsp/atsam-clock-config.h
+arm/atsam/include/bsp/atsam-spi.h
+arm/atsam/include/bsp/i2c.h
+arm/atsam/include/bsp/iocopy.h
+arm/atsam/include/bsp/irq.h
+arm/atsam/include/bsp/pin-config.h
+arm/atsam/include/bsp/spi.h
+arm/atsam/include/bsp/atsam-i2c.h
+arm/atsam/include/tm27.h

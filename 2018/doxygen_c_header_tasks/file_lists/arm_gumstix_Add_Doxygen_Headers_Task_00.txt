@@ -1,0 +1,4 @@
+arm/gumstix/include/bsp/irq.h
+arm/gumstix/include/ffuart.h
+arm/gumstix/include/pxa255.h
+arm/gumstix/include/tm27.h

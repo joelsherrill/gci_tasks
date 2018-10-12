@@ -1,16 +1,1 @@
-arm/altera-cyclone-v/hwlib/include/socal/alt_l3.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_sysmgr.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_dmasecure.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_i2c.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_clkmgr.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_gpio.h
-arm/altera-cyclone-v/hwlib/include/socal/socal.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_dmanonsecure.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_qspi.h
-arm/altera-cyclone-v/hwlib/include/socal/hps.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_uart.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_acpidmap.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_sdr.h
-arm/altera-cyclone-v/hwlib/include/socal/alt_rstmgr.h
-arm/altera-cyclone-v/hwlib/include/alt_cache.h
-arm/altera-cyclone-v/i2c/i2cdrv-config.h
+arm/altera-cyclone-v/include/tm27.h

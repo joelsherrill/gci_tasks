@@ -1,0 +1,4 @@
+arm/rtl22xx/btimer/lpc_timer.h
+arm/rtl22xx/include/bsp/irq.h
+arm/rtl22xx/include/lpc22xx.h
+arm/rtl22xx/include/tm27.h

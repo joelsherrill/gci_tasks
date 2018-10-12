@@ -1,1 +1,9 @@
 sh/gensh2/include/bsp.h
+sh/gensh2/include/rtems/score/iosh7045.h
+sh/gensh2/include/rtems/score/ispsh7045.h
+sh/gensh2/include/sh/io_types.h
+sh/gensh2/include/sh/sci.h
+sh/gensh2/include/sh/sci_termios.h
+sh/gensh2/include/sh/sh7_pfc.h
+sh/gensh2/include/sh/sh7_sci.h
+sh/gensh2/include/tm27.h

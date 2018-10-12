@@ -1,2 +1,8 @@
 sh/gensh4/include/bsp.h
+sh/gensh4/include/rtems/score/iosh7750.h
+sh/gensh4/include/rtems/score/ipl.h
+sh/gensh4/include/rtems/score/ispsh7750.h
+sh/gensh4/include/rtems/score/sh4_regs.h
+sh/gensh4/include/rtems/score/sh7750_regs.h
 sh/gensh4/include/sdram.h
+sh/gensh4/include/sh/sh4uart.h

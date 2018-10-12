@@ -1,5 +1,6 @@
+powerpc/virtex/include/bsp/irq.h
+powerpc/virtex/include/bsp/opbintctrl.h
+powerpc/virtex/include/tm27.h
+powerpc/virtex/include/xiltemac.h
 powerpc/virtex/include/xparameters_dflt.h
-powerpc/virtex/include/opbintctrl.h
 powerpc/virtex/include/bsp.h
-powerpc/virtex/irq/irq.h
-powerpc/virtex/network/xiltemac.h

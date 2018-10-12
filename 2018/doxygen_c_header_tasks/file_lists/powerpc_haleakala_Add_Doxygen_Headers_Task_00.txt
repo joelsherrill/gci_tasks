@@ -1,3 +1,4 @@
 powerpc/haleakala/include/bsp.h
+powerpc/haleakala/include/bsp/irq.h
 powerpc/haleakala/include/mmu_405.h
-powerpc/haleakala/irq/irq.h
+powerpc/haleakala/include/tm27.h

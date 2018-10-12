@@ -1,5 +1,5 @@
 m68k/mcf5206elite/include/bsp.h
 m68k/mcf5206elite/include/ds1307.h
-m68k/mcf5206elite/include/nvram.h
-m68k/mcf5206elite/include/i2cdrv.h
 m68k/mcf5206elite/include/i2c.h
+m68k/mcf5206elite/include/i2cdrv.h
+m68k/mcf5206elite/include/nvram.h

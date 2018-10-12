@@ -1,7 +1,0 @@
-sparc64/shared/helenos/boot/include/balloc.h
-sparc64/shared/helenos/boot/include/register.h
-sparc64/shared/helenos/boot/include/ofw_tree.h
-sparc64/shared/helenos/boot/include/ofwarch.h
-sparc64/shared/helenos/boot/include/gentypes.h
-sparc64/shared/helenos/boot/include/main.h
-sparc64/shared/helenos/boot/include/types.h

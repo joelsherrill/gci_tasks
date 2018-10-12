@@ -1,6 +1,0 @@
-sparc/shared/include/gr1553bm.h
-sparc/shared/include/gnatcommon.h
-sparc/shared/include/grpci2.h
-sparc/shared/include/grpwm.h
-sparc/shared/include/spwcuc.h
-sparc/shared/include/gr1553b.h

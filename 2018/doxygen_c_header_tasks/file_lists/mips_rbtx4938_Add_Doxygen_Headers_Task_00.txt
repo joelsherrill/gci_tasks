@@ -1,3 +1,4 @@
-mips/rbtx4938/include/bsp.h
-mips/rbtx4938/console/yamon_api.h
 mips/rbtx4938/clock/yamon_api.h
+mips/rbtx4938/console/yamon_api.h
+mips/rbtx4938/include/bsp.h
+mips/rbtx4938/include/tm27.h

@@ -3,13 +3,17 @@
 basename=Add_Doxygen_Headers_Task_
 files_per_task=20
 wiki_url="https://devel.rtems.org/wiki/GCI/Documentation/Doxygen"
-url="https://github.com/joelsherrill/gci_tasks/tree/master/2015/doxygen_c_header_tasks/file_lists"
+url="https://github.com/joelsherrill/gci_tasks/tree/master/2018/doxygen_c_header_tasks/file_lists"
 
 
 base=`pwd`
 outdir=${base}/file_lists
-rm -rf ${outdir}
+rm -rf ${outdir}/*
 mkdir ${outdir}
+
+csvdir=${base}/csv_lists
+rm -rf ${csvdir}
+mkdir ${csvdir}
 
 if [ X${r} = "X" ] ; then
   echo "Top of RTEMS tree not set in variable r"
@@ -21,7 +25,7 @@ if [ ! -x ../get_mentor ] ; then
   exit 1
 fi
 
-b=${r}/c/src/lib/libbsp
+b=${r}/bsps
 
 do_directory()
 {
@@ -32,6 +36,11 @@ do_directory()
   cd $b/
   find ${area} -name "*.[h]" | \
     grep -v /nds/ | \
+    grep -v /atsam\/include\/libchip/ | \
+    grep -v /atsam\/contrib\/ | \
+    grep -v /altera-cyclone-v\/contrib\/ | \
+    grep -v /altera-cyclone-v\/include\/socal\/ | \
+    grep -v /altera-cyclone-v\/include\/bsp\/alt_ | \
     while read f
   do
     grep "@brief" $f >/dev/null
@@ -108,7 +117,6 @@ generate_tasks()
 dirs="shared"
 dirs="${dirs} arm/shared"
 dirs="${dirs} bfin/shared"
-dirs="${dirs} epiphany/shared"
 dirs="${dirs} i386/shared"
 dirs="${dirs} lm32/shared"
 dirs="${dirs} m68k/shared"
@@ -120,111 +128,91 @@ dirs="${dirs} sparc64/shared"
 dirs="${dirs} sparc/shared"
 dirs="${dirs} v850/shared"
 
-
 # BSPs
-dirs="${dirs} sparc/leon2"
-dirs="${dirs} sparc/erc32"
-dirs="${dirs} sparc/leon3"
-dirs="${dirs} mips/rbtx4925"
-dirs="${dirs} mips/jmr3904"
-dirs="${dirs} mips/jmr3904"
-dirs="${dirs} mips/rbtx4938"
-dirs="${dirs} mips/genmongoosev"
-dirs="${dirs} mips/malta"
-dirs="${dirs} mips/csb350"
-dirs="${dirs} mips/hurricane"
-dirs="${dirs} i386/pc386"
-dirs="${dirs} i386/pc386"
-dirs="${dirs} no_cpu/no_bsp"
-dirs="${dirs} powerpc/score603e"
-dirs="${dirs} powerpc/gen83xx"
-dirs="${dirs} powerpc/psim"
-dirs="${dirs} powerpc/motorola_powerpc"
-dirs="${dirs} powerpc/motorola_powerpc"
-dirs="${dirs} powerpc/motorola_powerpc"
-dirs="${dirs} powerpc/beatnik"
-dirs="${dirs} powerpc/mbx8xx"
-dirs="${dirs} powerpc/t32mppc"
-dirs="${dirs} powerpc/virtex"
-dirs="${dirs} powerpc/qoriq"
-dirs="${dirs} powerpc/mpc55xxevb"
-dirs="${dirs} powerpc/gen5200"
-dirs="${dirs} powerpc/mpc8260ads"
-dirs="${dirs} powerpc/haleakala"
-dirs="${dirs} powerpc/ss555"
-dirs="${dirs} powerpc/virtex5"
-dirs="${dirs} powerpc/mvme3100"
-dirs="${dirs} powerpc/virtex4"
-dirs="${dirs} powerpc/mvme5500"
-dirs="${dirs} powerpc/qemuppc"
-dirs="${dirs} powerpc/ep1a"
-dirs="${dirs} powerpc/tqm8xx"
-dirs="${dirs} m32c/m32cbsp"
-dirs="${dirs} nios2/nios2_iss"
-dirs="${dirs} avr/avrtest"
-dirs="${dirs} lm32/milkymist"
-dirs="${dirs} lm32/lm32_evr"
-dirs="${dirs} moxie/moxiesim"
-dirs="${dirs} arm/csb337"
-dirs="${dirs} arm/gdbarmsim"
-dirs="${dirs} arm/edb7312"
-dirs="${dirs} arm/gumstix"
-dirs="${dirs} arm/gba"
-dirs="${dirs} arm/nds"
-dirs="${dirs} arm/nds"
-dirs="${dirs} arm/xilinx-zynq"
-dirs="${dirs} arm/raspberrypi"
-dirs="${dirs} arm/lm3s69xx"
-dirs="${dirs} arm/lpc32xx"
-dirs="${dirs} arm/smdk2410"
-dirs="${dirs} arm/realview-pbx-a9"
+dirs="${dirs} arm/altera-cyclone-v"
+dirs="${dirs} arm/atsam"
 dirs="${dirs} arm/beagle"
-dirs="${dirs} arm/gp32"
-dirs="${dirs} arm/rtl22xx"
+dirs="${dirs} arm/csb336"
+dirs="${dirs} arm/csb337"
+dirs="${dirs} arm/edb7312"
+dirs="${dirs} arm/gdbarmsim"
+dirs="${dirs} arm/gumstix"
+dirs="${dirs} arm/imx"
+dirs="${dirs} arm/lm3s69xx"
 dirs="${dirs} arm/lpc176x"
 dirs="${dirs} arm/lpc24xx"
-dirs="${dirs} arm/csb336"
-dirs="${dirs} arm/altera-cyclone-v"
+dirs="${dirs} arm/lpc32xx"
+dirs="${dirs} arm/raspberrypi"
+dirs="${dirs} arm/realview-pbx-a9"
+dirs="${dirs} arm/rtl22xx"
+dirs="${dirs} arm/smdk2410"
+dirs="${dirs} arm/stm32f4"
 dirs="${dirs} arm/tms570"
-dirs="${dirs} arm/stm32f4"           # added as a test case
+dirs="${dirs} arm/xilinx-zynq"
 dirs="${dirs} bfin/bf537Stamp"
-dirs="${dirs} bfin/TLL6527M"
 dirs="${dirs} bfin/eZKit533"
-dirs="${dirs} m32r/m32rsim"
-dirs="${dirs} m68k/mvme162"
-dirs="${dirs} m68k/mvme162"
-dirs="${dirs} m68k/mvme136"
-dirs="${dirs} m68k/mcf5235"
-dirs="${dirs} m68k/gen68302"
-dirs="${dirs} m68k/uC5282"
-dirs="${dirs} m68k/gen68360"
-dirs="${dirs} m68k/mcf5329"
+dirs="${dirs} bfin/TLL6527M"
+dirs="${dirs} epiphany/epiphany_sim"
+dirs="${dirs} i386/pc386"
+dirs="${dirs} lm32/lm32_evr"
+dirs="${dirs} lm32/milkymist"
+dirs="${dirs} m32c/m32cbsp"
 dirs="${dirs} m68k/av5282"
-dirs="${dirs} m68k/mvme147"
-dirs="${dirs} m68k/mcf5206elite"
-dirs="${dirs} m68k/mcf5206elite"
-dirs="${dirs} m68k/mvme147s"
-dirs="${dirs} m68k/mrm332"
-dirs="${dirs} m68k/idp"
-dirs="${dirs} m68k/mvme167"
-dirs="${dirs} m68k/ods68302"
-dirs="${dirs} m68k/sim68000"
 dirs="${dirs} m68k/csb360"
-dirs="${dirs} m68k/mcf5225x"
 dirs="${dirs} m68k/gen68340"
-dirs="${dirs} m68k/mcf52235"
+dirs="${dirs} m68k/gen68360"
 dirs="${dirs} m68k/genmcf548x"
-dirs="${dirs} h8300/h8sim"
-dirs="${dirs} v850/gdbv850sim"           # added as a test case
-dirs="${dirs} sparc64/usiii"
-dirs="${dirs} sparc64/niagara"
+dirs="${dirs} m68k/mcf5206elite"
+dirs="${dirs} m68k/mcf52235"
+dirs="${dirs} m68k/mcf5225x"
+dirs="${dirs} m68k/mcf5235"
+dirs="${dirs} m68k/mcf5329"
+dirs="${dirs} m68k/mrm332"
+dirs="${dirs} m68k/mvme147"
+dirs="${dirs} m68k/mvme147s"
+dirs="${dirs} m68k/mvme162"
+dirs="${dirs} m68k/mvme167"
+dirs="${dirs} m68k/uC5282"
+dirs="${dirs} mips/csb350"
+dirs="${dirs} mips/hurricane"
+dirs="${dirs} mips/jmr3904"
+dirs="${dirs} mips/malta"
+dirs="${dirs} mips/rbtx4925"
+dirs="${dirs} mips/rbtx4938"
+dirs="${dirs} moxie/moxiesim"
+dirs="${dirs} nios2/nios2_iss"
+dirs="${dirs} no_cpu/no_bsp"
 dirs="${dirs} or1k/generic_or1k"
-dirs="${dirs} sh/gensh2"
+dirs="${dirs} powerpc/beatnik"
+dirs="${dirs} powerpc/gen5200"
+dirs="${dirs} powerpc/gen83xx"
+dirs="${dirs} powerpc/haleakala"
+dirs="${dirs} powerpc/motorola_powerpc"
+dirs="${dirs} powerpc/mpc55xxevb"
+dirs="${dirs} powerpc/mpc8260ads"
+dirs="${dirs} powerpc/mvme3100"
+dirs="${dirs} powerpc/mvme5500"
+dirs="${dirs} powerpc/psim"
+dirs="${dirs} powerpc/qemuppc"
+dirs="${dirs} powerpc/qoriq"
+dirs="${dirs} powerpc/ss555"
+dirs="${dirs} powerpc/t32mppc"
+dirs="${dirs} powerpc/tqm8xx"
+dirs="${dirs} powerpc/virtex"
+dirs="${dirs} powerpc/virtex4"
+dirs="${dirs} powerpc/virtex5"
+dirs="${dirs} riscv/riscv"
 dirs="${dirs} sh/gensh1"
+dirs="${dirs} sh/gensh2"
+dirs="${dirs} sh/gensh4"
 dirs="${dirs} sh/shsim"
-dirs="${dirs} sh/gensh4"                 # added as a test case
-dirs="${dirs} epiphany/epiphany_sim"     # added as a test case
-
+dirs="${dirs} sparc64/niagara"
+dirs="${dirs} sparc64/usiii"
+dirs="${dirs} sparc/erc32"
+dirs="${dirs} sparc/leon2"
+dirs="${dirs} sparc/leon3"
+dirs="${dirs} v850/gdbv850sim"
+dirs="${dirs} x86_64/amd64"
 for d in ${dirs}
 do
   do_directory ${d}
@@ -255,9 +243,9 @@ do
   #outfile=`echo $infile | sed -e s/.txt/.csv/`
   #area=`echo ${d} | sed -e 's/\/src//' -e 's/\//_/g'`
   area=`echo ${infile} | sed -e 's/files_//'`
-  outfile=tasks_for_${area}.csv
+  outfile=${csvdir}/tasks_for_${area}.csv
   generate_tasks ${area} | sed -e '/^$/d' >$outfile
-  echo ${num}: ${outfile}
+  #echo ${num}: ${outfile}
   num=`expr ${num} + 1`
   lines=`cat ${outfile} | wc -l`
   if [ ${lines} -eq 0 ] ; then
@@ -266,5 +254,5 @@ do
   fi
 done
 
-wc -l *.csv
+echo "Total: " `cat ${csvdir}/*.csv | wc -l`
 exit 0

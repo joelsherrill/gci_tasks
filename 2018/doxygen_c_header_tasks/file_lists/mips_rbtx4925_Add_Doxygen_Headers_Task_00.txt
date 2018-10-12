@@ -1,1 +1,2 @@
 mips/rbtx4925/include/bsp.h
+mips/rbtx4925/include/tm27.h

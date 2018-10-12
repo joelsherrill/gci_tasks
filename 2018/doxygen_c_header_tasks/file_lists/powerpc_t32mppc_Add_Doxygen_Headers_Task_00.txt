@@ -1,2 +1,3 @@
-powerpc/t32mppc/include/irq.h
 powerpc/t32mppc/include/bsp.h
+powerpc/t32mppc/include/bsp/irq.h
+powerpc/t32mppc/include/tm27.h

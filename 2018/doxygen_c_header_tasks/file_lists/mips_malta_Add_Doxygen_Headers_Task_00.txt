@@ -1,2 +1,3 @@
-mips/malta/include/pci.h
 mips/malta/include/bsp.h
+mips/malta/include/bsp/pci.h
+mips/malta/include/tm27.h

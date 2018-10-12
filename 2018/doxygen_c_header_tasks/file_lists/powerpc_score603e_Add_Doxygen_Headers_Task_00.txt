@@ -1,7 +1,0 @@
-powerpc/score603e/include/bsp.h
-powerpc/score603e/include/gen2.h
-powerpc/score603e/console/consolebsp.h
-powerpc/score603e/console/85c30.h
-powerpc/score603e/irq/irq.h
-powerpc/score603e/PCI_bus/PCI.h
-powerpc/score603e/vme/VMEConfig.h

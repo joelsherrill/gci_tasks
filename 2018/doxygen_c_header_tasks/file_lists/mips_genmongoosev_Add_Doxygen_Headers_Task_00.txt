@@ -1,9 +1,0 @@
-mips/genmongoosev/include/lr333x0.h
-mips/genmongoosev/include/bsp.h
-mips/genmongoosev/include/lr33000.h
-mips/genmongoosev/include/mongoose-v.h
-mips/genmongoosev/include/tm27.h
-mips/genmongoosev/include/r3000.h
-mips/genmongoosev/console/mg5uart.h
-mips/genmongoosev/start/mg5.h
-mips/genmongoosev/start/regs.h

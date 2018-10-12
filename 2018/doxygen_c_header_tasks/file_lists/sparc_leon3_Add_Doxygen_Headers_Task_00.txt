@@ -1,2 +1,1 @@
-sparc/leon3/include/watchdog.h
-sparc/leon3/include/cache_.h
+sparc/leon3/include/bsp/watchdog.h

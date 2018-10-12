@@ -1,3 +1,1 @@
-epiphany/epiphany_sim/include/bsp.h
-epiphany/epiphany_sim/include/bspopts.h
 epiphany/epiphany_sim/include/tm27.h

@@ -1,0 +1,11 @@
+arm/imx/include/arm/freescale/imx/imx_ccmvar.h
+arm/imx/include/arm/freescale/imx/imx_ecspireg.h
+arm/imx/include/arm/freescale/imx/imx_gpcreg.h
+arm/imx/include/arm/freescale/imx/imx_i2creg.h
+arm/imx/include/arm/freescale/imx/imx_iomuxreg.h
+arm/imx/include/arm/freescale/imx/imx_iomuxvar.h
+arm/imx/include/arm/freescale/imx/imx_srcreg.h
+arm/imx/include/arm/freescale/imx/imx_uartreg.h
+arm/imx/include/arm/freescale/imx/imx_wdogreg.h
+arm/imx/include/bsp/irq.h
+arm/imx/include/tm27.h

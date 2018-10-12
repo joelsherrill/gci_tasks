@@ -1,5 +1,5 @@
-powerpc/gen83xx/include/irq.h
-powerpc/gen83xx/include/u-boot-config.h
 powerpc/gen83xx/include/bsp.h
-powerpc/gen83xx/include/tsec-config.h
-powerpc/gen83xx/include/hwreg_vals.h
+powerpc/gen83xx/include/bsp/hwreg_vals.h
+powerpc/gen83xx/include/bsp/irq.h
+powerpc/gen83xx/include/bsp/tsec-config.h
+powerpc/gen83xx/include/bsp/u-boot-config.h

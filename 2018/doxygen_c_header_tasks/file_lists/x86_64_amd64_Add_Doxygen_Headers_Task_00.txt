@@ -1,0 +1,5 @@
+x86_64/amd64/include/bsp.h
+x86_64/amd64/include/tm27.h
+x86_64/amd64/include/apic.h
+x86_64/amd64/include/clock.h
+x86_64/amd64/include/pic.h

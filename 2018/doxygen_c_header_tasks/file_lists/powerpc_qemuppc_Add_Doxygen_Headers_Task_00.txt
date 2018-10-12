@@ -1,2 +1,3 @@
 powerpc/qemuppc/include/bsp.h
-powerpc/qemuppc/irq/irq.h
+powerpc/qemuppc/include/bsp/irq.h
+powerpc/qemuppc/include/tm27.h

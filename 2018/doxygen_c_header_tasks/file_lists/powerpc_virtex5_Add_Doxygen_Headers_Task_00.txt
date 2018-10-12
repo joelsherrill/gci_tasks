@@ -1,2 +1,3 @@
-powerpc/virtex5/include/irq.h
 powerpc/virtex5/include/bsp.h
+powerpc/virtex5/include/bsp/irq.h
+powerpc/virtex5/include/tm27.h

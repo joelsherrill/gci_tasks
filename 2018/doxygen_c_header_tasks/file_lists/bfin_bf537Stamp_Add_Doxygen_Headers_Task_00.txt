@@ -1,1 +1,2 @@
 bfin/bf537Stamp/include/bsp.h
+bfin/bf537Stamp/include/tm27.h

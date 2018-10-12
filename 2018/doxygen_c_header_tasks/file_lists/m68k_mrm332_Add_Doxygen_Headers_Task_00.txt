@@ -1,3 +1,4 @@
+m68k/mrm332/console/sci.h
 m68k/mrm332/include/bsp.h
 m68k/mrm332/include/mrm332.h
-m68k/mrm332/console/sci.h
+m68k/mrm332/include/tm27.h

@@ -1,1 +1,3 @@
-powerpc/qoriq/include/u-boot-config.h
+powerpc/qoriq/include/asm/epapr_hcalls.h
+powerpc/qoriq/include/asm/fsl_hcalls.h
+powerpc/qoriq/include/uapi/asm/epapr_hcalls.h

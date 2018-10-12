@@ -1,1 +1,7 @@
+powerpc/motorola_powerpc/bootloader/bootldr.h
+powerpc/motorola_powerpc/bootloader/pci.h
+powerpc/motorola_powerpc/bootloader/zlib.h
+powerpc/motorola_powerpc/console/keyboard.h
 powerpc/motorola_powerpc/include/bsp.h
+powerpc/motorola_powerpc/include/bsp/VMEConfig.h
+powerpc/motorola_powerpc/include/bsp/irq.h

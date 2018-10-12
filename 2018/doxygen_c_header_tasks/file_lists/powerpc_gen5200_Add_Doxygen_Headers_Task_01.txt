@@ -1,7 +1,7 @@
-powerpc/gen5200/bestcomm/dma_image.capi.h
-powerpc/gen5200/bestcomm/dma_image.h
-powerpc/gen5200/bestcomm/bestcomm_api.h
-powerpc/gen5200/i2c/mpc5200mbus.h
-powerpc/gen5200/nvram/nvram.h
+powerpc/gen5200/include/bsp/nvram.h
+powerpc/gen5200/include/bsp/slicetimer.h
+powerpc/gen5200/include/bsp/u-boot-config.h
+powerpc/gen5200/include/bsp/ata.h
+powerpc/gen5200/mscan/mscan_int.h
 powerpc/gen5200/nvram/m93cxx.h
-powerpc/gen5200/ide/pcmcia_ide.h
+powerpc/gen5200/rtc/pcf8563.h

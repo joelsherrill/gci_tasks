@@ -1,3 +1,4 @@
-mips/hurricane/include/bsp.h
-mips/hurricane/include/usc.h
 mips/hurricane/clock/clock.h
+mips/hurricane/include/bsp.h
+mips/hurricane/include/tm27.h
+mips/hurricane/include/usc.h

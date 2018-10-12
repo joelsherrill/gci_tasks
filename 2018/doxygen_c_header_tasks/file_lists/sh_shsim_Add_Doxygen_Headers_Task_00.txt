@@ -1,2 +1,3 @@
 sh/shsim/include/bsp.h
-sh/shsim/include/syscall.h
+sh/shsim/include/bsp/syscall.h
+sh/shsim/include/tm27.h
