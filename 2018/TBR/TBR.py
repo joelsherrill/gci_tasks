@@ -37,17 +37,16 @@ def generate_tasks():
 
   for b in xrange(len(pages)):
     title = "Resolve Wiki Page: " + pages[b]
-    description = "\
-Investigate the page located on\
+    description = "\"Investigate the page located on\
  [the RTEMS Trac Wiki](https://devel.rtems.org/wiki/" + pages[b] + ")\
- Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/UI/WikiTBR) on our wiki.\
- The outcome of this task is a recommendation to relocate the page/contents or to delete it.\
+ Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/Outreach/WikiTBR) on our wiki.\
+ The outcome of this task is a recommendation to relocate the page/contents or to delete it.\"\
 "
     max_instances = "1"	
     mentors = "\"amardtakhar@gmail.com," + str(get_mentor(b)) + "\""
     tags = "\"wiki,research\""
     is_beginner = "false"
-    categories = "\"2,3,4,5\""
+    categories = "\"3,5\""
 	# 1: Coding. 2: User Interface. 3: Documentation & Training.
 	# 4: Quality Assurance. 5: Outreach & Research.
     time_to_complete = "3"
