@@ -7,13 +7,18 @@ url="https://github.com/joelsherrill/gci_tasks/tree/master/2018/doxygen_c_header
 
 
 base=`pwd`
+
 outdir=${base}/file_lists
 rm -rf ${outdir}/*
-mkdir ${outdir}
+test -d ${outdir} || mkdir ${outdir}
 
 csvdir=${base}/csv_lists
-rm -rf ${csvdir}
-mkdir ${csvdir}
+rm -rf ${csvdir}/*
+test -d ${cvsdir} || mkdir ${csvdir}
+
+tmpdir=${base}/tmp
+rm -rf ${tmpdir}
+mkdir ${tmpdir}
 
 if [ X${r} = "X" ] ; then
   echo "Top of RTEMS tree not set in variable r"
@@ -47,10 +52,10 @@ do_directory()
     if [ $? -ne 0 ] ; then
       echo $f
     fi
-  done >${base}/files_${area_b}
-  lines=`cat ${base}/files_${area_b} | wc -l`
+  done >${tmpdir}/files_${area_b}
+  lines=`cat ${tmpdir}/files_${area_b} | wc -l`
   if [ ${lines} -eq 0 ] ; then
-    rm ${base}/files_${area_b}
+    rm ${tmpdir}/files_${area_b}
   fi
   cd - >/dev/null 2>&1
 }
@@ -219,12 +224,12 @@ do
 done
 
 num=1
-for infile in files_*
+for infile in ${tmpdir}/files_*
 do
-  # echo $infile
+  #echo $infile
 
   # now split
-  area=`echo ${infile} | sed -e 's/files_//'`
+  area=`echo ${infile} | sed -e 's/^.*files_//'`
   lines=`cat ${infile} | wc -l`
   if [ ${lines} -eq 0 ] ; then
     echo "${infile} is empty - Skipping"
@@ -233,6 +238,7 @@ do
     echo "${infile} has ${lines} files"
   fi
 
+    continue
   split -l ${files_per_task} -d ${infile} ${outdir}/${area}_${basename}
   for f in ${outdir}/${area}_${basename}*
   do
@@ -249,7 +255,7 @@ do
   num=`expr ${num} + 1`
   lines=`cat ${outfile} | wc -l`
   if [ ${lines} -eq 0 ] ; then
-    rm ${area}.csv
+    rm -f ${cvsdir}/${area}.csv
     rm ${outfile}
   fi
 done
