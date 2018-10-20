@@ -38,13 +38,15 @@ def generate_tasks():
 
   for b in xrange(len(bugs)):
     title = "Investigate/Fix Bug: Ticket #" + bugs[b]
-    description = "First complete one of the Getting Started tasks.<p><p>\
-Investigate the bug described in Ticket #" + bugs[b] + " on\
+    description = "\"First complete one of the Getting Started tasks.\
+ \
+ Investigate the bug described in Ticket #" + bugs[b] + " on\
  [the RTEMS Trac](https://devel.rtems.org/ticket/" + bugs[b] + ")\
  Follow the [directions for this task](https://devel.rtems.org/wiki/GCI/QA/InvestigateTicket) on our wiki.\
+ \
  The outcome of this task will be a comment on the ticket to suggest a path forward.\
- If a bug fix is available, you may be expected to test the fix and possibly produce an updated patch.\
-"
+ If a bug fix is available you may be expected to test the fix and possibly produce an updated patch.\
+\""
     max_instances = "1"	
     mentors = "\"joelsherrill@gmail.com,gedarebloom@gmail.com," + str(get_mentor(b+2)) + "\""
     tags = "\"c,debugging\""
