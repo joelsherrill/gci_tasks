@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 79.374998 79.375002">
+  <path fill="#0e8430" d="M0 0h79.375v79.375H0z"/>
+  <path fill="#fff" d="M6.6145835 6.61458h66.145836v66.145836H6.6145835z"/>
+  <text x="8.7078543" y="265.55774" stroke-width=".26458332" font-family="Roboto" font-size="10.58333302" font-style="italic" font-weight="900" letter-spacing="0" style="line-height:1.25;-inkscape-font-specification:'Roboto Heavy Italic'" transform="translate(0 -217.62498)" word-spacing="0">
+    <tspan x="8.7078543" y="265.55774" fill="#cf0139" font-size="19.05000114" style="-inkscape-font-specification:'Roboto Heavy Italic'">RTEMS</tspan>
+  </text>
+  <text x="13.062115" y="248.81209" stroke-width=".26458332" font-family="Roboto" font-size="10.58333302" font-weight="400" letter-spacing="0" style="line-height:1.25;-inkscape-font-specification:Roboto" transform="translate(0 -217.62498)" word-spacing="0">
+    <tspan x="13.062115" y="248.81209" font-size="7.76111126" font-style="italic" font-weight="700" style="-inkscape-font-specification:'Roboto Bold Italic'">Embedded With</tspan>
+  </text>
+</svg>
