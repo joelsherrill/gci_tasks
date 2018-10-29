@@ -1,0 +1,37 @@
+Something like this in the Wiki
+================================================================
+Prerequisite: Being able to build RTEMS Documentation
+
+The POSIX Users Guide has sections where the prototype of the method
+is missing. This is because the current contents for that service are
+a stub.  The following is an example from
+posix_users/device_and_class_specific.rst:
+
+.. code-block:: c
+
+    int tcgetpgrp(
+    );
+
+This task consists of finding all methods in the .rst file specific to your
+instance of the task, locating all places where a method is incompletely
+prototyped, finding the correct prototype, fixing the document, and submitting
+a patch. The correct prototype can be found in the Open Group POSIX specification
+at http://pubs.opengroup.org/onlinepubs/9699919799/
+
+For the above example, the correct prototype you would end up with should be:
+
+.. code-block:: c
+
+    #include <unistd.h>
+    pid_t tcgetpgrp(int fildes);
+
+================================================================
+This task can be instanced for the following files:
+
+posix-users]$ grep -Pzl "\(\n    \);" *.rst
+device_and_class_specific.rst
+input_and_output.rst
+language_specific_services.rst
+memory_managment.rst
+system_database.rst
+thread_cancellation.rst
