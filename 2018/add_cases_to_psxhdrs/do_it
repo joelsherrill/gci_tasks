@@ -1,0 +1,17 @@
+
+CSVFILE=RTEMS-Standards-Compliance-v4.csv
+RTEMS=$r
+
+cat ${CSVFILE} | sed -e '1,1d' | while read line
+do
+#  method=`echo $line | cut -d',' -f1`
+  hfile=`echo $line | cut -d',' -f2 | cut -d'.' -f1`
+
+  echo $hfile
+done | sort -u | while read hfile
+do
+  if [ ! -d ${RTEMS}/testsuites/psxtests/psxhdrs/${hfile} ] ; then
+    echo ${hfile}.h
+  fi
+done | sed \
+  -e '/spawn.h/d' 
