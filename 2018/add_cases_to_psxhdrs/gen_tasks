@@ -1,0 +1,56 @@
+#! /bin/sh
+
+wiki_url="https://devel.rtems.org/wiki/GCI/Coding/AddPOSIXMethodSignatureComplianceTests"
+
+infile=missing_hfiles
+outfile=tasks.csv
+
+if [ ! -x ../get_mentor ] ; then
+  echo "get_mentor is not executable"
+  exit 1
+fi
+num=1
+
+generate_tasks()
+{
+  # row headings have to be printed
+  # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+
+  bsp=$1
+
+  title="Implement POSIX API Signature Compliance Tests for ${header} File"
+  desc=""
+  desc="${desc} This task consists of writing tests which verify that"
+  desc="${desc} RTEMS implements the signature correctly for each supported"
+  desc="${desc} method in the POSIX standard. This task consists of adding"
+  desc="${desc} a subdirectory to testsuites/psxtests/psxhdrs for ${header}"
+  desc="${desc} and the set of files needed to ensure that each method"
+  desc="${desc} prototypes in ${header} can be used using only the headers"
+  desc="${desc} specified in the POSIX definition."
+  desc="${desc} See these [instructions](${wiki_url}) for more details."
+  desc="${desc} If the header is not supported by RTEMS, report this before"
+  desc="${desc} writing any test code."
+  desc="${desc} The outcome of this task is a patch."
+  max_instances="1"
+  mentors=`../get_mentor ${num}`
+  tags="C, POSIX, tests, compliance, conformance"
+  is_beginner="0"
+  # 1: Coding. 2: User Interface. 3: Documentation & Training. 
+  # 4: Quality Assurance. 5: Outreach & Research.
+  categories="1,4"
+  time_to_complete="5"
+
+# NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
+  echo "${title}, \"${desc}\",${max_instances},\"joel.sherrill@gmail.com,${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"function sections BSP\""
+  num=`expr ${num} + 1`
+}
+
+echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
+cat ${infile} | while read line
+do
+  bsp=${line}
+  generate_tasks ${bsp}
+done >>${outfile}
+
+wc -l *.csv
+exit 0
