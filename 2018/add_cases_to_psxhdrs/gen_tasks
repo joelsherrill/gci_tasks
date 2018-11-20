@@ -41,15 +41,15 @@ generate_tasks()
   time_to_complete="5"
 
 # NEW - title,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata
-  echo "${title}, \"${desc}\",${max_instances},\"joel.sherrill@gmail.com,${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"function sections BSP\""
+  echo "${title}, \"${desc}\",${max_instances},\"joel.sherrill@gmail.com,${mentors}\",\"${tags}\",${is_beginner},\"${categories}\",${time_to_complete}, \"POSIX API Compliance\""
   num=`expr ${num} + 1`
 }
 
 echo "name,description,max_instances,mentors,tags,is_beginner,categories,time_to_complete_in_days,private_metadata" >${outfile}
 cat ${infile} | while read line
 do
-  bsp=${line}
-  generate_tasks ${bsp}
+  header=${line}
+  generate_tasks ${header}
 done >>${outfile}
 
 wc -l *.csv
