@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3696px" height="3696px" viewBox="0 0 3696 3696" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Big Transparent With Border 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="Arial-Black, Arial Black" font-size="370" font-weight="700" letter-spacing="-22.9999995" fill="#000000">
+            <tspan x="309" y="407">Embedded Wit</tspan>
+            <tspan x="2947.65333" y="407">h</tspan>
+        </text>
+        <filter x="-2.4%" y="-9.6%" width="104.9%" height="126.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-3" font-family="Arial-Black, Arial Black" font-size="950" font-weight="700" letter-spacing="-36.4166451" fill="#CC0638">
+            <tspan x="0" y="1324">RTEMS</tspan>
+        </text>
+        <filter x="-1.5%" y="-3.7%" width="104.0%" height="110.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="17" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-5" font-family="Arial-Black, Arial Black" font-size="400" font-weight="700" letter-spacing="-4.9043479" fill="#000000">
+            <tspan x="98" y="1910">www.rtems.org</tspan>
+        </text>
+        <filter x="-2.1%" y="-8.9%" width="104.2%" height="124.8%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Big-Transparent-With-Border-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="3696" height="3696"></rect>
+        <g id="Group" transform="translate(67.000000, 721.000000)" fill-opacity="1">
+            <g id="Embedded-With" fill="#000000">
+                <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                <use xlink:href="#text-1"></use>
+            </g>
+            <g id="RTEMS" fill="#CC0638">
+                <use filter="url(#filter-4)" xlink:href="#text-3"></use>
+                <use xlink:href="#text-3"></use>
+            </g>
+            <g id="www.rtems.org" fill="#000000">
+                <use filter="url(#filter-6)" xlink:href="#text-5"></use>
+                <use xlink:href="#text-5"></use>
+            </g>
+        </g>
+        <rect id="Rectangle" stroke="#267222" stroke-width="85" x="43" y="43" width="3610" height="3615"></rect>
+    </g>
+</svg>
